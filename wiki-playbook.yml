@@ -1,6 +1,6 @@
 site:
   title: jMonkeyEngine Docs
-  url: https://wiki.jmonkeyengine.org
+  url: https://github.com/mitm001/jme-wiki/settings
   robots: allow
   start_page: docs::documentation.adoc
 content:
@@ -8,15 +8,15 @@ content:
   - url: .
     branches: HEAD
     start_path: docs
-  - url: https://github.com/jMonkeyEngine/wiki-ui
+  - url: https://github.com/mitm001/jme-ui
     branches: HEAD
     start_path: docs
 ui:
   bundle:
-    url: https://github.com/jMonkeyEngine/wiki-ui/releases/latest/download/ui-bundle.zip
+    url: https://github.com/mitm001/jme-ui/releases/latest/download/ui-bundle.zip
     # Required when using cache or fetch will not update ui.
     snapshot: true
-  supplemental_files: ./supplemental-ui    
+  supplemental_files: ./supplemental-ui
 asciidoc:
   # Some built-in AsciiDoc attributes are not applicable in the Antora
   # environment. These attributes include data-uri, allow-uri-read, docinfo,

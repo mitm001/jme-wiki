@@ -38,7 +38,7 @@ jobs:
         #Static version is used to maintain stability.
         node-version: [12.17.0]
 
-    env: 
+    env:
       ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       ALGOLIA_IDX_NAME: ${{ secrets.ALGOLIA_IDX_NAME }}
 
@@ -128,4 +128,4 @@ jobs:
         # Commits these files to gh-pages if and only if there are changes.
         publish_dir: ./build/site
         # Insert CNAME for repository.
-        cname: wiki.jmonkeyengine.org
+#        cname: wiki.jmonkeyengine.org
