@@ -371,6 +371,20 @@ CubesSerializer.readFromBytes(blockTerrain, serializedTerrainData);</code></pre>
 <footer class="footer">
   <p>Copyright 2020 jMonkeyEngine Wiki Contributors. Licensed BSD-3.</p>
 </footer>
+<script src="../../../../../_/js/vendor/docsearch.min.js"></script>
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
+<script>
+var search = docsearch({
+  apiKey: '',
+  indexName: '',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: { hitsPerPage: 10 }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+function focusSearchInput () { document.querySelector('#search-input').focus() }
+if (document.querySelector('.home-link.is-current')) window.addEventListener('load', focusSearchInput)
+</script>
 <script src="../../../../../_/js/site.js"></script>
 <script async src="../../../../../_/js/vendor/highlight.js"></script>
   </body>
