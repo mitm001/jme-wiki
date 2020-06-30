@@ -1,6 +1,6 @@
 = jMonkeyEngine Documentation
 
-image:https://mitm001.github.io/jme-wiki/workflows/Build%20Docs/badge.svg[Status Badge, 175, 25]
+image:https://github.com/mitm001/jme-wiki/workflows/Build%20Docs/badge.svg[Status Badge, 175, 25]
 
 see link:https://mitm001.github.io/jme-wiki/[https://wiki.jmonkeyengine.org/]
 
