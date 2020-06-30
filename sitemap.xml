@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <sitemap>
-<loc>https://github.com/mitm001/jme-wiki/settings/sitemap-docs.xml</loc>
+<loc>https://github.com/mitm001/jme-wiki/sitemap-docs.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://github.com/mitm001/jme-wiki/settings/sitemap-wiki-ui.xml</loc>
+<loc>https://github.com/mitm001/jme-wiki/sitemap-wiki-ui.xml</loc>
 </sitemap>
 </sitemapindex>
