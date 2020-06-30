@@ -1,6 +1,6 @@
 site:
   title: jMonkeyEngine Docs
-  url: https://github.com/mitm001/jme-wiki/settings
+  url: https://github.com/mitm001/jme-wiki
   robots: allow
   start_page: docs::documentation.adoc
 content:
