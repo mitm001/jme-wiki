@@ -112,7 +112,7 @@ The scene graph only manages the parent-child relationship of spatials. The actu
 
 == Spatials: Node vs Geometry
 
-A Spatial can be transformed (in other words, it has a location, a rotation, and a scale). A Spatial can be loaded and saved as a .3jo file. There are two types of Spatials, _Nodes_ and _Geometries_:
+A Spatial can be transformed (in other words, it has a location, a rotation, and a scale). A Spatial can be loaded and saved as a .3jo file. There are two types of Spatials, _Node_ and _Geometry_:
 [cols="10,45,45", options="header"]
 |===
 
