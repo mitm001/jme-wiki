@@ -549,7 +549,7 @@ You do not need to create a Material if you exported the model with a material. 
 <div class="sectionbody">
 <div class="paragraph">
 <p>To create 3D models and scenes, you need a 3D Mesh Editor. If you don&#8217;t have any tools, install Blender.
-Then you <a href="http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/UV_Map_Basics">create fully textured models (e.g. with Blender)</a>, export them to your project using a <a href="#jme3/features.adoc#supported-formats" class="page unresolved">Supported External File Type</a>, <a href="#jme3/features.adoc#supported-external-file-types" class="page unresolved">convert models</a> to <code>.j3o</code> using the recommended method for your chosen file type, <a href="#jme3/beginner/hello_asset.adoc#loading-models-and-scenes" class="page unresolved">load models</a>, and create 3D scenes from them.</p>
+Then you <a href="http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro/UV_Map_Basics">create fully textured models (e.g. with Blender)</a>, export them to your project using a <a href="../../jme3/features.html#supported-formats" class="page">Supported External File Type</a>, <a href="../../jme3/features.html#supported-external-file-types" class="page">convert models</a> to <code>.j3o</code> using the recommended method for your chosen file type, <a href="#ROOT:jme3/beginner/hello_asset.adoc#loading-models-and-scenes" class="page unresolved">load models</a>, and create 3D scenes from them.</p>
 </div>
 <div class="sect2">
 <h3 id="model-file-formats"><a class="anchor" href="#model-file-formats"></a>Model File Formats</h3>
@@ -588,7 +588,7 @@ java.lang.NullPointerException</code></pre>
 <p>You see that loading the <strong>XML/OBJ/GLTF</strong> directly is only acceptable during the development phase in the SDK. For example, every time your graphic designer pushes updated files to the asset directory, you can quickly review the latest version in your development environment.</p>
 </div>
 <div class="paragraph">
-<p>But for QA test builds and for the final release build, you use <strong>.j3o files</strong> exclusively. J3o is an optimized binary format for jME3 applications. When you do QA test builds, or are ready to release, use the <a href="#sdk.adoc" class="page unresolved">SDK</a> to <a href="#sdk/model_loader_and_viewer.adoc" class="page unresolved">convert</a> all .obj/.scene/.xml/.gltf files to .j3o files, and update all code to load the .j3o files. The default build script automatically packages .j3o files in the executables.</p>
+<p>But for QA test builds and for the final release build, you use <strong>.j3o files</strong> exclusively. J3o is an optimized binary format for jME3 applications. When you do QA test builds, or are ready to release, use the <a href="../../sdk.html" class="page">SDK</a> to <a href="../../sdk/model_loader_and_viewer.html" class="page">convert</a> all .obj/.scene/.xml/.gltf files to .j3o files, and update all code to load the .j3o files. The default build script automatically packages .j3o files in the executables.</p>
 </div>
 <div class="paragraph">
 <p>Open your JME3 Project in the jMonkeyEngine SDK.</p>
@@ -849,7 +849,7 @@ Again, you should see the Ninja+wall+teapot standing in a town.</p>
 <p>Now you know how to populate the scenegraph with static shapes and models, and how to build scenes. You have learned how to load assets using the <code>assetManager</code> and you have seen that the paths start relative to your project directory. Another important thing you have learned is to convert models to .j3o format for the executable JARs etc.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s add some action to the scene and continue with the <a href="#jme3/beginner/hello_main_event_loop.adoc" class="page unresolved">Update Loop</a>!</p>
+<p>Let&#8217;s add some action to the scene and continue with the <a href="#ROOT:jme3/beginner/hello_main_event_loop.adoc" class="page unresolved">Update Loop</a>!</p>
 </div>
 <hr>
 <div class="paragraph">
@@ -858,16 +858,16 @@ Again, you should see the Ninja+wall+teapot standing in a town.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#jme3/external/blender.adoc" class="page unresolved">The definitive Blender import tutorial</a></p>
+<p><a href="../../jme3/external/blender.html" class="page">The definitive Blender import tutorial</a></p>
 </li>
 <li>
-<p><a href="#jme3/intermediate/multi-media_asset_pipeline.adoc" class="page unresolved">Asset pipeline introduction</a></p>
+<p><a href="../../jme3/intermediate/multi-media_asset_pipeline.html" class="page">Asset pipeline introduction</a></p>
 </li>
 <li>
-<p>If you want to learn how to load sounds, see <a href="#jme3/beginner/hello_audio.adoc" class="page unresolved">Hello Audio</a></p>
+<p>If you want to learn how to load sounds, see <a href="#ROOT:jme3/beginner/hello_audio.adoc" class="page unresolved">Hello Audio</a></p>
 </li>
 <li>
-<p>If you want to learn more about loading textures and materials, see <a href="#jme3/beginner/hello_material.adoc" class="page unresolved">Hello Material</a></p>
+<p>If you want to learn more about loading textures and materials, see <a href="#ROOT:jme3/beginner/hello_material.adoc" class="page unresolved">Hello Material</a></p>
 </li>
 </ul>
 </div>
