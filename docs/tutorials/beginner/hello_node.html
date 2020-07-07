@@ -675,7 +675,8 @@ For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Box mesh = new Box(Vector3f.ZERO, 1, 1, 1);
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/** a cuboid default mesh */
+Box mesh = new Box(Vector3f.ZERO, 1, 1, 1);
 Geometry thing = new Geometry("thing", mesh);
 Material mat = new Material(assetManager,
     "Common/MatDefs/Misc/ShowNormals.j3md");
