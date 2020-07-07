@@ -802,21 +802,6 @@ This will give you the opportunity to enable joystick movement, pause the game i
 <p>Add mappings for moving the player (box) up and down with the H and L keys!</p>
 </li>
 <li>
-<p>Switch off the flyCam and override the WASD keys.</p>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-Use <a href="../../jme3/faq.html#how-do-i-switch-between-third-person-and-first-person-view" class="page">flyCam.setEnabled(false);</a>
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
 <p>Modify the mappings so that you can also trigger the up an down motion with the mouse scroll wheel!</p>
 <div class="admonitionblock tip">
 <table>
@@ -839,6 +824,21 @@ Use <code>new MouseAxisTrigger(MouseInput.AXIS_WHEEL, true)</code>
 ...
 inputManager.addMapping("Pause",  new KeyTrigger(usersPauseKey));</code></pre>
 </div>
+</div>
+</li>
+<li>
+<p>Switch off the flyCam and override the WASD keys.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Use <a href="../../jme3/faq.html#how-do-i-switch-between-third-person-and-first-person-view" class="page">flyCam.setEnabled(false);</a>
+</td>
+</tr>
+</table>
 </div>
 </li>
 </ol>
