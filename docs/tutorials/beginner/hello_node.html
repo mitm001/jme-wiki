@@ -670,13 +670,15 @@ public class HelloNode extends SimpleApplication {
 <p>Create a Spatial.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Create a Mesh shape, wrap it into a Geometry, and give it a Material. For example:</p>
+<p>Create a Mesh shape, wrap it into a Geometry, and give it a Material.<br>
+For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Box mesh = new Box(Vector3f.ZERO, 1, 1, 1);
 Geometry thing = new Geometry("thing", mesh);
-Material mat = new Material(assetManager, "Common/MatDefs/Misc/ShowNormals.j3md");
+Material mat = new Material(assetManager,
+    "Common/MatDefs/Misc/ShowNormals.j3md");
 thing.setMaterial(mat);</code></pre>
 </div>
 </div></div></td>
