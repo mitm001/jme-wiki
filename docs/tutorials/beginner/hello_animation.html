@@ -431,12 +431,14 @@ public class HelloAnimation extends SimpleApplication
   public void simpleInitApp() {
     ...
     /* Load the animation controls, listen to animation events,
-     * create an animation channel, and bring the model in its default position.  */
+     * create an animation channel, and bring the model in its default position.
+     */
     control = player.getControl(AnimControl.class);
     control.addListener(this);
     channel = control.createChannel();
     channel.setAnim("stand");
-    ...</code></pre>
+    ...
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -516,7 +518,9 @@ public class HelloAnimation extends SimpleApplication
   }
   public void onAnimChange(AnimControl control, AnimChannel channel, String animName) {
     // unused
-  }</code></pre>
+  }
+ ...
+}</code></pre>
 </div>
 </div>
 </div>
@@ -611,7 +615,7 @@ public class HelloAnimation extends SimpleApplication
 <p>Create a second channel in the controller.</p>
 </li>
 <li>
-<p>Create a new key trigger mapping and action. (see: <a href="#jme3/beginner/hello_input_system.adoc" class="page unresolved">Hello Input</a>)</p>
+<p>Create a new key trigger mapping and action. (see: <a href="hello_input_system.html" class="page">Hello Input</a>)</p>
 </li>
 </ol>
 </div>
@@ -623,7 +627,10 @@ public class HelloAnimation extends SimpleApplication
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Do you want to find out what animation sequences are available in the model? Use:</p>
+<p>Do you want to find out what animation sequences are available in the model?</p>
+</div>
+<div class="paragraph">
+<p>Use:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -640,7 +647,7 @@ public class HelloAnimation extends SimpleApplication
 <div class="sect2">
 <h3 id="exercise-2-revealing-the-skeleton-1"><a class="anchor" href="#exercise-2-revealing-the-skeleton-1"></a>Exercise 2: Revealing the Skeleton (1)</h3>
 <div class="paragraph">
-<p>Open the <code>skeleton.xml</code> file in a text editor of your choice. You don&#8217;t have to be able to read or write these xml files (Blender does that for you) – but it is good to know how skeletons work. “There&#8217;s no magic to it!</p>
+<p>Open the <code>skeleton.xml</code> file in a text editor of your choice. You don&#8217;t have to be able to read or write these xml files (Blender does that for you) – but it is good to know how skeletons work. There&#8217;s no magic to it!</p>
 </div>
 <div class="ulist">
 <ul>
@@ -694,11 +701,14 @@ public class HelloAnimation extends SimpleApplication
 <p>Now you can load animated models, identify stored animations, and trigger animations by using onAnimCycleDone() and onAnimChange(). You also learned that you can play several animations simultaneously, by starting each in a channel of its own. This could be useful if you ever want to animate the lower and upper part of the characters body independently, for example the legs run, while the arms use a weapon.</p>
 </div>
 <div class="paragraph">
-<p>Now that your character can walk, wouldn&#8217;t it be cool if it could also pick up things, or aim a weapon at things, or open doors? Time to reveal the secrets of <a href="#jme3/beginner/hello_picking.adoc" class="page unresolved">mouse picking</a>!</p>
+<p><strong>See also:</strong></p>
 </div>
-<hr>
-<div class="paragraph">
-<p>See also: <a href="https://docs.google.com/leaf?id=0B9hhZie2D-fEYmRkMTYwN2YtMzQ0My00NTM4LThhOTYtZTk1MTRlYTNjYTc3&amp;hl=en">Creating Animated OgreXML Models in Blender</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.google.com/leaf?id=0B9hhZie2D-fEYmRkMTYwN2YtMzQ0My00NTM4LThhOTYtZTk1MTRlYTNjYTc3&amp;hl=en">Creating Animated OgreXML Models in Blender</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
