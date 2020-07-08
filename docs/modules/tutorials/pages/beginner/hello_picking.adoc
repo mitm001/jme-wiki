@@ -1,24 +1,18 @@
 = jMonkeyEngine 3 Tutorial (8) - Hello Picking
 :author:
 :revnumber:
-:revdate: 2016/03/17 20:48
+:revdate: 2020/07/06
 :keywords: beginner, documentation, intro, node, ray, click, collision, keyinput, input
-:relfileprefix: ../../
-:imagesdir: ../..
-ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 
-
-Previous: <<jme3/beginner/hello_animation#,Hello Animation>>,
-Next: <<jme3/beginner/hello_collision#,Hello Collision>>
 
 Typical interactions in games include shooting, picking up objects, and opening doors. From an implementation point of view, these apparently different interactions are surprisingly similar: The user first aims and selects a target in the 3D scene, and then triggers an action on it. We call this process picking.
 
 You can pick something by either pressing a key on the keyboard, or by clicking with the mouse. In either case, you identify the target by aiming a ray –a straight line– into the scene. This method to implement picking is called _ray casting_ (which is not the same as _ray tracing_).
 
-This tutorial relies on what you have learned in the <<jme3/beginner/hello_input_system#,Hello Input>> tutorial. You find more related code samples under <<jme3/advanced/mouse_picking#,Mouse Picking>> and <<jme3/advanced/collision_and_intersection#,Collision and Intersection>>.
+This tutorial relies on what you have learned in the xref:beginner/hello_input_system.adoc[Hello Input] tutorial. You find more related code samples under xref:ROOT:jme3/advanced/mouse_picking.adoc[Mouse Picking] and xref:ROOT:jme3/advanced/collision_and_intersection.adoc[Collision and Intersection].
 
 
-image::jme3/beginner/beginner-picking.png[beginner-picking.png,width="",height="",align="center"]
+image::beginner/beginner-picking.png[beginner-picking.png,width="",height="",align="center"]
 
 
 
@@ -316,7 +310,7 @@ Note how it prints a lot of output to show you which hits were registered.
   };
 ----
 
-*Tip:* Notice how you use the provided method `results.getClosestCollision().getContactPoint()` to determine the _closest_ hit's location. If your game includes a “weapon or “spell that can hit multiple targets, you could also loop over the list of results, and interact with each of them.
+TIP: Notice how you use the provided method `results.getClosestCollision().getContactPoint()` to determine the _closest_ hit's location. If your game includes a “weapon or “spell that can hit multiple targets, you could also loop over the list of results, and interact with each of them.
 
 
 === Picking Action Using Mouse Pointer
@@ -388,13 +382,11 @@ Change the code as follows to simulate the player picking up objects into the in
 **  Position the nodes: The bottom left corner of the HUD is (0f,0f), and the top right corner is at (settings.getWidth(),settings.getHeight()).
 
 
-
 [IMPORTANT]
 ====
-Link to user-proposed solutions: <<jme3/beginner/solutions#,jme3:solutions>> +
-+++<u>Be sure to try to solve them for yourself first!</u>+++
+<<beginner/solutions.adoc#hello-picking,Some proposed solutions>> +
+*Be sure to try to solve them for yourself first!*
 ====
-
 
 
 == Conclusion
@@ -405,13 +397,3 @@ Use your imagination from here:
 
 *  In your game, the click can trigger any action on the identified Geometry: Detach it and put it into the inventory, attach something to it, trigger an animation or effect, open a door or crate, – etc.
 *  In your game, you could replace the red mark with a particle emitter, add an explosion effect, play a sound, calculate the new score after each hit depending on what was hit – etc.
-
-Now, wouldn't it be nice if those targets and the floor were solid objects and you could walk around between them? Let's continue to learn about <<jme3/beginner/hello_collision#,Collision Detection>>.
-
-'''
-
-See also:
-
-*  <<jme3/beginner/hello_input_system#,Hello Input>>
-*  <<jme3/advanced/mouse_picking#,Mouse Picking>>
-*  <<jme3/advanced/collision_and_intersection#,Collision and Intersection>>

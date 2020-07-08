@@ -1,19 +1,12 @@
 = jMonkeyEngine 3 Tutorial (12) - Hello Effects
 :author:
 :revnumber:
-:revdate: 2016/03/17 20:48
+:revdate: 2020/07/06
 :keywords: beginner, documentation, intro, transparency, effect
-:relfileprefix: ../../
-:imagesdir: ../..
-:experimental:
-ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 
-
-Previous: <<jme3/beginner/hello_audio#,Hello Audio>>,
-Next: <<jme3/beginner/hello_physics#,Hello Physics>>
 
 [.right]
-image::jme3/beginner/beginner-effect-fire.png[beginner-effect-fire.png,150,165]
+image::beginner/beginner-effect-fire.png[beginner-effect-fire.png,150,165]
 
 
 When you see one of the following in a game, then a particle system is likely behind it:
@@ -32,12 +25,7 @@ These scene elements cannot be modeled by meshes. In very simple terms:
 
 Particle effects can be animated (e.g. sparks, drops) and static (strands of grass, hair). Non-particle effects include bloom/glow, and motion blur/afterimage. In this tutorial you learn how to make animated particles (com.jme3.effect).
 
-
-[TIP]
-====
-To use the example assets in a new jMonkeyEngine SDK project, btn:[RMB] click your project, select menu:Properties[Libraries>Add Library] and add the "`jme3-test-data`" library.
-====
-
+include::partial$add-testdata-tip.adoc[]
 
 
 == Sample Code
@@ -112,7 +100,7 @@ link:https://github.com/jMonkeyEngine/jmonkeyengine/tree/master/jme3-examples/sr
 === Texture Animation and Variation
 
 [.right]
-image::jme3/beginner/Debris.png[Debris.png,96,96]
+image::beginner/Debris.png[Debris.png,96,96]
 
 
 Start by choosing a material texture for your effect. If you provide the emitter with a set of textures (see image), it can use them either for variation (random order), or as animation steps (fixed order).
@@ -149,35 +137,9 @@ The fire material is created the same way, just using "`Effects/Explosion/flame.
 
 === Default Particle Textures
 
-The following particle textures included in `test-data.jar`. You can copy and use them in your own effects.
-[cols="3", options="header"]
-|===
+The following particle textures are included in `test-data.jar`. You can copy and use them in your own effects.
 
-<a| Texture Path
-a| Dimension
-a| Preview
-
-<a| Effects/Explosion/Debris.png
-<a| 3*3
-a| image:jme3/beginner/Debris.png[Debris.png,32,32]
-
-<a| Effects/Explosion/flame.png
-<a| 2*2
-a| image:jme3/beginner/flame.png[flame.png,32,32]
-
-<a| Effects/Explosion/shockwave.png
-<a| 1*1
-a| image:jme3/beginner/shockwave.png[shockwave.png,32,32]
-
-a| Effects/Explosion/smoketrail.png
-<a| 1*3
-a| image:jme3/beginner/smoketrail.png[smoketrail.png,32,32]
-
-<a| Effects/Smoke/Smoke.png
-a| 1*15
-a| image:jme3/beginner/Smoke.png[Smoke.png,96,32]
-
-|===
+include::partial$default-particles-table.adoc[]
 
 Copy them into your `assets/Effects` directory to use them.
 
@@ -204,7 +166,7 @@ For your game, you will likely create custom particle textures. Look at the fire
 ----
 
 [.right]
-image::jme3/beginner/flame.png[flame.png,96,96]
+image::beginner/flame.png[flame.png,96,96]
 
 
 Compare the texture with the resulting effect.
@@ -299,7 +261,7 @@ a| Whether particles fall down (positive) or fly up (negative). Set to 0f for a 
 
 |===
 
-You can find details about <<jme3/advanced/particle_emitters#configure_parameters,effect parameters>> here.
+You can find details about xref:ROOT:jme3/advanced/particle_emitters.adoc#configure_parameters[effect parameters] here.
 Add and modify one parameter at a time, and try different values until you get the effect you want.
 
 
@@ -323,5 +285,3 @@ Can you "`invert`" the fire effect into a small waterfall? Here some tips:
 == Conclusion
 
 You have learned that many different effects can be created by changing the parameters and textures of one general emitter object.
-
-Now you move on to another exciting chapter – the simulation of <<jme3/beginner/hello_physics#,physical objects>>. Let's shoot some cannon balls at a brick wall!

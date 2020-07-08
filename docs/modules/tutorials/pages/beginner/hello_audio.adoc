@@ -1,24 +1,13 @@
 = jMonkeyEngine 3 Tutorial (11) - Hello Audio
-:author: 
-:revnumber: 
-:revdate: 2016/03/17 20:48
+:author:
+:revnumber:
+:revdate: 2020/07/06
 :keywords: sound, documentation, beginner, intro
-:relfileprefix: ../../
-:imagesdir: ../..
-ifdef::env-github,env-browser[:outfilesuffix: .adoc]
 
 
-Previous: <<jme3/beginner/hello_terrain#,Hello Terrain>>, Next: <<jme3/beginner/hello_effects#,Hello Effects>>
+This tutorial explains how to add 3D sound to a game, and how to make sounds play together with events, such as clicking. You learn how to use an Audio Listener and Audio Nodes. You also make use of an Action Listener and a MouseButtonTrigger from the previous xref:beginner/hello_input_system.adoc[Hello Input] tutorial to make a mouse click trigger a gun shot sound.
 
-This tutorial explains how to add 3D sound to a game, and how to make sounds play together with events, such as clicking. You learn how to use an Audio Listener and Audio Nodes. You also make use of an Action Listener and a MouseButtonTrigger from the previous <<jme3/beginner/hello_input_system#,Hello Input>> tutorial to make a mouse click trigger a gun shot sound.
-
-
-[TIP]
-====
-To use the example assets in a new jMonkeyEngine SDK project, right-click your project, select “Properties, go to “Libraries, press “Add Library and add the “jme3-test-data library.
-====
-
-
+include::partial$add-testdata-tip.adoc[]
 
 == Sample Code
 
@@ -52,7 +41,7 @@ public class HelloAudio extends SimpleApplication {
   @Override
   public void simpleInitApp() {
     flyCam.setMoveSpeed(40);
-    
+
     /** just a blue box floating in space */
     Box box1 = new Box(1, 1, 1);
     player = new Geometry("Player", box1);
@@ -78,7 +67,7 @@ public class HelloAudio extends SimpleApplication {
     /* nature sound - keeps playing in a loop. */
     audio_nature = new AudioNode(assetManager, "Sound/Environment/Ocean Waves.ogg", DataType.Stream);
     audio_nature.setLooping(true);  // activate continuous playing
-    audio_nature.setPositional(true);   
+    audio_nature.setPositional(true);
     audio_nature.setVolume(3);
     rootNode.attachChild(audio_nature);
     audio_nature.play(); // play continuously!
@@ -118,7 +107,7 @@ When you run the sample, you should see a blue cube. You should hear a nature-li
 
 In the `initSimpleApp()` method, you create a simple blue cube geometry called `player` and attach it to the scene – this is just arbitrary sample content, so you see something when running the audio sample.
 
-Let's have a closer look at `initAudio()` to learn how to use `AudioNode`s.
+Let's have a closer look at `initAudio()` to learn how to use `AudioNode`.
 
 
 == AudioNodes
@@ -248,7 +237,7 @@ The two sounds are two different use cases:
 **  This is why you `setLooping(true)`.
 
 
-Now every sound knows whether it should loop or not. 
+Now every sound knows whether it should loop or not.
 
 Apart from the looping boolean, another difference is where `play().playInstance()` is called on those nodes:
 
@@ -278,20 +267,16 @@ Apart from the looping boolean, another difference is where `play().playInstance
 
 == Buffered or Streaming?
 
-As of 3.1-alpha2, the Enum in the AudioNode constructor defines whether the audio is buffered or streamed. For example:
+The Enum in the AudioNode constructor defines whether the audio is buffered or streamed. For example:
 
 [source,java]
 ----
 audio_gunshot = new AudioNode(assetManager, "Sound/Effects/Gun.wav", DataType.Buffer); // buffered
 ...
-audio_nature = new AudioNode(assetManager, "Sound/Environment/Nature.ogg", DataType.Stream); // streamed 
+audio_nature = new AudioNode(assetManager, "Sound/Environment/Nature.ogg", DataType.Stream); // streamed
 ----
 
 Typically, you stream long sounds, and buffer short sounds.
-
-+++<strike>Note that streamed sounds can not loop (i.e. setLooping will not work as you expect). Check the getStatus on the node and if it has stopped recreate the node.</strike>+++ (In 3.1-alpha2, this is wrong).
-If you still run 3.0, the above is still the case aswell as a simple boolean will be used instead of `DataType`
-
 
 == Play() or PlayInstance()?
 [cols="2", options="header"]
@@ -301,7 +286,7 @@ a|audio.play()
 a|audio.playInstance()
 
 a|Plays buffered sounds.
-a|Plays buffered sounds. 
+a|Plays buffered sounds.
 
 a|Plays streamed sounds.
 a|Cannot play streamed sounds.
@@ -333,13 +318,13 @@ If you don't do that, the results of 3D audio will be quite random.
 
 == Global, Directional, Positional?
 
-In this example, you defined the nature sound as coming from a certain position, but not the gunshot sound. This means your gunshot is global and can be heard everywhere with the same volume. JME3 also supports directional sounds which you can only hear from a certain direction. 
+In this example, you defined the nature sound as coming from a certain position, but not the gunshot sound. This means your gunshot is global and can be heard everywhere with the same volume. JME3 also supports directional sounds which you can only hear from a certain direction.
 
 It makes equal sense to make the gunshot positional, and let the ambient sound come from every direction. How do you decide which type of 3D sound to use from case to case?
 
 *  In a game with moving enemies you may want to make the gun shot or footsteps positional sounds. In these cases you must move the AudioNode to the location of the enemy before `playInstance()`ing it. This way a player with stereo speakers hears from which direction the enemy is coming.
 *  Similarly, you may have game levels where you want one background sound to play globally. In this case, you would make the AudioNode neither positional nor directional (set both to false).
-*  If you want sound to be “absorbed by the walls and only broadcast in one direction, you would make this AudioNode directional. This tutorial does not discuss directional sounds, you can read about <<jme3/advanced/audio#,Advanced Audio>> here.
+*  If you want sound to be "`absorbed`" by the walls and only broadcast in one direction, you would make this AudioNode directional. This tutorial does not discuss directional sounds, you can read about xref:ROOT:jme3/advanced/audio.adoc[Advanced Audio] here.
 
 In short, you must choose in every situation whether it makes sense for a sound to be global, directional, or positional.
 
@@ -350,13 +335,5 @@ You now know how to add the two most common types of sound to your game: Global 
 
 [TIP]
 ====
-JME's Audio implementation also supports more advanced effects such as reverberation and Doppler effect. Use these “pro features to make audio sound different depending on whether it's in the hallway, in a cave, outdoors, or in a carpeted room. Find out more about environmental effects from the sample code included in the jme3test directory and from the advanced <<jme3/advanced/audio#,Audio>> docs.
+JME's Audio implementation also supports more advanced effects such as reverberation and Doppler effect. Use these "`pro`" features to make audio sound different depending on whether it's in the hallway, in a cave, outdoors, or in a carpeted room. Find out more about environmental effects from the sample code included in the jme3test directory and from the advanced xref:ROOT:jme3/advanced/audio.adoc[Advanced Audio] docs.
 ====
-
-Want some fire and explosions to go with your sounds? Read on to learn more about <<jme3/beginner/hello_effects#,effects>>.
-
-'''
-
-See also:
-
-*   <<jme3/advanced/audio#,Audio>>
