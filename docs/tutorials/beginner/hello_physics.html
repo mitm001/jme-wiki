@@ -272,10 +272,10 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Do you remember the <a href="#jme3/beginner/hello_collision.adoc" class="page unresolved">Hello Collision</a> tutorial where you made the model of a town solid and walked through it in a first-person perspective? Then you may remember that, for the simulation of physical forces, jME3 integrates the <a href="http://jbullet.advel.cz/">jBullet</a> library.</p>
+<p>Do you remember the <a href="hello_collision.html" class="page">Hello Collision</a> tutorial where you made the model of a town solid and walked through it in a first-person perspective? Then you may remember that, for the simulation of physical forces, jME3 integrates the <a href="http://jbullet.advel.cz/">jBullet</a> library.</p>
 </div>
 <div class="paragraph">
-<p>Apart from making models “solid, the most common use cases for physics in 3D games are:</p>
+<p>Apart from making models &#8220;solid&#8221;, the most common use cases for physics in 3D games are:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -292,7 +292,7 @@
 <p>Exposing objects to forces and gravity – Example: spaceships or zero-g flight</p>
 </li>
 <li>
-<p>Animating ragdolls – Example: “realistic character simulations</p>
+<p>Animating ragdolls – Example: &#8220;realistic&#8221; character simulations</p>
 </li>
 <li>
 <p>Swinging pendulums, rope bridges, flexible chains, and much more…</p>
@@ -315,7 +315,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>To use the example assets in a new jMonkeyEngine SDK project, right-click your project, select “Properties, go to “Libraries, press “Add Library and add the “jme3-test-data library.</p>
+<p>To use the example assets in a new jMonkeyEngine SDK project, right-click your project, select <span class="menuseq"><b class="menu">Properties</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Libraries</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Add Library</b></span>, and add the &#8220;jme3-test-data&#8221; library.</p>
 </div>
 </td>
 </tr>
@@ -326,9 +326,6 @@
 <div class="sect1">
 <h2 id="sample-code"><a class="anchor" href="#sample-code"></a>Sample Code</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Thanks to double1984 for contributing this fun sample!</p>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package jme3test.helloworld;
@@ -535,7 +532,7 @@ public class HelloPhysics extends SimpleApplication {
 <h2 id="a-basic-physics-application"><a class="anchor" href="#a-basic-physics-application"></a>A Basic Physics Application</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In the previous tutorials, you used static Geometries (boxes, spheres, and models) that you placed in the scene. Depending on their translation, Geometries can “float in mid-air and even overlap – they are not affected by “gravity and have no physical mass. This tutorial shows how to add physical properties to Geometries.</p>
+<p>In the previous tutorials, you used static Geometries (boxes, spheres, and models) that you placed in the scene. Depending on their translation, Geometries can &#8220;float&#8221; in mid-air and even overlap – they are not affected by &#8220;gravity&#8221; and have no physical mass. This tutorial shows how to add physical properties to Geometries.</p>
 </div>
 <div class="paragraph">
 <p>As always, start with a standard com.jme3.app.SimpleApplication. To activate physics, create a com.jme3.bullet.BulletAppState, and and attach it to the SimpleApplication&#8217;s AppState manager.</p>
@@ -565,7 +562,7 @@ public class HelloPhysics extends SimpleApplication {
 <div class="sect2">
 <h3 id="geometries"><a class="anchor" href="#geometries"></a>Geometries</h3>
 <div class="paragraph">
-<p>In this “shoot at the wall example, you use Geometries such as cannon balls and bricks. Geometries contain meshes, such as Shapes. Let&#8217;s create and initialize some Shapes: Boxes and Spheres.</p>
+<p>In this &#8220;shoot&#8221; at the wall example, you use Geometries such as cannon balls and bricks. Geometries contain meshes, such as Shapes. Let&#8217;s create and initialize some Shapes: Boxes and Spheres.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -900,7 +897,7 @@ As before, you write a custom <code>initFloor()</code> method that creates a fla
 <div class="ulist">
 <ul>
 <li>
-<p>A kinematic is unaffected by forces or gravity, which means it can float in mid-air and cannot be pushed away by dynamic “cannon balls etc.</p>
+<p>A kinematic is unaffected by forces or gravity, which means it can float in mid-air and cannot be pushed away by dynamic &#8220;cannon&#8221; balls etc.</p>
 </li>
 <li>
 <p>A kinematic RigidBody has a mass.</p>
@@ -954,10 +951,10 @@ bulletAppState.setDebugEnabled(true);</code></pre>
 <p>Fill your scene with walls, bricks, and cannon balls. When do you begin to see a performance impact?</p>
 </div>
 <div class="paragraph">
-<p>Popular AAA games use a clever mix of physics, animation and prerendered graphics to give you the illusion of a real, “physical world. Think of your favorite video games and try to spot where and how the game designers trick you into believing that the whole scene is physical. For example, think of a building “breaking into 4-8 parts after an explosion. The pieces most likely fly on predefined (so called kinematic) paths and are only replaced by dynamic Spatials after they touch the ground… Now that you start to implement game physics yourself, look behind the curtain!</p>
+<p>Popular AAA games use a clever mix of physics, animation and prerendered graphics to give you the illusion of a real, &#8220;physical&#8221; world. Think of your favorite video games and try to spot where and how the game designers trick you into believing that the whole scene is physical. For example, think of a building &#8220;breaking&#8221; into 4-8 parts after an explosion. The pieces most likely fly on predefined (so called kinematic) paths and are only replaced by dynamic Spatials after they touch the ground… Now that you start to implement game physics yourself, look behind the curtain!</p>
 </div>
 <div class="paragraph">
-<p>Using physics everywhere in a game sounds like a cool idea, but it is easily overused. Although the physics nodes are put to “sleep when they are not moving, creating a world solely out of dynamic physics nodes will quickly bring you to the limits of your computer&#8217;s capabilities.</p>
+<p>Using physics everywhere in a game sounds like a cool idea, but it is easily overused. Although the physics nodes are put to &#8220;sleep&#8221; when they are not moving, creating a world solely out of dynamic physics nodes will quickly bring you to the limits of your computer&#8217;s capabilities.</p>
 </div>
 </div>
 </div>
