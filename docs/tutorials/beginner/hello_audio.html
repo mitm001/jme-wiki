@@ -393,7 +393,7 @@ public class HelloAudio extends SimpleApplication {
 <p>In the <code>initSimpleApp()</code> method, you create a simple blue cube geometry called <code>player</code> and attach it to the scene – this is just arbitrary sample content, so you see something when running the audio sample.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s have a closer look at <code>initAudio()</code> to learn how to use `AudioNode`s.</p>
+<p>Let&#8217;s have a closer look at <code>initAudio()</code> to learn how to use <code>AudioNode</code>.</p>
 </div>
 </div>
 </div>
@@ -614,7 +614,7 @@ audio_nature = new AudioNode(assetManager, "Sound/Environment/Nature.ogg", DataT
 <h2 id="buffered-or-streaming"><a class="anchor" href="#buffered-or-streaming"></a>Buffered or Streaming?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>As of 3.1-alpha2, the Enum in the AudioNode constructor defines whether the audio is buffered or streamed. For example:</p>
+<p>The Enum in the AudioNode constructor defines whether the audio is buffered or streamed. For example:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -625,10 +625,6 @@ audio_nature = new AudioNode(assetManager, "Sound/Environment/Nature.ogg", DataT
 </div>
 <div class="paragraph">
 <p>Typically, you stream long sounds, and buffer short sounds.</p>
-</div>
-<div class="paragraph">
-<p><strike>Note that streamed sounds can not loop (i.e. setLooping will not work as you expect). Check the getStatus on the node and if it has stopped recreate the node.</strike> (In 3.1-alpha2, this is wrong).
-If you still run 3.0, the above is still the case aswell as a simple boolean will be used instead of <code>DataType</code></p>
 </div>
 </div>
 </div>
