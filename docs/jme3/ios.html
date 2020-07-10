@@ -488,7 +488,7 @@
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_add_ios_lib.jpg" alt="xcode_add_ios_lib.jpg">
+<img src="../_images/xcode_add_ios_lib.jpg" alt="xcode_add_ios_lib.jpg">
 </div>
 </div>
 <div class="admonitionblock tip">
@@ -532,7 +532,7 @@
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_enable_ios_deploy.jpg" alt="xcode_enable_ios_deploy.jpg">
+<img src="../_images/xcode_enable_ios_deploy.jpg" alt="xcode_enable_ios_deploy.jpg">
 </div>
 </div>
 <div class="paragraph">
@@ -604,7 +604,7 @@
 <p>First change the selected &#8220;TARGET&#8221; at the top of the screen from <code>iPhone 7 Plus</code> to <code>Generic iOS Device</code>. This is so we can do a full build. If you want to run it in a simulator then you can change it back later.</p>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_generic_ios.jpg" alt="xcode_generic_ios.jpg">
+<img src="../_images/xcode_generic_ios.jpg" alt="xcode_generic_ios.jpg">
 </div>
 </div>
 </li>
@@ -614,7 +614,7 @@
 <div class="content">
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_issue_nav.jpg" alt="xcode_issue_nav.jpg">
+<img src="../_images/xcode_issue_nav.jpg" alt="xcode_issue_nav.jpg">
 </div>
 </div>
 <div class="paragraph">
@@ -628,7 +628,7 @@
 <p>Click <b class="button">Validate Project Settings</b> followed by <b class="button">PERFORM CHANGES</b> to accept all the suggested amendments.</p>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_perform_changes.jpg" alt="xcode_perform_changes.jpg">
+<img src="../_images/xcode_perform_changes.jpg" alt="xcode_perform_changes.jpg">
 </div>
 </div>
 </li>
@@ -636,7 +636,7 @@
 <p>Click on the Missing Image warning and XCODE will automatically add a placeholder for you.</p>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_add_placeholder.jpg" alt="xcode_add_placeholder.jpg">
+<img src="../_images/xcode_add_placeholder.jpg" alt="xcode_add_placeholder.jpg">
 </div>
 </div>
 </li>
@@ -644,7 +644,7 @@
 <p>Add your iOS developer account details by clicking on the target and then the Account Drop down.</p>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_add_account.jpg" alt="xcode_add_account.jpg">
+<img src="../_images/xcode_add_account.jpg" alt="xcode_add_account.jpg">
 </div>
 </div>
 </li>
@@ -655,7 +655,7 @@
 <p>Now click the &#8220;PROJECT&#8221; menu and &#8220;BUILD&#8221; again and it should compile now but fails at the linking stage.</p>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_build.jpg" alt="xcode_build.jpg">
+<img src="../_images/xcode_build.jpg" alt="xcode_build.jpg">
 </div>
 </div>
 </li>
@@ -682,7 +682,7 @@
 <p>Scroll down to &#8220;LINKING&#8221; section.</p>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_linking.jpg" alt="xcode_linking.jpg">
+<img src="../_images/xcode_linking.jpg" alt="xcode_linking.jpg">
 </div>
 </div>
 </li>
@@ -690,7 +690,7 @@
 <p>Double click on <b class="button">OTHER LINKER FLAGS</b>.</p>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_linker_flags.jpg" alt="xcode_linker_flags.jpg">
+<img src="../_images/xcode_linker_flags.jpg" alt="xcode_linker_flags.jpg">
 </div>
 </div>
 </li>
@@ -736,7 +736,7 @@
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_other_linker.png" alt="xcode_other_linker.png">
+<img src="../_images/xcode_other_linker.png" alt="xcode_other_linker.png">
 </div>
 </div>
 </div>
@@ -768,7 +768,7 @@
 <p>Scroll down to &#8220;BUILD OPTIONS&#8221; section and change &#8220;ENABLE BITCODE&#8221; to &#8220;NO&#8221;.</p>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_disable_bitcode.jpg" alt="xcode_disable_bitcode.jpg">
+<img src="../_images/xcode_disable_bitcode.jpg" alt="xcode_disable_bitcode.jpg">
 </div>
 </div>
 </li>
@@ -785,7 +785,7 @@
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/sdk/xcode_publish.png" alt="xcode_publish.png">
+<img src="../_images/xcode_publish.png" alt="xcode_publish.png">
 </div>
 </div>
 </li>
@@ -807,7 +807,7 @@
 <p>Effectively native code can reside in both the Xcode project and in the <code>ios/src</code> folder. To keep the dependencies clean and make code reusable you should try to put generic native code that does not depend on the Xcode project in the <code>ios/src</code> folder. You can also mix and match ARC and non-ARC code through this by converting the main project to use ARC and putting code with manual memory management in the <code>ios/src</code> folder.</p>
 </div>
 <div class="paragraph">
-<p>Java code for iOS should be in the <code>ios/src</code> folder as well for clean separation, its also the only place where they will be compiled with a reference to the iOS specific jME classes. For information on how to connect your application code and device specific code, see the <a href="#../sdk:android.adoc#using_android_specific_functions" class="page unresolved">Android</a>.</p>
+<p>Java code for iOS should be in the <code>ios/src</code> folder as well for clean separation, its also the only place where they will be compiled with a reference to the iOS specific jME classes. For information on how to connect your application code and device specific code, see the <a href="../sdk/android.html#using_android_specific_functions" class="page">Android</a>.</p>
 </div>
 </div>
 </div>
