@@ -483,7 +483,7 @@ The android support is in constant enhancement so if you have questions or sugge
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>(You don&#8217;t need the ADT Bundle for Windows. Choose “USE AN EXISTING IDE and download the SDK Tools)</p>
+<p>(You don&#8217;t need the ADT Bundle for Windows. Choose &#8220;USE AN EXISTING IDE&#8221; and download the SDK Tools)</p>
 </li>
 <li>
 <p>It&#8217;s recommended to choose another destination folder.</p>
@@ -509,7 +509,7 @@ The android support is in constant enhancement so if you have questions or sugge
 <p>Go to Tools→Plugins→Available Plugins.</p>
 </li>
 <li>
-<p>Install the “Android plugin.</p>
+<p>Install the &#8220;Android&#8221; plugin.</p>
 </li>
 </ol>
 </div>
@@ -522,7 +522,7 @@ The android support is in constant enhancement so if you have questions or sugge
 <div class="ulist">
 <ul>
 <li>
-<p>Android 2.3 device or better with development mode (“USB-Debugging) enabled</p>
+<p>Android 2.3 device or better with development mode (&#8220;USB-Debugging&#8221;) enabled</p>
 </li>
 <li>
 <p>Graphic card that supports OpenGL ES 2.0 or better</p>
@@ -592,7 +592,7 @@ The android support is in constant enhancement so if you have questions or sugge
 <div class="sect2">
 <h3 id="jmonkeyengine-sdk-android-integration"><a class="anchor" href="#jmonkeyengine-sdk-android-integration"></a>jMonkeyEngine SDK Android Integration</h3>
 <div class="paragraph">
-<p>Mobile deployment is a “one-click option next to Desktop/WebStart/Applet deployment in the jMonkeyEngine SDK.</p>
+<p>Mobile deployment is a &#8220;one-click&#8221; option next to Desktop/WebStart/Applet deployment in the jMonkeyEngine SDK.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -639,7 +639,7 @@ The android support is in constant enhancement so if you have questions or sugge
 </li>
 <li>
 <p>In the Application&gt;Android Properties, enable Android Deployment, and select an Android target. E.g. <code>Android 4.2.2</code><br>
-This creates a “mobile folder in your projects directory. This folder contains a complete android project with correct settings to run the application using the AndroidHarness.</p>
+This creates a &#8220;mobile&#8221; folder in your projects directory. This folder contains a complete android project with correct settings to run the application using the AndroidHarness.</p>
 </li>
 <li>
 <p>(Restart the jMonkeyEngine)</p>
@@ -651,7 +651,7 @@ It lets you edit the MainActivitity.java, the AndroidManifest.xml, and build.pro
 </ol>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/jme3/nvyyd.png" alt="nvyyd.png" width="" height=""></span></p>
+<p><span class="image"><img src="_images/nvyyd.png" alt="nvyyd.png" width="" height=""></span></p>
 </div>
 <div class="paragraph">
 <p>The Android deployment option creates a separate sub-project for android and makes the main project and associated libraries available to the sub-project as libraries. The sub-project can be edited using NBAndroid (see below) or using Eclipse or any other IDE that supports standard android projects. Normally you do not need to edit the android project files. Exceptions are described further below. <em>The libraries are first added to the android sub-project when the main project is built for the first time.</em></p>
@@ -667,7 +667,7 @@ It lets you edit the MainActivitity.java, the AndroidManifest.xml, and build.pro
 </div>
 <div class="paragraph">
 <p>Right-click the project node to build your project.<br>
-An APK file is created in the “dist folder.</p>
+An APK file is created in the &#8220;dist&#8221; folder.</p>
 </div>
 <div class="paragraph">
 <p><strong>Running</strong></p>
@@ -678,19 +678,19 @@ An APK file is created in the “dist folder.</p>
 <p>Right-click the project node and choose Set Main Project.</p>
 </li>
 <li>
-<p>Select the “Android Device build configuration next to the Run toolbar button.</p>
+<p>Select the &#8220;Android Device&#8221; build configuration next to the Run toolbar button.</p>
 </li>
 <li>
-<p><em>Make sure “Compile on Save is disabled in your project preferences.</em></p>
+<p><em>Make sure &#8220;Compile on Save&#8221; is disabled in your project preferences.</em></p>
 </li>
 <li>
-<p>Run the application on a connected phone by right-clicking it and selecting “Run or press the “Play button in the toolbar.</p>
+<p>Run the application on a connected phone by right-clicking it and selecting &#8220;Run&#8221; or press the &#8220;Play&#8221; button in the toolbar.</p>
 </li>
 <li>
-<p>The application will run and output its log to the “Output window of the SDK.</p>
+<p>The application will run and output its log to the &#8220;Output&#8221; window of the SDK.</p>
 </li>
 <li>
-<p>When finished testing, click the “x next to the run status in the lower right to quit the logging output.</p>
+<p>When finished testing, click the &#8220;x&#8221; next to the run status in the lower right to quit the logging output.</p>
 </li>
 </ol>
 </div>
@@ -760,10 +760,10 @@ An APK file is created in the “dist folder.</p>
 <p>The main application class parameter for the AndroidHarness is taken from the jme3 project settings when enabling android deployment. Currently it is not updated when you change the main class package or name.</p>
 </li>
 <li>
-<p>When you disable the mobile deployment option, the whole “mobile” folder is deleted.</p>
+<p>When you disable the mobile deployment option, the whole &#8220;mobile&#8221; folder is deleted.</p>
 </li>
 <li>
-<p>The “errors shown in the MainActivity are wrongly displayed only in the editor and will disappear when you install NBAndroid (see below).</p>
+<p>The &#8220;errors&#8221; shown in the MainActivity are wrongly displayed only in the editor and will disappear when you install NBAndroid (see below).</p>
 </li>
 <li>
 <p>To sign your application, edit the mobile/build.properties file to point at valid keystore files.</p>
@@ -793,7 +793,7 @@ An APK file is created in the “dist folder.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Best Practice:</strong> Ideally, you write the core application code in a way that it checks for the environment it&#8217;s being run on, and automatically adapts the device&#8217;s limitations by switching off effects, changing input mechanisms etc. Learn how to <a href="#jme3/advanced/read_graphic_card_capabilites.adoc" class="page unresolved">read graphic card capabilites</a> here.</p>
+<p><strong>Best Practice:</strong> Ideally, you write the core application code in a way that it checks for the environment it&#8217;s being run on, and automatically adapts the device&#8217;s limitations by switching off effects, changing input mechanisms etc. Learn how to <a href="../jme3/advanced/read_graphic_card_capabilites.html" class="page">read graphic card capabilites</a> here.</p>
 </div>
 </div>
 </div>
@@ -804,11 +804,11 @@ An APK file is created in the “dist folder.</p>
 <p>As described above, you should always try to design your application as platform independent as possible. If your game becomes a sudden hit on android, why not release it on Facebook as an applet as well? When your application is designed in a platform independent way, you don&#8217;t have to do much more but check a checkbox to deploy your application as an applet. But what if you want to for example access the camera of an android device? Inevitably you will have to use android specific api to access the camera.</p>
 </div>
 <div class="paragraph">
-<p>Since the main project is not configured to access the android api directly, you have to install NBAndroid (see above) to be able to edit the created android project in the SDK. After installing, click the “open project button and navigate to the “mobile folder inside the main project folder (it should show up with an android “a icon) and open it.</p>
+<p>Since the main project is not configured to access the android api directly, you have to install NBAndroid (see above) to be able to edit the created android project in the SDK. After installing, click the &#8220;open&#8221; project button and navigate to the &#8220;mobile&#8221; folder inside the main project folder (it should show up with an android &#8220;a&#8221; icon) and open it.</p>
 </div>
 <div class="imageblock right">
 <div class="content">
-<img src="_images/jme3/android_access.png" alt="android_access.png" width="" height="">
+<img src="_images/android_access.png" alt="android_access.png" width="" height="">
 </div>
 </div>
 <div class="paragraph">
@@ -823,7 +823,7 @@ An APK file is created in the “dist folder.</p>
 <h2 id="signing-an-apk"><a class="anchor" href="#signing-an-apk"></a>Signing an APK</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When you have a mobile project in the “important files” section you have an “Android Properties” file.<br>
+<p>When you have a mobile project in the &#8220;important files&#8221; section you have an &#8220;Android Properties&#8221; file.<br>
 There are 2 entries in this file :<br>
 key.store=path/to/your/keystore/on/your/drive/mykeystore.keystore<br>
 key.alias=mykeystorealias</p>
