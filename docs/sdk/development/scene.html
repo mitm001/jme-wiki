@@ -488,7 +488,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>To reduce system overhead the jMonkeyEngine SDK Core supplies one scene/jme3 application that is shared between plugins. Furthermore there&#8217;s the “SceneExplorer that shows a visual representation of the scenegraph and its objects properties across plugins.</p>
+<p>To reduce system overhead the jMonkeyEngine SDK Core supplies one scene/jme3 application that is shared between plugins. Furthermore there&#8217;s the &#8220;SceneExplorer&#8221; that shows a visual representation of the scenegraph and its objects properties across plugins.</p>
 </div>
 </div>
 </div>
@@ -514,7 +514,7 @@
 <h2 id="listening-for-node-selection"><a class="anchor" href="#listening-for-node-selection"></a>Listening for Node selection</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In the jMonkeyEngine SDK, all objects are wrapped into NetBeans “Nodes (different thing than jme Nodes!). Such nodes can have properties and icons and can be displayed and selected in the jMonkeyEngine SDK UI. The SceneExplorer shows a tree of Nodes that wrap the Spatials of the current scene and allows manipulating their properties on selection. A jME “Spatial is wrapped by a “JmeSpatial node, for example. One advantage of these Nodes is that one can manipulate properties of Spatials directly from the AWT thread.</p>
+<p>In the jMonkeyEngine SDK, all objects are wrapped into NetBeans &#8220;Nodes&#8221; (different thing than jme Nodes!). Such nodes can have properties and icons and can be displayed and selected in the jMonkeyEngine SDK UI. The SceneExplorer shows a tree of Nodes that wrap the Spatials of the current scene and allows manipulating their properties on selection. A jME &#8220;Spatial&#8221; is wrapped by a &#8220;JmeSpatial&#8221; node, for example. One advantage of these Nodes is that one can manipulate properties of Spatials directly from the AWT thread.</p>
 </div>
 <div class="paragraph">
 <p>To listen to the current selection, implement org.openide.util.LookupListener and register like this:</p>
@@ -541,7 +541,7 @@ public void resultChanged(LookupEvent ev) {
 </div>
 </div>
 <div class="paragraph">
-<p>You can also access the “real spatial but since its part of the scenegraph you will have to modify it on that thread:</p>
+<p>You can also access the &#8220;real&#8221; spatial but since its part of the scenegraph you will have to modify it on that thread:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -570,7 +570,7 @@ for (JmeSpatial jmeSpatial : items) {
 </div>
 <div class="paragraph">
 <p>+
-The SceneRequest object has to contain several things. A thing that you must supply is a jme “Node wrapped into a “JmeNode object. This is your rootNode that you use to display and build your scene. As soon as you control the scene, you will have to control the camera etc. yourself.</p>
+The SceneRequest object has to contain several things. A thing that you must supply is a jme &#8220;Node&#8221; wrapped into a &#8220;JmeNode&#8221; object. This is your rootNode that you use to display and build your scene. As soon as you control the scene, you will have to control the camera etc. yourself.</p>
 </div>
 <div class="listingblock">
 <div class="content">
