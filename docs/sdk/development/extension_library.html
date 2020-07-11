@@ -477,7 +477,7 @@
 <p>This page describes how you can wrap any jar library into a plugin that a jMonkeyEngine SDK user can download, install and then use the contained library in his own game projects.</p>
 </div>
 <div class="paragraph">
-<p>Make sure you have your SDK set up for plugin development <a href="#../../sdk/development/setup.adoc" class="page unresolved">as described here</a>.</p>
+<p>Make sure you have your SDK set up for plugin development <a href="#sdk/development/setup.adoc" class="page unresolved">as described here</a>.</p>
 </div>
 <div class="paragraph">
 <p>Creating the plugin project (in jMonkeyEngine SDK):</p>
@@ -488,19 +488,19 @@
 <p>Create a new Module Suite (or use an existing one)</p>
 </li>
 <li>
-<p>Open the suite, right-click the “Modules folder and select “Add new..</p>
+<p>Open the suite, right-click the &#8216;Modules&#8217; folder and select &#8220;Add new&#8221;..</p>
 </li>
 <li>
-<p>For “Project Name enter an all-lowercase name without spaces like <code>my-library</code></p>
+<p>For &#8220;Project Name&#8221; enter an all-lowercase name without spaces like <code>my-library</code></p>
 </li>
 <li>
-<p>Make sure the “Project Location is inside the module suite folder and press “Next</p>
+<p>Make sure the &#8220;Project Location&#8221; is inside the module suite folder and press &#8220;Next&#8221;</p>
 </li>
 <li>
-<p>Enter the base java package for your plugin in “Code Name Base like <code>com.mycompany.plugins.mylibrary</code></p>
+<p>Enter the base java package for your plugin in &#8220;Code Name Base&#8221; like <code>com.mycompany.plugins.mylibrary</code></p>
 </li>
 <li>
-<p>Enter a “Module Display Name for your plugin like “My Library</p>
+<p>Enter a &#8220;Module Display Name&#8221; for your plugin like &#8220;My Library&#8221;</p>
 </li>
 <li>
 <p>Press Finish</p>
@@ -513,26 +513,26 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Right click the Module Project and select “New→Other</p>
+<p>Right click the Module Project and select New→Other</p>
 </li>
 <li>
-<p>Under “Module Development select the “Java SE Library Descriptor template and press “Next</p>
+<p>Under &#8220;Module Development&#8221; select the &#8220;Java SE Library Descriptor&#8221; template and press &#8220;Next&#8221;</p>
 </li>
 <li>
-<p>If you dont have the external library registered in the jMonkeyEngine SDK yet, click “Manage Libraries and do the following:</p>
+<p>If you dont have the external library registered in the jMonkeyEngine SDK yet, click &#8220;Manage Libraries&#8221; and do the following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Click “New Library, enter a name for the library and press OK</p>
+<p>Click &#8220;New Library&#8221;, enter a name for the library and press OK</p>
 </li>
 <li>
-<p>In the “Classpath tab, press “Add JAR/Folder and select the jar file(s) needed for the library</p>
+<p>In the &#8220;Classpath&#8221; tab, press &#8220;Add JAR/Folder&#8221; and select the jar file(s) needed for the library</p>
 </li>
 <li>
-<p>In the “JavaDoc tab, press “Add ZIP/Folder and add the javadoc for the library (zipped or folder)</p>
+<p>In the &#8220;JavaDoc&#8221; tab, press &#8220;Add ZIP/Folder&#8221; and add the javadoc for the library (zipped or folder)</p>
 </li>
 <li>
-<p>In the “Sources tab you can add a folder or jar file containing the source files of the library if available</p>
+<p>In the &#8220;Sources&#8221; tab you can add a folder or jar file containing the source files of the library if available</p>
 </li>
 <li>
 <p>Press OK</p>
@@ -541,7 +541,7 @@
 </div>
 </li>
 <li>
-<p>Select the external library from the list and press “Next</p>
+<p>Select the external library from the list and press &#8220;Next&#8221;</p>
 </li>
 <li>
 <p>Enter a name for the Library (used as filename for the description file)</p>
@@ -555,13 +555,13 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>You will notice a new file “MyLibrary.xml is created in the plugins base package and linked to in the layer.xml file. Additionally the jar file and sources /javadoc are copied into a “release folder in the project root. This is basically it, you can configure a version number, license file (should be placed in Module root folder) and more via the Module Properties.</p>
+<p>You will notice a new file &#8220;MyLibrary.xml&#8221; is created in the plugins base package and linked to in the layer.xml file. Additionally the jar file and sources /javadoc are copied into a &#8220;release&#8221; folder in the project root. This is basically it, you can configure a version number, license file (should be placed in Module root folder) and more via the Module Properties.</p>
 </div>
 <div class="paragraph">
 <p>Note that the files in the release folder are <strong>not</strong> automatically updated when the library changes, you have to pack and replace the jar and zip files manually. See the build script extension in the link below on how you can make your module build script do that automatically.</p>
 </div>
 <div class="paragraph">
-<p>After you are done, you can <a href="#../../sdk/development/setup.adoc#jmonkeyengine_sdk_contributions_update_center" class="page unresolved">contribute the plugin in the jMonkeyEngine SDK contribution update center</a>.</p>
+<p>After you are done, you can <a href="setup.html#jmonkeyengine_sdk_contributions_update_center" class="page">contribute the plugin in the jMonkeyEngine SDK contribution update center</a>.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="projects_assets.html">Projects and Assets</a></span>
