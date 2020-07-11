@@ -475,13 +475,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#../sdk/development/setup.adoc" class="page unresolved">Creating a plugin</a></p>
+<p><a href="development/setup.html" class="page">Creating a plugin</a></p>
 </li>
 <li>
-<p><a href="#../sdk/development/general.adoc" class="page unresolved">Creating components</a></p>
+<p><a href="development/general.html" class="page">Creating components</a></p>
 </li>
 <li>
-<p><a href="#../sdk/build_platform.adoc" class="page unresolved">Building the jME SDK from scratch</a> (not necessary for plugin development, only for contributors)</p>
+<p><a href="build_platform.html" class="page">Building the jME SDK from scratch</a> (not necessary for plugin development, only for contributors)</p>
 </li>
 </ul>
 </div>
@@ -491,13 +491,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#../sdk/development/scene.adoc" class="page unresolved">The Main Scene</a></p>
+<p><a href="development/scene.html" class="page">The Main Scene</a></p>
 </li>
 <li>
-<p><a href="#../sdk/development/sceneexplorer.adoc" class="page unresolved">The Scene Explorer</a></p>
+<p><a href="development/sceneexplorer.html" class="page">The Scene Explorer</a></p>
 </li>
 <li>
-<p><a href="#../sdk/development/projects_assets.adoc" class="page unresolved">Projects and Assets</a></p>
+<p><a href="development/projects_assets.html" class="page">Projects and Assets</a></p>
 </li>
 </ul>
 </div>
@@ -507,10 +507,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#../sdk/development/extension_library.adoc" class="page unresolved">Create a library plugin from a jar file</a></p>
+<p><a href="development/extension_library.html" class="page">Create a library plugin from a jar file</a></p>
 </li>
 <li>
-<p><a href="#../sdk/development/model_loader.adoc" class="page unresolved">Create a new or custom model filetype and loader</a></p>
+<p><a href="development/model_loader.html" class="page">Create a new or custom model filetype and loader</a></p>
 </li>
 </ul>
 </div>
@@ -526,7 +526,7 @@
 <p>Although the scene can be accessed at any time via SceneApplication.getApplication() it is not recommended to modify the scene like that. Other plugins might be accessing the scene and updates will not be properly recognized. Use the sceneRequest object and the lookup of selected nodes and files to access things like the assetManager etc.</p>
 </li>
 <li>
-<p>It became a standard in jMonkeyEngine SDK to start the name of methods that execute directly on the OpenGL thread with “do e.g “doMoveSpatial, this makes identifying threading issues easier.</p>
+<p>It became a standard in jMonkeyEngine SDK to start the name of methods that execute directly on the OpenGL thread with &#8220;do&#8221; e.g &#8220;doMoveSpatial&#8221;, this makes identifying threading issues easier.</p>
 </li>
 <li>
 <p>The AssetManager of jme3 is threadsafe and can be used from any thread to load assets</p>
@@ -535,10 +535,10 @@
 <p>You can get access to the ProjectAssetManager via the Lookup of a JmeSpatial and other objects</p>
 </li>
 <li>
-<p>Use org.openide.filesystems.FileObject instead of java.io.File for file access, it always uses system-independent “/ path separators and has some more advanced functions that make file handling easier.</p>
+<p>Use org.openide.filesystems.FileObject instead of java.io.File for file access, it always uses system-independent &#8220;/&#8221; path separators and has some more advanced functions that make file handling easier.</p>
 </li>
 <li>
-<p>You can get a file from a string using Repository.getDefault().getDefaultFileSystem().getRoot().getFileObject(“aaa/bbb/ccc/whatever);</p>
+<p>You can get a file from a string using Repository.getDefault().getDefaultFileSystem().getRoot().getFileObject(&#8220;aaa/bbb/ccc/whatever&#8221;);</p>
 </li>
 <li>
 <p>You can convert a regular java File to a FileObject and vice versa using org.openide.filesystems.FileUtil</p>
@@ -554,16 +554,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>A “plugin” is anything you can tick in the plugin manager of the SDK. It can contain editors, simple “Java SE Libraries” that you can add to your projects as jar files and other things like project templates etc.</p>
+<p>A &#8220;plugin&#8221; is anything you can tick in the plugin manager of the SDK. It can contain editors, simple &#8220;Java SE Libraries&#8221; that you can add to your projects as jar files and other things like project templates etc.</p>
 </li>
 <li>
-<p>A “module” is the project type that allows you to create plugins, strictly speaking all plugins are modules but there can be modules that are never shown in the plugin list and only exist as dependencies of other modules.</p>
+<p>A &#8220;module&#8221; is the project type that allows you to create plugins, strictly speaking all plugins are modules but there can be modules that are never shown in the plugin list and only exist as dependencies of other modules.</p>
 </li>
 <li>
-<p>A “library” is an entry for a jar file (and optionally sources and javadocs) which can be added to a SDK project to be used and distributed with it</p>
+<p>A &#8220;library&#8221; is an entry for a jar file (and optionally sources and javadocs) which can be added to a SDK project to be used and distributed with it</p>
 </li>
 <li>
-<p>An “extension” is a generic name for stuff that extends the jME engine, like pathfinding algorithms or anything that can be used at the game runtime..</p>
+<p>An &#8220;extension&#8221; is a generic name for stuff that extends the jME engine, like pathfinding algorithms or anything that can be used at the game runtime..</p>
 </li>
 </ul>
 </div>
@@ -580,7 +580,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>AbstractCameraController → A basic camera control for plugins, used by SimpleSceneComposer and “View Model</p>
+<p>AbstractCameraController → A basic camera control for plugins, used by SimpleSceneComposer and &#8220;View Model&#8221;</p>
 </li>
 <li>
 <p>SceneToolController → A basic controller for having selection, cursor etc. displayed in the scene, used by SimpleSceneComposer</p>
