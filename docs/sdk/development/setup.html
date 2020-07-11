@@ -498,44 +498,44 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Install the “Netbeans Plugin Development and “NetBeans <abbr title="Application Programming Interface">API</abbr> Documentation plugins via Tools→Plugins</p>
+<p>Install the &#8220;Netbeans Plugin Development&#8221; and &#8220;NetBeans&#8221; <abbr title="Application Programming Interface">API</abbr> Documentation plugins via Tools→Plugins</p>
 </li>
 <li>
-<p>Create a new “Module Suite project (can be any name, this will be your local “collection of plugins that you create)</p>
+<p>Create a new &#8220;Module Suite&#8221; project (can be any name, this will be your local &#8220;collection&#8221; of plugins that you create)</p>
 </li>
 <li>
 <p>If no platform is listed, add one by selecting the SDK application folder</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Mac users have to right-click the jmonkeyplatform application and select “show contents and then select the jmonkeyplatform folder under Contents/Resources/</p>
+<p>Mac users have to right-click the jmonkeyplatform application and select &#8220;show contents&#8221; and then select the jmonkeyplatform folder under Contents/Resources/</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Open the suite, right-click the “Modules folder and select “Add new..</p>
+<p>Open the suite, right-click the &#8220;Modules&#8221; folder and select &#8220;Add new&#8221;..</p>
 </li>
 <li>
-<p>For “Project Name enter an all-lowercase name without spaces like <code>my-library</code></p>
+<p>For &#8220;Project Name&#8221; enter an all-lowercase name without spaces like <code>my-library</code></p>
 </li>
 <li>
-<p>Make sure the “Project Location is inside the module suite folder and press “Next</p>
+<p>Make sure the &#8220;Project Location&#8221; is inside the module suite folder and press &#8220;Next&#8221;</p>
 </li>
 <li>
-<p>Enter the base java package for your plugin in “Code Name Base like <code>com.mycompany.plugins.mylibrary</code></p>
+<p>Enter the base java package for your plugin in &#8220;Code Name Base&#8221; like <code>com.mycompany.plugins.mylibrary</code></p>
 </li>
 <li>
-<p>Enter a “Module Display Name for your plugin like “My Library</p>
+<p>Enter a &#8220;Module Display Name&#8221; for your plugin like &#8220;My Library&#8221;</p>
 </li>
 <li>
 <p>Press Finish</p>
 </li>
 <li>
-<p>To use core SDK or jME3 functions, add “SDK Core and “SDK Engine via “Module Properties→Library→Add Dependency</p>
+<p>To use core SDK or jME3 functions, add &#8220;SDK Core&#8221; and &#8220;SDK Engine&#8221; via Module Properties→Library→Add Dependency</p>
 </li>
 <li>
-<p>Write your plugin (e.g. <a href="#../../sdk/development.adoc" class="page unresolved">create a new editor</a> or <a href="#../../sdk/development/extension_library.adoc" class="page unresolved">wrap a jar library</a>)</p>
+<p>Write your plugin (e.g. <a href="../development.html" class="page">create a new editor</a> or <a href="extension_library.html" class="page">wrap a jar library</a>)</p>
 </li>
 </ul>
 </div>
@@ -545,7 +545,7 @@
 <h2 id="jmonkeyengine-sdk-contributions-update-center"><a class="anchor" href="#jmonkeyengine-sdk-contributions-update-center"></a>jMonkeyEngine SDK Contributions Update Center</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you want your plugin to appear in the “jMonkeyEngine SDK Contributions Update Center so users can download, install and update it easily via the plugin manager, you can host your plugin in the contributions update center svn repository. The contributions update center is based on a googlecode project for contributed plugins which will be automatically compiled, version-labeled and added to the contributions update center like the core jMonkeyEngine SDK plugins.</p>
+<p>If you want your plugin to appear in the &#8220;jMonkeyEngine SDK Contributions Update Center&#8221; so users can download, install and update it easily via the plugin manager, you can host your plugin in the contributions update center svn repository. The contributions update center is based on a googlecode project for contributed plugins which will be automatically compiled, version-labeled and added to the contributions update center like the core jMonkeyEngine SDK plugins.</p>
 </div>
 <div class="paragraph">
 <p>Effectively its one large module suite with multiple modules which each represent one plugin, extension library.</p>
@@ -558,33 +558,33 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Make sure the plugin is part of a “Module Suite and that its located in the folder of the suite (this saves you from problems with the svn and local version not being configured the same)</p>
+<p>Make sure the plugin is part of a &#8220;Module Suite&#8221; and that its located in the folder of the suite (this saves you from problems with the svn and local version not being configured the same)</p>
 </li>
 <li>
-<p>In “Module Properties→Sources</p>
+<p>In Module Properties→Sources</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Set the “Source Level to 1.5 if possible (jMonkeyEngine SDK is compatible to Java 1.5)</p>
+<p>Set the &#8220;Source Level&#8221; to 1.5 if possible (jMonkeyEngine SDK is compatible to Java 1.5)</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>In “Module Properties→<abbr title="Application Programming Interface">API</abbr> Versioning</p>
+<p>In Module Properties→<abbr title="Application Programming Interface">API</abbr> Versioning</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Set a specification version for your plugin (like 0.8.1)</p>
 </li>
 <li>
-<p>Set the “implementation version to “0 and select “append implementation versions automatically</p>
+<p>Set the &#8220;implementation version&#8221; to &#8220;0&#8221; and select &#8220;append implementation versions automatically&#8221;</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>In “Module Properties→Display</p>
+<p>In Module Properties→Display</p>
 <div class="ulist">
 <ul>
 <li>
@@ -592,13 +592,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p>For a library plugin: “jME3 - Library</p>
+<p>For a library plugin: jME3 - Library</p>
 </li>
 <li>
-<p>For a SDK plugin: “jME3 - SDK Plugin</p>
+<p>For a SDK plugin: jME3 - SDK Plugin</p>
 </li>
 <li>
-<p>For a model loader plugin: “jME3 - Loader</p>
+<p>For a model loader plugin: jME3 - Loader</p>
 </li>
 </ul>
 </div>
@@ -607,7 +607,7 @@
 </div>
 </li>
 <li>
-<p>In “Module Properties→Build→Packaging</p>
+<p>In Module Properties→Build→Packaging</p>
 <div class="ulist">
 <ul>
 <li>
@@ -630,16 +630,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Right click the Module Project and select “Versioning → Import into Subversion Repository</p>
+<p>Right click the Module Project and select Versioning → Import into Subversion Repository</p>
 </li>
 <li>
-<p>Enter your googlecode username and commit password (different than login pass, you can find your password <a href="https://code.google.com/hosting/settings">here</a>!) and press “Next</p>
+<p>Enter your googlecode username and commit password (different than login pass, you can find your password <a href="https://code.google.com/hosting/settings">here</a>!) and press &#8220;Next&#8221;</p>
 </li>
 <li>
-<p>Check that the “Repository Folder is <code>trunk/mypluginfolder</code> and enter an import message</p>
+<p>Check that the &#8220;Repository Folder&#8221; is <code>trunk/mypluginfolder</code> and enter an import message</p>
 </li>
 <li>
-<p>Press “Finish</p>
+<p>Press &#8220;Finish&#8221;</p>
 </li>
 </ul>
 </div>
@@ -656,7 +656,7 @@
 <p>You can just build your library locally and update and commit the jar file and javadoc/sources zip files to the <code>release/libs</code> folder of your plugin in the contrib repo. The users plugins will automatically be updated with the new jar files. You can however also build the library project on the server.</p>
 </div>
 <div class="paragraph">
-<p>As normally only the module project is being built on the server, any projects that create the actual jar files for library plugins (“normal projects from the SDK/NetBeans) have to be built from the module build file. To do that simply add the following ant targets to the module build file (adapt to your project file and folder names):</p>
+<p>As normally only the module project is being built on the server, any projects that create the actual jar files for library plugins (normal projects from the SDK/NetBeans) have to be built from the module build file. To do that simply add the following ant targets to the module build file (adapt to your project file and folder names):</p>
 </div>
 <div class="listingblock">
 <div class="content">
