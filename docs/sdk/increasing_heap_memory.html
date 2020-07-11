@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Increasing Heap Memory in the jMonkeyEngine SDK :: jMonkeyEngine Docs</title>
     <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/sdk/increasing_heap_memory.html">
-    <link rel="prev" href="development/model_loader.html">
+    <link rel="prev" href="use_own_jme.html#.adoc">
     <link rel="next" href="../jme3/contributions.html">
     <meta name="keywords" content="documentation, sdk, faq">
     <meta name="generator" content="Antora 2.3.3">
@@ -368,14 +368,14 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
     <span class="nav-text">Advanced Usage</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="build_platform.html">Building jMonkeyEngine SDK</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="use_own_jme.html#.adoc">Using your own (modified) version of jME3 in jMonkeyEngine SDK</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="development/model_loader.html">Create a custom model importer</a>
   </li>
   <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="increasing_heap_memory.html">Increasing Heap Memory</a>
@@ -399,13 +399,40 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Development</span>
+    <a class="nav-link" href="development.html">Developing plugins for jMonkeyEngine SDK</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="build_platform.html">Building jMonkeyEngine SDK</a>
+    <a class="nav-link" href="development/setup.html">Creating a plugin</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="development.html">Developing plugins for jMonkeyEngine SDK</a>
+    <a class="nav-link" href="development/general.html">Creating components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Extending jMonkeyEngine SDK</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="development/scene.html">The Main Scene</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="development/sceneexplorer.html">The Scene Explorer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="development/projects_assets.html">Projects and Assets</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Recipes</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="development/extension_library.html">Create a library plugin from a jar file</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="development/model_loader.html">Create a new or custom model filetype and loader</a>
   </li>
 </ul>
   </li>
@@ -450,7 +477,7 @@
   <ul>
     <li><a href="../documentation.html">Docs</a></li>
     <li><a href="sdk.html">SDK</a></li>
-    <li>Advanced Usage</li>
+    <li><a href="build_platform.html">Building jMonkeyEngine SDK</a></li>
     <li><a href="increasing_heap_memory.html">Increasing Heap Memory</a></li>
   </ul>
 </nav>
@@ -486,7 +513,7 @@ If you ran out of Direct Memory, increase -XX:MaxDirectMemorySize=256M</p>
 <p>Note that Increasing the Heap Space might also fix problems where you ran out of DirectMemory.</p>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="development/model_loader.html">Create a custom model importer</a></span>
+  <span class="prev"><a href="use_own_jme.html#.adoc">Using your own (modified) version of jME3 in jMonkeyEngine SDK</a></span>
   <span class="next"><a href="../jme3/contributions.html">Contributions</a></span>
 </nav>
 </article>
