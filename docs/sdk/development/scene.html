@@ -406,12 +406,6 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="general.html">Creating components</a>
   </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Extending jMonkeyEngine SDK</span>
-<ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="scene.html">The Main Scene</a>
   </li>
@@ -476,7 +470,7 @@
   <ul>
     <li><a href="../../documentation.html">Docs</a></li>
     <li><a href="../sdk.html">SDK</a></li>
-    <li>Extending jMonkeyEngine SDK</li>
+    <li><a href="../development.html">Developing plugins for jMonkeyEngine SDK</a></li>
     <li><a href="scene.html">The Main Scene</a></li>
   </ul>
 </nav>
@@ -569,8 +563,7 @@ for (JmeSpatial jmeSpatial : items) {
 <p>If your plugin wants to use the scene by itself, it first has to implement SceneListener and register at the scene and then send a SceneRequest to the SceneApplication. When the SceneRequest has been approved and the current Scene has been closed, the SceneListener (your class) is called with its own SceneRequest as a parameter. When another plugin sends a SceneRequest it is also reported to you and its a hint that your RootNode has been removed from the Scene and you are no longer in control of it. You could also hook into the SceneRequests of other plugins to see if/when they are activated to display add-on plugins for that plugin.</p>
 </div>
 <div class="paragraph">
-<p>+
-The SceneRequest object has to contain several things. A thing that you must supply is a jme &#8220;Node&#8221; wrapped into a &#8220;JmeNode&#8221; object. This is your rootNode that you use to display and build your scene. As soon as you control the scene, you will have to control the camera etc. yourself.</p>
+<p>The SceneRequest object has to contain several things. A thing that you must supply is a jme &#8220;Node&#8221; wrapped into a &#8220;JmeNode&#8221; object. This is your rootNode that you use to display and build your scene. As soon as you control the scene, you will have to control the camera etc. yourself.</p>
 </div>
 <div class="listingblock">
 <div class="content">
