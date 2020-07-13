@@ -478,7 +478,22 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Contributing to the Wiki is now easier than it ever has been. Using the Atom editor will give you an easy to use interface that is cross-platform, has code completion, syntax highlighting, instant AsciiDoctor page previewing, with an integrated GitHub client. The only thing it doesn&#8217;t do is write the page for you. You can use it in conjunction with the <a href="https://git-scm.com/">Git</a> command line interface</p>
+<p>Contributing to the Wiki is now easier than it ever has been. Using the Atom editor will give you an easy to use interface that is cross-platform, has code completion, syntax highlighting, instant AsciiDoctor page previewing, with an integrated GitHub client. The only thing it doesn&#8217;t do is write the page for you. You can use it in conjunction with the <a href="https://git-scm.com/">Git</a> command line interface.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="definitions"><a class="anchor" href="#definitions"></a>Definitions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>(CLI) - Git Command Line Interface</p>
+</li>
+<li>
+<p>(GWI) - GitHub Web Interface</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -617,7 +632,7 @@ Use the <abbr title="Uniform Resource Locator">URL</abbr> to your repository for
 <div class="ulist">
 <ul>
 <li>
-<p>Git Bash:  <a href="https://help.github.com/articles/setting-your-commit-email-address-in-git/">Setting your commit email address in Git</a></p>
+<p>Git Bash: <a href="https://help.github.com/articles/setting-your-commit-email-address-in-git/">Setting your commit email address in Git</a></p>
 </li>
 <li>
 <p>Manually: <a href="https://help.github.com/articles/setting-your-commit-email-address-on-github/">Set your commit email address on GitHub</a></p>
@@ -671,35 +686,21 @@ Use the <abbr title="Uniform Resource Locator">URL</abbr> to your repository for
 </div>
 <div class="paragraph">
 <div class="title">Members</div>
-<p>Update your local copy of the Wiki from the Atom Editor by issuing a Pull command prior to Commit/Push.</p>
-</div>
-<div class="paragraph">
-<p>As a member, you issue Git commands from the Atom Editor.</p>
+<p>Update your local copy of the Wiki from the Atom Editor or (CLI) by issuing a Pull command prior to Commit/Push.</p>
 </div>
 <div class="paragraph">
 <div class="title">Non-Members</div>
-<p>Update your local copy of the Wiki by issuing a pull request from your forked repository to the Wiki repository prior to pushing your commit to your fork.</p>
+<p>Update your local copy of the Wiki by:
+. Issuing a pull request from your forked repository using the (GWI).
+..  Go to your version of the repository on GitHub.
+..  Click the <b class="button">New Pull Request</b> button at the top.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Go to your version of the repository on GitHub.</p>
-</li>
-<li>
-<p>Click the <b class="button">New Pull Request</b> button at the top.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The Wiki repository will be on the left and your repository will be on the right.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>+
+NOTE: The Wiki repository will be on the left and your repository will be on the right.</p>
 </div>
-</li>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>Click the <b class="button">Base</b> button on the left and from the drop down list select your forked repository.</p>
 </li>
@@ -711,9 +712,13 @@ The Wiki repository will be on the left and your repository will be on the right
 </li>
 <li>
 <p>If the repositories are not identical, there will be green button <b class="button">Create pull request</b>. Click it to update your repository.</p>
-</li>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Update your local copy by doing a Pull request in Atom.</p>
+<p>Update your local copy by doing a Pull request in the Atom Editor or (CLI).</p>
+</li>
+</ol>
+</div>
 </li>
 </ol>
 </div>
@@ -724,7 +729,7 @@ The Wiki repository will be on the left and your repository will be on the right
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-As a non-member, when there is interaction between the Wiki repository and your fork, you issue commands online. When the interaction is between your forked repository and your local copy, you issue commands from Atom.
+As a non-member, when there is interaction between the Wiki repository and your fork, you issue commands online. When the interaction is between your forked repository and your local copy, you issue commands from Atom or the (CLI).
 </td>
 </tr>
 </table>
@@ -736,25 +741,33 @@ As a non-member, when there is interaction between the Wiki repository and your 
 <div class="sectionbody">
 <div class="paragraph">
 <div class="title">Members</div>
-<p>As a member, you issue all Git commands from the Atom Editor.</p>
+<p>As a member, issue a push command from the Atom Editor or (CLI).</p>
 </div>
 <div class="paragraph">
 <div class="title">Non-Members</div>
-<p>To submit changes to the Wiki repository after pushing them to your fork:</p>
+<p>To submit changes to the Wiki repository, after pushing them to your fork, from the (GWI):</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Go to your version of the Wiki repository on GitHub.</p>
-</li>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>Click the <b class="button">New Pull Request</b> button at the top.</p>
-</li>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
 <li>
 <p>Note that the jMonkeyEngine repository will be on the left and your repository will be on the right.</p>
 </li>
+</ol>
+</div>
+</li>
 <li>
 <p>Click the green button <b class="button">Create pull request</b>. Give a succinct and informative title, in the comment field give a short explanation of the changes and click the green button <b class="button">Create pull request</b> again.</p>
+</li>
+</ol>
+</div>
 </li>
 </ol>
 </div>
@@ -765,7 +778,7 @@ As a non-member, when there is interaction between the Wiki repository and your 
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-As a non-member, when there is interaction between the Wiki repository and your fork, you issue commands online. When the interaction is between your forked repository and your local copy, you issue commands from Atom.
+As a non-member, when there is interaction between the Wiki repository and your fork, you issue commands online. When the interaction is between your forked repository and your local copy, you issue commands from Atom or the (CLI).
 </td>
 </tr>
 </table>
@@ -796,7 +809,7 @@ As a non-member, when there is interaction between the Wiki repository and your 
 <p>The snippets page contains various forms these <code>Cross References</code> that make linking easier.</p>
 </div>
 <div class="paragraph">
-<p>See also: <a href="emoji.html#How to use emoji in the wiki" class="page">How to use emoji in the wiki</a></p>
+<p>See also: <a href="emoji.html#how-to-use-emoji-in-the-wiki" class="page">How to use emoji in the wiki</a></p>
 </div>
 </div>
 </div>
