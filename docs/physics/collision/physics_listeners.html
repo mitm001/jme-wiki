@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Physics Listeners :: jMonkeyEngine Docs</title>
-    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/jme3/advanced/physics_listeners.html">
+    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/physics/collision/physics_listeners.html">
+    <link rel="prev" href="../bullet_multithreading.html">
+    <link rel="next" href="../../sdk/sdk.html">
     <meta name="keywords" content="documentation, physics, collision, forces, interaction">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -388,10 +390,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../../physics/physics.html">Physics</a>
+    <a class="nav-link" href="../physics.html">Physics</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../physics/bullet_multithreading.html">Multi-Threaded Physics</a>
+    <a class="nav-link" href="../bullet_multithreading.html">Multi-Threaded Physics</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="physics_listeners.html">Physics Listeners and Collision Detection</a>
   </li>
 </ul>
   </li>
@@ -579,7 +584,7 @@
     <span class="nav-text">Available external plugins</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../contributions.html">Contributions</a>
+    <a class="nav-link" href="../../jme3/contributions.html">Contributions</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../sdk/neotexture.html">Neo Texture Editor for procedural textures</a>
@@ -656,10 +661,11 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../documentation.html">Docs</a></li>
-    <li><a href="physics_listeners.html">Physics Listeners</a></li>
+    <li><a href="../physics.html">Physics</a></li>
+    <li><a href="physics_listeners.html">Physics Listeners and Collision Detection</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/ROOT/pages/jme3/advanced/physics_listeners.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/physics/pages/collision/physics_listeners.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
@@ -696,7 +702,7 @@
 <p>Attach a com.jme3.bullet.control.GhostControl to any Spatial to turn it into a PhysicsGhostObject. Ghost objects automatically follow their spatial and detect collisions. The attached ghost itself is invisible and non-solid (!) and doesn&#8217;t interfere with your game otherwise, it only passively reports collisions.</p>
 </div>
 <div class="paragraph">
-<p>You can leave the GhostControl non-solid and invisible and attach it to an (invisible) Node in the scene to create something like a motion detector. But a GhostControl also works fine when added to spatials that are solid (with RigidBodyControl) and visible (with Geometry). One use case for GhostControls is to check for collisions among <a href="walking_character.html" class="page">CharacterControls</a> when the characters are walking.</p>
+<p>You can leave the GhostControl non-solid and invisible and attach it to an (invisible) Node in the scene to create something like a motion detector. But a GhostControl also works fine when added to spatials that are solid (with RigidBodyControl) and visible (with Geometry). One use case for GhostControls is to check for collisions among <a href="#../../jme3/advanced/walking_character.adoc" class="page unresolved">CharacterControls</a> when the characters are walking.</p>
 </div>
 <div class="paragraph">
 <p>The shape of the ghost depends on the CollisionShape that you gave the GhostControl. This means that the GhostControl&#8217;s shape can be different from the RigidBodyControl&#8217;s shape. For example, the non-solid ghost shape can be bigger than the solid shape of the Spatial (so you can “feel ahead).</p>
@@ -984,6 +990,10 @@ myNode.getControl(RigidBodyControl.class).setCollideWithGroups(PhysicsCollisionO
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="../bullet_multithreading.html">Multi-Threaded Physics</a></span>
+  <span class="next"><a href="../../sdk/sdk.html">SDK</a></span>
+</nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
