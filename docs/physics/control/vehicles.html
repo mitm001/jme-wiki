@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Physics : SoftBody :: jMonkeyEngine Docs</title>
-    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/jme3/advanced/softbody.html">
+    <title>Controlling a Physical Vehicle :: jMonkeyEngine Docs</title>
+    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/physics/control/vehicles.html">
+    <meta name="keywords" content="documentation, physics, vehicle, collision">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
-<meta property="og:description" content="Physics : SoftBody">
+<meta property="og:description" content="Controlling a Physical Vehicle">
 <meta property="og:title" content="jMonkeyEngine Docs">
 <link rel="stylesheet" href="../../../_/css/site-extra.css">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -387,13 +388,13 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../../physics/physics.html">Physics</a>
+    <a class="nav-link" href="../physics.html">Physics</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../physics/bullet_multithreading.html">Multi-Threaded Physics</a>
+    <a class="nav-link" href="../bullet_multithreading.html">Multi-Threaded Physics</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../physics/collision/physics_listeners.html">Listeners and Collision Detection</a>
+    <a class="nav-link" href="../collision/physics_listeners.html">Listeners and Collision Detection</a>
   </li>
 </ul>
   </li>
@@ -581,7 +582,7 @@
     <span class="nav-text">Available external plugins</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../contributions.html">Contributions</a>
+    <a class="nav-link" href="../../jme3/contributions.html">Contributions</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../sdk/neotexture.html">Neo Texture Editor for procedural textures</a>
@@ -658,334 +659,407 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../documentation.html">Docs</a></li>
-    <li><a href="softbody.html">Physics : SoftBody</a></li>
+    <li><a href="vehicles.html">Controlling a Physical Vehicle</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/ROOT/pages/jme3/advanced/softbody.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/physics/pages/control/vehicles.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Physics : SoftBody</h1>
+<h1 class="page">Controlling a Physical Vehicle</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
 <div class="paragraph">
-<p>Writing in progress, checkout the forum for additional infos <a href="http://hub.jmonkeyengine.org/t/bullet-softbody-in-jme3-1/33110">http://hub.jmonkeyengine.org/t/bullet-softbody-in-jme3-1/33110</a></p>
-</div>
-</td>
-</tr>
-</table>
+<p>For physical vehicles, jME&#8217;s uses the jBullet ray-cast vehicle. In this vehicle implementation, the physical chassis 'floats' along on four non-physical vertical rays.</p>
 </div>
 <div class="paragraph">
-<p>what is a soft body ?</p>
+<p>Internally, each wheel casts a ray down, and using the ray&#8217;s intersection point, jBullet calculates the suspension length, and the suspension force. The suspension force is applied to the chassis, keeping it from hitting the ground. The friction force is calculated for each wheel where the ray intersects with the ground. Friction is applied as a sideways and forwards force. <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>how a soft body is simulated ? (  node, link, face ; spring &amp; damper )</p>
+<p>This article shows how you use this vehicle implementation in a jME3 application.</p>
 </div>
-<div class="paragraph">
-<p><a href="https://en.wikipedia.org/wiki/Soft_body_dynamics">https://en.wikipedia.org/wiki/Soft_body_dynamics</a></p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="../_images/jme3/advanced/physics-vehicle.png" alt="physics-vehicle.png" width="" height="">
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="getting-started"><a class="anchor" href="#getting-started"></a>Getting Started</h2>
+<h2 id="sample-code"><a class="anchor" href="#sample-code"></a>Sample Code</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The dynamics libraries for softbody (.so , .dll …) isn&#8217;t (yet) prebuild for your platform so you have to checkout the entire project from GitHub then build the project.</p>
+<p>Full code samples are here:</p>
 </div>
-<div class="sect2">
-<h3 id="how-to"><a class="anchor" href="#how-to"></a>How to :</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-examples/src/main/java/jme3test/bullet/TestPhysicsCar.java">TestPhysicsCar.java</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-examples/src/main/java/jme3test/bullet/TestFancyCar.java">TestFancyCar.java</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview-of-this-physics-application"><a class="anchor" href="#overview-of-this-physics-application"></a>Overview of this Physics Application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The goal is to create a physical vehicle with wheels that can be steered and that interacts (collides with) with the floor and obstacles.</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>checkout the project from <a href="https://github.com/Dokthar/jmonkeyengine/tree/bullet_SoftBody">GitHub</a>.</p>
+<p>Create a SimpleApplication with a <a href="#../../jme3/advanced/physics.adoc" class="page unresolved">BulletAppState</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>This gives us a PhysicsSpace for PhysicsNodes</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>go into the file gradle.propeties and set the line : buildNativeProjecte = true .</p>
+<p>Create a VehicleControl + CompoundCollisionShape for the physical vehicle behaviour</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Set physical properties of the vehicle, such as suspension.</p>
+</li>
+</ol>
+</div>
 </li>
 <li>
-<p>run the command : ./gradlew build</p>
+<p>Create a VehicleNode for the car model</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create a box plus 4 cylinders as wheels (using <code>vehicle.addWheel()</code>).</p>
 </li>
 <li>
-<p>then build the sdk : ant -f ./sdk/ build-zip (or build the sdk installer)</p>
+<p>Add the VehicleControl behaviour to the VehicleNode geometry.</p>
+</li>
+</ol>
+</div>
 </li>
 <li>
-<p>create a new project and make sure you use the following libraries : jme3-bullet-native and jme3-bullet (instead of jme3-jBullet)</p>
+<p>Create a RigidBodyControl and CollisionShape for the floor</p>
+</li>
+<li>
+<p>Map key triggers and add input listeners</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Navigational commands Left, Right, Foward, Brake.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Define the steering actions to be triggered by the key events.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>vehicle.steer()</code></p>
+</li>
+<li>
+<p><code>vehicle.accelerate()</code></p>
+</li>
+<li>
+<p><code>vehicle.brake()</code></p>
+</li>
+</ul>
+</div>
 </li>
 </ol>
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
-<h2 id="simple-example"><a class="anchor" href="#simple-example"></a>Simple Example</h2>
+<h2 id="creating-the-vehicle-chassis"><a class="anchor" href="#creating-the-vehicle-chassis"></a>Creating the Vehicle Chassis</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The vehicle that we create here in the <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-examples/src/main/java/jme3test/bullet/TestPhysicsCar.java">TestPhysicsCar.java</a> example is just a “box on wheels, a basic vehicle shape that you can replace with a fancy car model, as demonstrated in <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-examples/src/main/java/jme3test/bullet/TestFancyCar.java">TestFancyCar.java</a>.</p>
+</div>
+<div class="paragraph">
+<p>Every physical object must have a collision shape, that we prepare first. For the vehicle, we choose a compound collision shape that is made up of a box-shaped body of the right size for the vehicle. We will add the wheels later.</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void simpleInitApp() {
-    softBodyAppState = new BulletSoftBodyAppState();
-    getStateManager().attach(softBodyAppState);
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CompoundCollisionShape compoundShape = new CompoundCollisionShape();
+BoxCollisionShape box = new BoxCollisionShape(new Vector3f(1.2f, 0.5f, 2.4f));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Best Practice:</strong> We attach the BoxCollisionShape (the vehicle body) to the CompoundCollisionShape at a Vector of (0,1,0): This shifts the effective center of mass of the BoxCollisionShape downwards to 0,-1,0 and makes a moving vehicle more stable!</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">compoundShape.addChildShape(box, new Vector3f(0, 1, 0));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Any kind of geometry can make up the visible part of the vehicle, here we use a wireframe box. We create a node that we use to group the geometry.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Node vehicleNode=new Node("vehicleNode");
+vehicle = new VehicleControl(compoundShape, 400);
+vehicleNode.addControl(vehicle);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We initialize the Vehicle Control with the compound shape, and set its mass to a heavy value, 400f. The Vehicle Control represents the car&#8217;s physical behaviour.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">vehicle = new VehicleControl(compoundShape, 400);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally we add the behaviour (VehicleControl) to the visible Geometry (node).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">vehicleNode.addControl(vehicle);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We configure the physical properties of the vehicle&#8217;s suspension: Compresion, Damping, Stiffness, and MaxSuspenionForce. Picking workable values for the wheel suspension can be tricky – for background info have a look at these <a href="https://docs.google.com/Doc?docid=0AXVUZ5xw6XpKZGNuZG56a3FfMzU0Z2NyZnF4Zmo&amp;hl=en">Suspension Settings Tips</a>. For now, let&#8217;s work with the following values:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">float stiffness = 60.0f;//200=f1 car
+float compValue = .3f; //(should be lower than damp)
+float dampValue = .4f;
+vehicle.setSuspensionCompression(compValue * 2.0f * FastMath.sqrt(stiffness));
+vehicle.setSuspensionDamping(dampValue * 2.0f * FastMath.sqrt(stiffness));
+vehicle.setSuspensionStiffness(stiffness);
+vehicle.setMaxSuspensionForce(10000.0f);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We now have a node <code>vehicleNode</code> with a visible “car geometry, which acts like a vehicle. One thing that&#8217;s missing are wheels.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="adding-the-wheels"><a class="anchor" href="#adding-the-wheels"></a>Adding the Wheels</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We create four wheel Geometries and add them to the vehicle. Our wheel geometries are simple, non-physical discs (flat Cylinders), they are just visual decorations. Note that the physical wheel behaviour (the com.jme3.bullet.objects.VehicleWheel objects) is created internally by the <code>vehicle.addWheel()</code> method.</p>
+</div>
+<div class="paragraph">
+<p>The <code>addWheel()</code> method sets following properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Vector3f connectionPoint – Coordinate where the suspension connects to the chassis (internally, this is where the Ray is casted downwards).</p>
+</li>
+<li>
+<p>Vector3f direction – Wheel direction is typically a (0,-1,0) vector.</p>
+</li>
+<li>
+<p>Vector3f axle – Axle direction is typically a (-1,0,0) vector.</p>
+</li>
+<li>
+<p>float suspensionRestLength – Suspension rest length in world units</p>
+</li>
+<li>
+<p>float wheelRadius – Wheel radius in world units</p>
+</li>
+<li>
+<p>boolean isFrontWheel – Whether this wheel is one of the steering wheels.<br>
+Front wheels are the ones that rotate visibly when the vehicle turns.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We initialize a few variables that we will reuse when we add the four wheels. yOff, etc, are the particular wheel offsets for our small vehicle model.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Vector3f wheelDirection = new Vector3f(0, -1, 0);
+Vector3f wheelAxle = new Vector3f(-1, 0, 0);
+float radius = 0.5f;
+float restLength = 0.3f;
+float yOff = 0.5f;
+float xOff = 1f;
+float zOff = 2f;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We create a Cylinder mesh shape that we use to create the four visible wheel geometries.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Cylinder wheelMesh = new Cylinder(16, 16, radius, radius * 0.6f, true);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For each wheel, we create a Node and a Geometry. We attach the Cylinder Geometry to the Node. We rotate the wheel by 90° around the Y axis. We set a material to make it visible. Finally we add the wheel (plus its properties) to the vehicle.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Node node1 = new Node("wheel 1 node");
+Geometry wheels1 = new Geometry("wheel 1", wheelMesh);
+node1.attachChild(wheels1);
+wheels1.rotate(0, FastMath.HALF_PI, 0);
+wheels1.setMaterial(mat);
 
-    SoftBodyWorldInfo sbwi = softBodyAppState.getPhysicsSoftSpace().getWorldInfo();
-    sbwi.setGravity(Vector3f.UNIT_Y.mult(-0.981f));
-
-    Geometry bunny = new Geometry("b", StandfordBunny.getMesh().deepClone());
-    Material matN = new Material(assetManager, "Common/MatDefs/Misc/ShowNormals.j3md");
-    bunny.setMaterial(matN);
-    rootNode.attachChild(bunny);
-    bunny.addControl(new SoftBodyControl(false));
-
-    PhysicsSoftBody soft = bunny.getControl(SoftBodyControl.class);
-    soft.generateClusters(8);
-    soft.config().setDynamicFrictionCoef(0.8f);
-    soft.config().setPoseMatchingCoef(0.2f);
-
-    soft.config().setCollisionsFlags(PhysicsSoftBody.Config.CL_SS + PhysicsSoftBody.Config.CL_RS);
-
-    soft.setPose(false, true);
-    soft.setTotalMass(100, true);
-    soft.randomizeConstraints();
-    softBodyAppState.getPhysicsSoftSpace().add(soft);
-
-    Box floorMesh = new Box(100f, 0.5f, 100f);
-    Geometry floor = new Geometry("floor", floorMesh);
-    floor.move(0, -5f, 0);
-    floor.addControl(new RigidBodyControl(0));
-    softBodyAppState.getPhysicsSpace().add(floor);
+vehicle.addWheel(node1, new Vector3f(-xOff, yOff, zOff),
+    wheelDirection, wheelAxle, restLength, radius, true);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The three next wheels are created in the same fashion, only the offsets are different. Remember to set the Boolean parameter correctly to indicate whether it&#8217;s a front wheel.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">...
+vehicle.addWheel(node2, new Vector3f(xOff, yOff, zOff),
+  wheelDirection, wheelAxle, restLength, radius, true);
+...
+vehicle.addWheel(node3, new Vector3f(-xOff, yOff, -zOff),
+  wheelDirection, wheelAxle, restLength, radius, false);
+...
+vehicle.addWheel(node4, new Vector3f(xOff, yOff, -zOff),
+  wheelDirection, wheelAxle, restLength, radius, false);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Attach the wheel Nodes to the vehicle Node to group them, so they move together.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">vehicleNode.attachChild(node1);
+vehicleNode.attachChild(node2);
+vehicleNode.attachChild(node3);
+vehicleNode.attachChild(node4);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As always, attach the vehicle Node to the rootNode to make it visible, and add the Vehicle Control to the PhysicsSpace to make the car physical.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">rootNode.attachChild(vehicleNode);
+getPhysicsSpace().add(vehicle);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Not shown here is that we also created a Material <code>mat</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="steering-the-vehicle"><a class="anchor" href="#steering-the-vehicle"></a>Steering the Vehicle</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Not shown here is the standard way how we map the input keys to actions (see full code sample). Also refer to <a href="#../../jme3/advanced/input_handling.adoc" class="page unresolved">Input Handling</a>).</p>
+</div>
+<div class="paragraph">
+<p>In the ActionListener, we implement the actions that control the vehicle&#8217;s direction and speed. For the four directions (accelerate=up, brake=down, left, right), we specify how we want the vehicle to move.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The braking action is pretty straightforward:<br>
+<code>vehicle.brake(brakeForce)</code></p>
+</li>
+<li>
+<p>For left and right turns, we add a constant to <code>steeringValue</code> when the key is pressed, and subtract it when the key is released.<br>
+<code>vehicle.steer(steeringValue);</code></p>
+</li>
+<li>
+<p>For acceleration we add a constant to <code>accelerationValue</code> when the key is pressed, and substract it when the key is released.<br>
+<code>vehicle.accelerate(accelerationValue);</code></p>
+</li>
+<li>
+<p>Because we can and it&#8217;s fun, we also add a turbo booster that makes the vehicle jump when you press the assigned key (spacebar).<br>
+<code>vehicle.applyImpulse(jumpForce, Vector3f.ZERO);</code></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void onAction(String binding, boolean value, float tpf) {
+  if (binding.equals("Lefts")) {
+      if (value) { steeringValue += .5f; } else { steeringValue += -.5f; }
+      vehicle.steer(steeringValue);
+  } else if (binding.equals("Rights")) {
+      if (value) { steeringValue += -.5f; } else { steeringValue += .5f; }
+      vehicle.steer(steeringValue);
+  } else if (binding.equals("Ups")) {
+      if (value) {
+        accelerationValue += accelerationForce;
+      } else {
+        accelerationValue -= accelerationForce;
+      }
+      vehicle.accelerate(accelerationValue);
+  } else if (binding.equals("Downs")) {
+      if (value) { vehicle.brake(brakeForce); } else { vehicle.brake(0f); }
+  } else if (binding.equals("Space")) {
+      if (value) {
+        vehicle.applyImpulse(jumpForce, Vector3f.ZERO);
+      }
+  } else if (binding.equals("Reset")) {
+      if (value) {
+        System.out.println("Reset");
+        vehicle.setPhysicsLocation(Vector3f.ZERO);
+        vehicle.setPhysicsRotation(new Matrix3f());
+        vehicle.setLinearVelocity(Vector3f.ZERO);
+        vehicle.setAngularVelocity(Vector3f.ZERO);
+        vehicle.resetSuspension();
+      } else {
+    }
+  }
 }</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>For your reference, this is how we initialized the constants for this example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private final float accelerationForce = 1000.0f;
+private final float brakeForce = 100.0f;
+private float steeringValue = 0;
+private float accelerationValue = 0;
+private Vector3f jumpForce = new Vector3f(0, 3000, 0);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Remember, the standard input listener code that maps the actions to keys can be found in the code samples.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="documentation"><a class="anchor" href="#documentation"></a>Documentation</h2>
+<h2 id="detecting-collisions"><a class="anchor" href="#detecting-collisions"></a>Detecting Collisions</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>soft mesh / surface</p>
+<p>Read the <a href="#../../jme3/advanced/physics.adoc#responding_to_a_physicscollisionevent" class="page unresolved">Responding to a PhysicsCollisionEvent</a> chapter in the general physics documentation on how to detect collisions. You would do this if you want to react to collisions with custom events, such as adding points or substracting health.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="best-practices"><a class="anchor" href="#best-practices"></a>Best Practices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This example shows a very simple but functional vehicle. For a game you would implement steering behaviour and acceleration with values that are typical for the type of vehicle that you want to simulate. Instead of a box, you load a chassis model. You can consider using an <a href="#../../jme3/advanced/input_handling.adoc" class="page unresolved">AnalogListener</a> to respond to key events in a more sophisticated way.</p>
 </div>
 <div class="paragraph">
-<p>Cluster ?</p>
-</div>
-<div class="paragraph">
-<p>(generate) bending constraint ?</p>
-</div>
-<div class="paragraph">
-<p>config collision flag ?</p>
-</div>
-<div class="sect2">
-<h3 id="ropes"><a class="anchor" href="#ropes"></a>Ropes</h3>
-<div class="paragraph">
-<p>A rope can be created by creating a new SoftBody on a Mesh with Mesh.Mode.Lines.
-More informations on creating <a href="#../../jme3/advanced/custom_meshes.adoc" class="page unresolved">custom meshes</a>.</p>
-</div>
-<div class="sect3">
-<h4 id="example"><a class="anchor" href="#example"></a>Example</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mesh ropeMesh = new Mesh();
-Vector3f[] vertices = {
-   new Vector3f(0.00f, 0, 0),
-   new Vector3f(0.50f, 0, 0),
-   new Vector3f(1.00f, 0, 0),
-   new Vector3f(1.50f, 0, 0),
-   new Vector3f(2.00f, 0, 0),
-   new Vector3f(2.50f, 0, 0),
-   new Vector3f(3.00f, 0, 0),
-   new Vector3f(3.50f, 0, 0),
-   new Vector3f(4.00f, 0, 0)};
-int[] indices = {
-   0, 1,
-   1, 2,
-   2, 3,
-   3, 4,
-   4, 5,
-   5, 6,
-   6, 7,
-   7, 8};
-ropeMesh.setBuffer(VertexBuffer.Type.Position, 3, BufferUtils.createFloatBuffer(vertices));
-ropeMesh.setBuffer(VertexBuffer.Type.Index, 2, BufferUtils.createIntBuffer(indices));
-ropeMesh.setMode(Mesh.Mode.Lines);
-ropeMesh.updateBound();</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Once you have a Line Mesh, you can do as follow :</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Geometry t = new Geometry("softRope", ropeMesh);
-t.move(0, 5, 0);
-t.addControl(new SoftBodyControl(false));</code></pre>
+<p>For a more advanced example, look at <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-examples/src/main/java/jme3test/bullet/TestFancyCar.java">TestFancyCar.java</a>.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="anchors"><a class="anchor" href="#anchors"></a>Anchors</h4>
-<div class="paragraph">
-<p>An Anchors act like a weld between a SoftBody and a RigidBody.
-Adding a anchors to a soft body require to specify the SoftBody&#8217;s node and the RigidBody to weld with.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">soft.appendAnchor(nodeId, rigid);</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="note"><a class="anchor" href="#note"></a>Note</h3>
-<div class="paragraph">
-<p>An anchor bind a SoftBody&#8217;s node (or Vertex) to a RigidBody, the node will be attached to a RigidBody even if there are space in between.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="literalblock">
-<div class="content">
-<pre>Anchors are not yet Serialized</pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="sect3">
-<h4 id="example-2"><a class="anchor" href="#example-2"></a>Example</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Geometry t = new Geometry("softRope", ropeMesh);
-Box box = new Box(1f, 1f, 1f);
-Geometry b = new Geometry("rigidBox", box);
-t.move(0, 5, 0);
-b.move(3f, 5, 0);
-
-t.addControl(new SoftBodyControl(false));
-soft = t.getControl(SoftBodyControl.class);
-soft.setMass(0, 0); // make the first ndoe static
-
-b.addControl(new RigidBodyControl(1));
-rigid = b.getControl(RigidBodyControl.class);
-
-softBodyAppState.getPhysicsSpace().add(rigid);
-softBodyAppState.getPhysicsSoftSpace().add(soft);
-
-soft.appendAnchor(8, rigid); //where 8 is the last node of the rope</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Anchors can be removed as below. Note that you have to keep the node and RigidBody bind with.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">soft.removeAnchor(8,rigid);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="joints"><a class="anchor" href="#joints"></a>Joints</h4>
-<div class="paragraph">
-<p>Joints require SoftBodies with Clusters ( see generateClusters(int k) ).</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="literalblock">
-<div class="content">
-<pre>joint don't use values pivotA &amp; pivotB (not yet)</pre>
-</div>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="linearjoint"><a class="anchor" href="#linearjoint"></a>LinearJoint</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public SoftLinearJoint(Vector3f position, PhysicsSoftBody nodeA, PhysicsRigidBody nodeB, Vector3f pivotA, Vector3f pivotB);
-public SoftLinearJoint(Vector3f position, PhysicsSoftBody nodeA, PhysicsSoftBody nodeB, Vector3f pivotA, Vector3f pivotB);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="angularjoint"><a class="anchor" href="#angularjoint"></a>AngularJoint</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public SoftAngularJoint(Vector3f axis, PhysicsSoftBody nodeA, PhysicsRigidBody nodeB, Vector3f pivotA, Vector3f pivotB);
-public SoftAngularJoint(Vector3f axis, PhysicsSoftBody nodeA, PhysicsSoftBody nodeB, Vector3f pivotA, Vector3f pivotB);</code></pre>
-</div>
-</div>
-<div class="sect3">
-<h4 id="examples"><a class="anchor" href="#examples"></a>Examples</h4>
-
-</div>
-</div>
-<div class="sect2">
-<h3 id="linearjoint-2"><a class="anchor" href="#linearjoint-2"></a>LinearJoint</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Box box = new Box(3f, 1f, 3f);
-Geometry b = new Geometry("rigidBox", box);
-b.move(0, 5f, 0);
-b.addControl(new RigidBodyControl(1));
-rigid = b.getControl(RigidBodyControl.class);
-
-Torus torus = new Torus(20, 10, 1f, 1.5f);
-Geometry t = new Geometry("softTorus", torus);
-t.addControl(new SoftBodyControl(true, false));
-soft = t.getControl(SoftBodyControl.class);
-soft.generateBendingConstraints(4, soft.material());
-soft.generateClusters(4);
-
-softBodyAppState.getPhysicsSpace().add(rigid);
-softBodyAppState.getPhysicsSoftSpace().add(soft);
-
-joint = new SoftLinearJoint(Vector3f.UNIT_X, soft, rigid, new Vector3f(0f,2,0f), new Vector3f(0f,-2,0f));
-softBodyAppState.getPhysicsSoftSpace().add(joint);</code></pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="angularjoint-2"><a class="anchor" href="#angularjoint-2"></a>AngularJoint</h3>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Box box = new Box(1f, 1f, 1f);
-Geometry b = new Geometry("rigidBox", box);
-b.move(0, 5f, 0);
-b.addControl(new RigidBodyControl(1));
-rigid = b.getControl(RigidBodyControl.class);
-
- Torus torus = new Torus(20, 10, 1f, 1.5f);
-Geometry t = new Geometry("softTorus", torus);
-t.addControl(new SoftBodyControl(true, false));
-soft = t.getControl(SoftBodyControl.class);
-soft.generateBendingConstraints(4, soft.material());
-soft.generateClusters(4);
-
-softBodyAppState.getPhysicsSpace().add(rigid);
-softBodyAppState.getPhysicsSoftSpace().add(soft);
-
-joint = new SoftAngularJoint(Vector3f.UNIT_X, soft, rigid, new Vector3f(0,0,2), new Vector3f(0, 0, 2));
-softBodyAppState.getPhysicsSoftSpace().add(joint);</code></pre>
-</div>
-</div>
-</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://docs.google.com/Doc?docid=0AXVUZ5xw6XpKZGNuZG56a3FfMzU0Z2NyZnF4Zmo&amp;hl=en">https://docs.google.com/Doc?docid=0AXVUZ5xw6XpKZGNuZG56a3FfMzU0Z2NyZnF4Zmo&amp;hl=en</a>
 </div>
 </div>
 </article>
