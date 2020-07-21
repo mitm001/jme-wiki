@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>networking_video_tutorials :: jMonkeyEngine Docs</title>
-    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/jme3/advanced/networking_video_tutorials.html">
+    <title>Traverse the SceneGraph :: jMonkeyEngine Docs</title>
+    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/jme3/advanced/traverse_scenegraph.html">
+    <meta name="keywords" content="spatial, node, mesh, geometry, scenegraph">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
-<meta property="og:description" content="networking_video_tutorials">
+<meta property="og:description" content="Traverse the SceneGraph">
 <meta property="og:title" content="jMonkeyEngine Docs">
 <link rel="stylesheet" href="../../../_/css/site-extra.css">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -422,47 +423,114 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../documentation.html">Docs</a></li>
-    <li><a href="networking_video_tutorials.html">networking_video_tutorials</a></li>
+    <li><a href="traverse_scenegraph.html">Traverse the SceneGraph</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/master/docs/modules/ROOT/pages/jme3/advanced/networking_video_tutorials.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/master/docs/modules/ROOT/pages/jme3/advanced/traverse_scenegraph.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">networking_video_tutorials</h1>
+<h1 class="page">Traverse the SceneGraph</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p><strong>jME3 Networking Video Tutorials</strong></p>
+<p>You can run a search across the whole scene graph and search for individual Spatials (<code>Node</code> and <code>Geometry</code>) by custom criteria, such as the Spatial&#8217;s name, or the Spatial&#8217;s class, or the Spatial&#8217;s user data, or Spatial&#8217;s Controls. You do this when you want modify  the found nodes (move them, call a method, etc) but you don&#8217;t have a local variable for them.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="example-use-cases"><a class="anchor" href="#example-use-cases"></a>Example Use Cases</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Example 1:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You have created a procedural scene with lots of dynamically generated elements.</p>
+</li>
+<li>
+<p>You want to find individual Spatials under ever-changing conditions and modify their state.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Example 2:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You created a mostly static scene in the jMonkeyEngine SDK and exported it as .j3o file.<br>
+The scene also contains interactive objects, for example a particle emitter, spatials with user data, or spatials with custom controls.</p>
+</li>
+<li>
+<p>You load the .j3o scene using the assetManager.</p>
+</li>
+<li>
+<p>You want to interact with one of the loaded interactive scene elements in your Java code.<br>
+For example, you want to call <code>emitAllParticles()</code> on the particle emitter. Or you want to find all NPC&#8217;s Geometries with a custom CivilianControl, and call the CivilianControl method that makes them start acting their role.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In this case, you can use a SceneGraphVisitorAdapter to identify and access the Spatials in question.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code-sample"><a class="anchor" href="#code-sample"></a>Code Sample</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For each search, you create a <code>com.jme3.scene.SceneGraphVisitorAdapter</code> that defines your search criteria and what you want to do with the found Spatials. Then you call the <code>depthFirstTraversal(visitor)</code> or <code>breadthFirstTraversal(visitor)</code> method of the Spatial (e.g. the rootNode, or better, a subnode) to start the search.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SceneGraphVisitor visitor = new SceneGraphVisitor() {
+
+  @Override
+  public void visit(Spatial spatial) {
+    // search criterion can be control class:
+    MyControl control = spatial.getControl(MyControl.class);
+    if (control != null) {
+      // you have access to any method, e.g. name.
+      System.out.println("Instance of " + control.getClass().getName()
+                       + " found for " + spatial.getName());
+    }
+  }
+
+};
+
+// Now scan the tree either depth first...
+rootNode.depthFirstTraversal(visitor);
+// ... or scan it breadth first.
+rootNode.breadthFirstTraversal(visitor);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which of the two methods is faster depends on how you designed the scengraph, and what tree element you are looking for. If you are searching for one single Geometry that is a &#8220;leaf&#8221; of the tree, and then stop searching, depth-first may be faster. If you search for a high-level grouping Node, breadth-first may be faster.</p>
+</div>
+<div class="paragraph">
+<p>The choice of depth- vs breadth-first also influences the order in which found elements are returned (children first or parents first). If you want to modify user data that is inherited from the parent node (e.g. transformations), the order of application is important, because the side-effects add up.</p>
+</div>
+<div class="paragraph">
+<p>You can use the SceneGraphVisitorAdapter class to scan separately for Geometry and Nodes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://www.youtube.com/watch?v=5IbmPL_m9t4">Video: General Introduction to the networking series</a></p>
+<p><a href="../the_scene_graph.html" class="page">The Scene Graph</a></p>
 </li>
 <li>
-<p><a href="http://www.youtube.com/watch?v=-fzMIOUIKGo">Video: Introduction to the internet</a></p>
-</li>
-<li>
-<p><a href="http://www.youtube.com/watch?v=vm4BtptrmRc">Video: Introduction to the web</a></p>
-</li>
-<li>
-<p><a href="http://www.youtube.com/watch?v=1v8aplAFlFs">Video: Cheating in games</a></p>
-</li>
-<li>
-<p><a href="http://www.youtube.com/watch?v=e4MheUDfxJg">Video: Introduction to SpiderMonkey (Part 1/2)</a></p>
-</li>
-<li>
-<p><a href="http://www.youtube.com/watch?v=uJuO-JPl14I">Video: Introduction to SpiderMonkey (Part 2/2)</a></p>
-</li>
-<li>
-<p><a href="http://www.youtube.com/watch?v=4medGxTsz_U">Video: Our first Networked game (Part 1/3)</a></p>
-</li>
-<li>
-<p><a href="http://www.youtube.com/watch?v=IuYDNS8qGeo">Video: Our first Networked game (Part 2/3)</a></p>
-</li>
-<li>
-<p><a href="http://www.youtube.com/watch?v=mvORSLiYRuo">Video: Our first Networked game (Part 3/3)</a></p>
+<p><a href="spatial.html" class="page">Spatial</a></p>
 </li>
 </ul>
+</div>
+</div>
 </div>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
