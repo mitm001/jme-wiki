@@ -326,10 +326,10 @@
     <a class="nav-link" href="../../sdk/filters.html">Post-Processor Filter Editor and Viewer</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../jme3/advanced/application_states.html">Application States</a>
+    <a class="nav-link" href="#ROOT:jme3/advanced/application_states.adoc">Application States</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../jme3/advanced/custom_controls.html">Custom Controls</a>
+    <a class="nav-link" href="#ROOT:jme3/advanced/custom_controls.adoc">Custom Controls</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../sdk/vehicle_creator.html">Vehicle Creator</a>
@@ -872,7 +872,7 @@ Example: Players have <strong>methods</strong> such as <code>walk(), addGold(), 
 <p>Use <code><a href="../../jme3/advanced/spatial.html" class="page">setUserData()</a></code> to add custom attributes to Spatials.</p>
 </li>
 <li>
-<p>Use <a href="../../jme3/advanced/custom_controls.html" class="page">Controls</a> and <a href="../../jme3/advanced/application_states.html" class="page">Application States</a> to define custom behaviour systems.</p>
+<p>Use <a href="#ROOT:jme3/advanced/custom_controls.adoc" class="page unresolved">Controls</a> and <a href="#ROOT:jme3/advanced/application_states.adoc" class="page unresolved">Application States</a> to define custom behaviour systems.</p>
 </li>
 </ul>
 </div>
@@ -906,7 +906,7 @@ Example: Players have <strong>methods</strong> such as <code>walk(), addGold(), 
 <div class="sect2">
 <h3 id="the-smart-way-to-access-game-features"><a class="anchor" href="#the-smart-way-to-access-game-features"></a>The Smart Way to Access Game Features</h3>
 <div class="paragraph">
-<p><a href="#ROOT:jme3/intermediate/simpleapplication.adoc" class="page unresolved">SimpleApplication</a> gives you access to game features such as a the rootNode, assetManager, guiNode, inputManager, audioManager, physicsSpace, viewPort, and the camera. But what if you need this access also from another class? Don&#8217;t extend SimpleApplication a second time, and don&#8217;t pass around tons of object references in constructors! Needing access to application level objects is a sign that this class should be designed as an <a href="../../jme3/advanced/application_states.html" class="page">AppState</a> (read details there).</p>
+<p><a href="#ROOT:jme3/intermediate/simpleapplication.adoc" class="page unresolved">SimpleApplication</a> gives you access to game features such as a the rootNode, assetManager, guiNode, inputManager, audioManager, physicsSpace, viewPort, and the camera. But what if you need this access also from another class? Don&#8217;t extend SimpleApplication a second time, and don&#8217;t pass around tons of object references in constructors! Needing access to application level objects is a sign that this class should be designed as an <a href="#ROOT:jme3/advanced/application_states.adoc" class="page unresolved">AppState</a> (read details there).</p>
 </div>
 <div class="paragraph">
 <p>An AppState has access to all game features in the SimpleApplication via the <code>this.app</code> and <code>this.stateManager</code> objects. Examples:</p>
@@ -927,7 +927,7 @@ this.app.getRootNode().attachChild( sky );</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Use <a href="../../jme3/advanced/application_states.html" class="page">AppStates</a> to implement <em>global game mechanics</em>.</p>
+<p>Use <a href="#ROOT:jme3/advanced/application_states.adoc" class="page unresolved">AppStates</a> to implement <em>global game mechanics</em>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -949,7 +949,7 @@ this.app.getRootNode().attachChild( sky );</code></pre>
 </div>
 </li>
 <li>
-<p>Use <a href="../../jme3/advanced/custom_controls.html" class="page">Controls</a> to implement the <em>behaviour of game entities</em>.</p>
+<p>Use <a href="#ROOT:jme3/advanced/custom_controls.adoc" class="page unresolved">Controls</a> to implement the <em>behaviour of game entities</em>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1004,7 +1004,7 @@ this.app.getRootNode().attachChild( sky );</code></pre>
 </table>
 </div>
 <div class="paragraph">
-<p>Read all about <a href="../../jme3/advanced/custom_controls.html" class="page">Custom Controls</a> and <a href="../../jme3/advanced/application_states.html" class="page">Application States</a> here.</p>
+<p>Read all about <a href="#ROOT:jme3/advanced/custom_controls.adoc" class="page unresolved">Custom Controls</a> and <a href="#ROOT:jme3/advanced/application_states.adoc" class="page unresolved">Application States</a> here.</p>
 </div>
 </div>
 <div class="sect2">
