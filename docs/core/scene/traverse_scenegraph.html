@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Saving and Loading Games (.j3o) :: jMonkeyEngine Docs</title>
-    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/jme3/advanced/save_and_load.html">
-    <meta name="keywords" content="convert, j3o, models, load, save, documentation, serialization, import, export, spatial, node, mesh, geometry, scenegraph, sdk">
+    <title>Traverse the SceneGraph :: jMonkeyEngine Docs</title>
+    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/core/scene/traverse_scenegraph.html">
+    <link rel="prev" href="#multithreading.adoc.adoc">
+    <link rel="next" href="spatial.html">
+    <meta name="keywords" content="spatial, node, mesh, geometry, scenegraph">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
-<meta property="og:description" content="Saving and Loading Games (.j3o)">
+<meta property="og:description" content="Traverse the SceneGraph">
 <meta property="og:title" content="jMonkeyEngine Docs">
 <link rel="stylesheet" href="../../../_/css/site-extra.css">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -68,95 +70,177 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Tutorials</span>
+    <a class="nav-link" href="../../tutorials/beginner/beginner.html">Beginner Tutorials</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../../tutorials/beginner/beginner.html">Beginner</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../tutorials/beginner/hello_simpleapplication.html">Hello SimpleApplication</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_node.html">Hello Node</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_asset.html">Hello Asset</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_main_event_loop.html">Hello Update Loop</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_input_system.html">Hello Input System</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_material.html">Hello Material</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_animation.html">Hello Animation</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_picking.html">Hello Picking</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_collision.html">Hello Collision</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_terrain.html">Hello Terrain</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_audio.html">Hello Audio</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_effects.html">Hello Effects</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_physics.html">Hello Physics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Key Concepts</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/best_practices.html">Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/optimization.html">Optimization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/faq.html">Frequently Asked Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/math_for_dummies.html">Math for Dummies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/math.html">Math overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/math_cheet_sheet.html">3D math "cheat sheet"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/rotate.html">3-D Rotation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/math_video_tutorials.html">Math video tutorial series</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/multi-media_asset_pipeline.html">Multi-Media Asset Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/scenegraph_for_dummies.html">Scene Graph for Dummies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/terminology.html">3D Graphics Terminology</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/transparency_sorting.html">Transparency Sorting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Core Engine</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app/simpleapplication.html">SimpleApplication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system/appsettings.html">AppSettings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Controlling Game Logic</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../app/update_loop.html">Update Loop</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../app/state/application_states.html">Application States</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="control/custom_controls.html">Custom Controls</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Video</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="https://www.youtube.com/watch?v=MNDiZ9YHIpM">Control any scene node</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="https://www.youtube.com/watch?v=-OzRZscLlHY">Control a character</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="https://wiki.jmonkeyengine.org/Scenes/SDK-UsecaseDemo_1.zip">Video Source Code</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#multithreading.adoc.adoc">Multithreading</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Intermediate</span>
+    <span class="nav-text">Manage the Scene Graph</span>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/best_practices.html">Best Practices</a>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="traverse_scenegraph.html">Traverse SceneGraph</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/optimization.html">Optimization</a>
+    <a class="nav-link" href="spatial.html">Spatial: Node vs Geometry</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/faq.html">Frequently Asked Questions</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="mesh.html">Mesh</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../custom_meshes.html">Custom Meshes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="shape.html">Shape</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../3d_models.html">3D Models</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/math_for_dummies.html">Math for Dummies</a>
+    <a class="nav-link" href="../asset/asset_manager.html">Asset Manager</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/math.html">Math overview</a>
+    <a class="nav-link" href="../export/save_and_load.html">Saving and Loading Nodes</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/math_cheet_sheet.html">3D math "cheat sheet"</a>
+    <a class="nav-link" href="../collision/collision_and_intersection.html">Collision and Intersection</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/rotate.html">3-D Rotation</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/math_video_tutorials.html">Math video tutorial series</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/multi-media_asset_pipeline.html">Multi-Media Asset Pipeline</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/scenegraph_for_dummies.html">Scene Graph for Dummies</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/terminology.html">3D Graphics Terminology</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/how_to_use_materials.html">How to Use Materials</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/transparency_sorting.html">Transparency Sorting</a>
+    <a class="nav-link" href="control/level_of_detail.html">Level of Detail</a>
   </li>
 </ul>
   </li>
@@ -313,10 +397,10 @@
     <a class="nav-link" href="../../sdk/filters.html">Post-Processor Filter Editor and Viewer</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="application_states.html">Application States</a>
+    <a class="nav-link" href="#ROOT:jme3/advanced/application_states.adoc">Application States</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="custom_controls.html">Custom Controls</a>
+    <a class="nav-link" href="#ROOT:jme3/advanced/custom_controls.adoc">Custom Controls</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../sdk/vehicle_creator.html">Vehicle Creator</a>
@@ -346,7 +430,7 @@
     <span class="nav-text">Available external plugins</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../contributions.html">Contributions</a>
+    <a class="nav-link" href="../../jme3/contributions.html">Contributions</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../sdk/neotexture.html">Neo Texture Editor for procedural textures</a>
@@ -423,323 +507,121 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../documentation.html">Docs</a></li>
-    <li><a href="save_and_load.html">Saving and Loading Games (.j3o)</a></li>
+    <li>Core Engine</li>
+    <li>Manage the Scene Graph</li>
+    <li><a href="traverse_scenegraph.html">Traverse SceneGraph</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/master/docs/modules/ROOT/pages/jme3/advanced/save_and_load.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/core/pages/scene/traverse_scenegraph.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Saving and Loading Games (.j3o)</h1>
+<h1 class="page">Traverse the SceneGraph</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Spatials (that is Nodes and Geometries) can contain audio and light nodes, particle emitters, controls, and user data (player score, health, inventory, etc). For your game distribution, you must convert all original models to a faster binary format. You save individual Spatials as well as scenes using <code>com.jme3.export.binary.BinaryExporter</code>.</p>
-</div>
-<div class="paragraph">
-<p>The jMonkeyEngine&#8217;s binary file format is called <code>.j3o</code>. You can convert, view and edit .j3o files and their materials in the jMonkeyEngine <a href="../../sdk/sdk.html" class="page">SDK</a> and compose scenes (this does not include editing meshes). For the conversion, you can either use the BinaryExporters, or a context menu in the SDK.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The jMonkeyEngine&#8217;s serialization system is the <code>com.jme3.export.Savable</code> interface. JME3&#8217;s BinaryExporter can write standard Java objects, JME3 objects, and primitive data types that are included in a <a href="spatial.html" class="page">spatial&#8217;s user data</a>. If you use custom game data classes, see below how to make them “Savable.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>There is also a com.jme3.export.xml.XMLExporter and com.jme3.export.xml.XMLImporter that similarly converts jme3 spatials to an XML format. But you wouldn&#8217;t use that to load models at runtime (quite slow).</p>
+<p>You can run a search across the whole scene graph and search for individual Spatials (<code>Node</code> and <code>Geometry</code>) by custom criteria, such as the Spatial&#8217;s name, or the Spatial&#8217;s class, or the Spatial&#8217;s user data, or Spatial&#8217;s Controls. You do this when you want modify  the found nodes (move them, call a method, etc) but you don&#8217;t have a local variable for them.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="sample-code"><a class="anchor" href="#sample-code"></a>Sample Code</h2>
+<h2 id="example-use-cases"><a class="anchor" href="#example-use-cases"></a>Example Use Cases</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
+<div class="paragraph">
+<p><strong>Example 1:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p><a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-examples/src/main/java/jme3test/tools/TestSaveGame.java">TestSaveGame.java</a></p>
+<p>You have created a procedural scene with lots of dynamically generated elements.</p>
 </li>
-</ul>
+<li>
+<p>You want to find individual Spatials under ever-changing conditions and modify their state.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Example 2:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>You created a mostly static scene in the jMonkeyEngine SDK and exported it as .j3o file.<br>
+The scene also contains interactive objects, for example a particle emitter, spatials with user data, or spatials with custom controls.</p>
+</li>
+<li>
+<p>You load the .j3o scene using the assetManager.</p>
+</li>
+<li>
+<p>You want to interact with one of the loaded interactive scene elements in your Java code.<br>
+For example, you want to call <code>emitAllParticles()</code> on the particle emitter. Or you want to find all NPC&#8217;s Geometries with a custom CivilianControl, and call the CivilianControl method that makes them start acting their role.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In this case, you can use a SceneGraphVisitorAdapter to identify and access the Spatials in question.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="saving-a-node"><a class="anchor" href="#saving-a-node"></a>Saving a Node</h2>
+<h2 id="code-sample"><a class="anchor" href="#code-sample"></a>Code Sample</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following example overrides <code>stop()</code> in SimpleApplication to save the rootNode to a file when the user quits the application. The saved rootNode is a normal .j3o binary file that you can open in the <a href="../../sdk/sdk.html" class="page">SDK</a>.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Note that when you save a model that has textures, the references to those textures are stored as absolute paths, so when loading the j3o file again, the textures have to be accessible at the exact location (relative to the assetmanager root, by default the <code>assets</code> directory) they were loaded from. This is why the SDK manages the conversion on the project level.</p>
-</div>
-</td>
-</tr>
-</table>
+<p>For each search, you create a <code>com.jme3.scene.SceneGraphVisitorAdapter</code> that defines your search criteria and what you want to do with the found Spatials. Then you call the <code>depthFirstTraversal(visitor)</code> or <code>breadthFirstTraversal(visitor)</code> method of the Spatial (e.g. the rootNode, or better, a subnode) to start the search.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  /* This is called when the user quits the app. */
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SceneGraphVisitor visitor = new SceneGraphVisitor() {
+
   @Override
-  public void stop() {
-    String userHome = System.getProperty("user.home");
-    BinaryExporter exporter = BinaryExporter.getInstance();
-    File file = new File(userHome+"/Models/"+"MyModel.j3o");
-    try {
-      exporter.save(rootNode, file);
-    } catch (IOException ex) {
-      Logger.getLogger(Main.class.getName()).log(Level.SEVERE, "Error: Failed to save game!", ex);
+  public void visit(Spatial spatial) {
+    // search criterion can be control class:
+    MyControl control = spatial.getControl(MyControl.class);
+    if (control != null) {
+      // you have access to any method, e.g. name.
+      System.out.println("Instance of " + control.getClass().getName()
+                       + " found for " + spatial.getName());
     }
-    super.stop(); // continue quitting the game
-  }</code></pre>
+  }
+
+};
+
+// Now scan the tree either depth first...
+rootNode.depthFirstTraversal(visitor);
+// ... or scan it breadth first.
+rootNode.breadthFirstTraversal(visitor);</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Which of the two methods is faster depends on how you designed the scengraph, and what tree element you are looking for. If you are searching for one single Geometry that is a &#8220;leaf&#8221; of the tree, and then stop searching, depth-first may be faster. If you search for a high-level grouping Node, breadth-first may be faster.</p>
+</div>
+<div class="paragraph">
+<p>The choice of depth- vs breadth-first also influences the order in which found elements are returned (children first or parents first). If you want to modify user data that is inherited from the parent node (e.g. transformations), the order of application is important, because the side-effects add up.</p>
+</div>
+<div class="paragraph">
+<p>You can use the SceneGraphVisitorAdapter class to scan separately for Geometry and Nodes.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="loading-a-node"><a class="anchor" href="#loading-a-node"></a>Loading a Node</h2>
+<h2 id="see-also"><a class="anchor" href="#see-also"></a>See Also</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The following example overrides <code>simpleInitApp()</code> in SimpleApplication to load <code>Models/MyModel.j3o</code> when the game is initialized.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Override
-  public void simpleInitApp() {
-     String userHome = System.getProperty("user.home");
-     assetManager.registerLocator(userHome, FileLocator.class);
-     Node loadedNode = (Node)assetManager.loadModel("Models/MyModel.j3o");
-     loadedNode.setName("loaded node");
-     rootNode.attachChild(loadedNode);
-  }</code></pre>
-</div>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Here you see why we save user data inside spatials – so it can be saved and loaded together with the .j3o file. If you have game data outside Spatials, you have to remember to save() and load(), and get() and set() it yourself.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="custom-savable-class"><a class="anchor" href="#custom-savable-class"></a>Custom Savable Class</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>JME&#8217;s BinaryExporter can write standard Java objects (String, ArrayList, buffers, etc), JME objects (Savables, such as Material), and primitive data types (int, float, etc). If you are using any custom class together with a Spatial, then the custom class must implement the <code>com.jme3.export.Savable</code> interface. There are two common cases where this is relevant:</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>The Spatial is carrying any <a href="custom_controls.html" class="page">Custom Controls</a>.<br>
-Example: You used something like <code>mySpatial.addControl(myControl);</code></p>
+<p><a href="#../../jme3/the_scene_graph.adoc" class="page unresolved">The Scene Graph</a></p>
 </li>
 <li>
-<p>The Spatial&#8217;s user data can contain a custom Java object.<br>
-Example: You used something like <code>mySpatial.setUserData("inventory", myInventory);</code></p>
+<p><a href="#../../jme3/advanced/spatial.adoc" class="page unresolved">Spatial</a></p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>If your custom classes (the user data or the Controls) do not implement Savable, then the BinaryImporter/BinaryExporter cannot save the Spatial!</p>
-</div>
-<div class="paragraph">
-<p>So every time you create a custom Control or custom user data class, remember to implement Savable:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import com.jme3.export.InputCapsule;
-import com.jme3.export.JmeExporter;
-import com.jme3.export.JmeImporter;
-import com.jme3.export.OutputCapsule;
-import com.jme3.export.Savable;
-import com.jme3.material.Material;
-import java.io.IOException;
-
-public class MyCustomClass implements Savable {
-    private int      someIntValue;   // some custom user data
-    private float    someFloatValue; // some custom user data
-    private Material someJmeObject;  // some custom user data
-
-    ...
-    // your other code...
-    ...
-
-    public void write(JmeExporter ex) throws IOException {
-        OutputCapsule capsule = ex.getCapsule(this);
-        capsule.write(someIntValue,   "someIntValue",   1);
-        capsule.write(someFloatValue, "someFloatValue", 0f);
-        capsule.write(someJmeObject,  "someJmeObject",  new Material());
-    }
-
-    public void read(JmeImporter im) throws IOException {
-        InputCapsule capsule = im.getCapsule(this);
-        someIntValue   = capsule.readInt(    "someIntValue",   1);
-        someFloatValue = capsule.readFloat(  "someFloatValue", 0f);
-        someJmeObject  = capsule.readSavable("someJmeObject",  new Material());
-    }
-}</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>To make a custom class savable:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Implement <code>Savable</code> and add the <code>write()</code> and <code>read()</code> methods as shown in the example above.</p>
-</li>
-<li>
-<p>Do the following for each non-temporary class field:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Add one line that <code>write()</code>s the data to the JmeExport output capsule.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Specify the variable to save, give it a String name (can be the same as the variable name), and specify a default value.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Add one line that <code>read…()</code>s the data to the JmeImport input capsule.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>On the left side of the assignment, specify the class field that you are restoring</p>
-</li>
-<li>
-<p>On the right side, use the appropriate <code>capsule.read…()</code> method for the data type. Specify the String name of the variable (must be the same as you used in the <code>write()</code> method), and again specify a default value.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>As with all serialization, remember that if you ever change data types in custom classes, the updated read() methods will no longer be able to read your old files. Also there has to be a constructor that takes no Parameters.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="default-value"><a class="anchor" href="#default-value"></a>Default Value</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The default value plays an important role in what data is saved to file.</p>
-</div>
-<div class="listingblock">
-<div class="title">write()</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void write(int value, String name, int defVal) throws IOException {
-    if (value == defVal)
-        return;
-    writeAlias(name, BinaryClassField.INT);
-    write(value);
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The write methods of the <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/445f7ed010199d30c484fe75bacef4b87f2eb38e/jme3-core/src/plugins/java/com/jme3/export/binary/BinaryOutputCapsule.java">BinaryOutputCapsule.java </a> class do not write the <code>defVal</code> to file. Instead, they check to see if <code>value</code> is equal to <code>defVal</code>, and if so, will not write anything at all.</p>
-</div>
-<div class="paragraph">
-<p>There are very good reasons to do this.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>It takes less space if everything is a default value.</p>
-</li>
-<li>
-<p>You may decide on new defaults later and your objects will automatically upgrade if they didn’t have specifically overridden values.</p>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="title">read()</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public int readInt(String name, int defVal) throws IOException {
-    BinaryClassField field = cObj.nameFields.get(name);
-    if (field == null || !fieldData.containsKey(field.alias))
-        return defVal;
-    return ((Integer) fieldData.get(field.alias)).intValue();
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>When reading your saved file, the <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/445f7ed010199d30c484fe75bacef4b87f2eb38e/jme3-core/src/plugins/java/com/jme3/export/binary/BinaryInputCapsule.java">BinaryInputCapsule.java</a> class will see that the <code>name</code> field is <code>null</code> and this is when the defVal is set.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>If you rely on the compiler to initialize class or instance variables for you, this can lead too unintended consequences.</p>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">capsule.write(someIntValue,   "someIntValue",   1);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If you let the compiler initialize <code>someIntValue</code>, it will initialize to zero and if it&#8217;s not changed after initialization, zero will be written to file.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">someIntValue   = capsule.readInt(    "someIntValue",   1);</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Now when <code>read</code> is called, it will see the &#8220;someIntValue&#8221; name and set the <code>someIntValue</code> variable to zero. Not one, as you were expecting. Keep this in mind when using Savable.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
+<nav class="pagination">
+  <span class="prev"><a href="#multithreading.adoc.adoc">Multithreading</a></span>
+  <span class="next"><a href="spatial.html">Spatial: Node vs Geometry</a></span>
+</nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>

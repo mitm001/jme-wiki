@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Collision and Intersection :: jMonkeyEngine Docs</title>
-    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/jme3/advanced/collision_and_intersection.html">
+    <title>Saving and Loading Games (.j3o) :: jMonkeyEngine Docs</title>
+    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/core/export/save_and_load.html">
+    <link rel="prev" href="../asset/asset_manager.html">
+    <link rel="next" href="../collision/collision_and_intersection.html">
+    <meta name="keywords" content="convert, j3o, models, load, save, documentation, serialization, import, export, spatial, node, mesh, geometry, scenegraph, sdk">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
-<meta property="og:description" content="Collision and Intersection">
+<meta property="og:description" content="Saving and Loading Games (.j3o)">
 <meta property="og:title" content="jMonkeyEngine Docs">
 <link rel="stylesheet" href="../../../_/css/site-extra.css">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -67,95 +70,177 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Tutorials</span>
+    <a class="nav-link" href="../../tutorials/beginner/beginner.html">Beginner Tutorials</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../../tutorials/beginner/beginner.html">Beginner</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../tutorials/beginner/hello_simpleapplication.html">Hello SimpleApplication</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_node.html">Hello Node</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_asset.html">Hello Asset</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_main_event_loop.html">Hello Update Loop</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_input_system.html">Hello Input System</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_material.html">Hello Material</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_animation.html">Hello Animation</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_picking.html">Hello Picking</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_collision.html">Hello Collision</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_terrain.html">Hello Terrain</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_audio.html">Hello Audio</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_effects.html">Hello Effects</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../tutorials/beginner/hello_physics.html">Hello Physics</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Key Concepts</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/best_practices.html">Best Practices</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/optimization.html">Optimization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/faq.html">Frequently Asked Questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/math_for_dummies.html">Math for Dummies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/math.html">Math overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/math_cheet_sheet.html">3D math "cheat sheet"</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/rotate.html">3-D Rotation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/math_video_tutorials.html">Math video tutorial series</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/multi-media_asset_pipeline.html">Multi-Media Asset Pipeline</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/scenegraph_for_dummies.html">Scene Graph for Dummies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/terminology.html">3D Graphics Terminology</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../tutorials/intermediate/transparency_sorting.html">Transparency Sorting</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Core Engine</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../app/simpleapplication.html">SimpleApplication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../system/appsettings.html">AppSettings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Controlling Game Logic</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../app/update_loop.html">Update Loop</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../app/state/application_states.html">Application States</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scene/control/custom_controls.html">Custom Controls</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Video</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="https://www.youtube.com/watch?v=MNDiZ9YHIpM">Control any scene node</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="https://www.youtube.com/watch?v=-OzRZscLlHY">Control a character</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="https://wiki.jmonkeyengine.org/Scenes/SDK-UsecaseDemo_1.zip">Video Source Code</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#multithreading.adoc.adoc">Multithreading</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Intermediate</span>
+    <span class="nav-text">Manage the Scene Graph</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/best_practices.html">Best Practices</a>
+    <a class="nav-link" href="../scene/traverse_scenegraph.html">Traverse SceneGraph</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/optimization.html">Optimization</a>
+    <a class="nav-link" href="../scene/spatial.html">Spatial: Node vs Geometry</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/faq.html">Frequently Asked Questions</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../scene/mesh.html">Mesh</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../custom_meshes.html">Custom Meshes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../scene/shape.html">Shape</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../3d_models.html">3D Models</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/math_for_dummies.html">Math for Dummies</a>
+    <a class="nav-link" href="../asset/asset_manager.html">Asset Manager</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="save_and_load.html">Saving and Loading Nodes</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/math.html">Math overview</a>
+    <a class="nav-link" href="../collision/collision_and_intersection.html">Collision and Intersection</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/math_cheet_sheet.html">3D math "cheat sheet"</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/rotate.html">3-D Rotation</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/math_video_tutorials.html">Math video tutorial series</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/multi-media_asset_pipeline.html">Multi-Media Asset Pipeline</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/scenegraph_for_dummies.html">Scene Graph for Dummies</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/terminology.html">3D Graphics Terminology</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/how_to_use_materials.html">How to Use Materials</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../tutorials/intermediate/transparency_sorting.html">Transparency Sorting</a>
+    <a class="nav-link" href="../scene/control/level_of_detail.html">Level of Detail</a>
   </li>
 </ul>
   </li>
@@ -312,10 +397,10 @@
     <a class="nav-link" href="../../sdk/filters.html">Post-Processor Filter Editor and Viewer</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="application_states.html">Application States</a>
+    <a class="nav-link" href="#ROOT:jme3/advanced/application_states.adoc">Application States</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="custom_controls.html">Custom Controls</a>
+    <a class="nav-link" href="#ROOT:jme3/advanced/custom_controls.adoc">Custom Controls</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../sdk/vehicle_creator.html">Vehicle Creator</a>
@@ -345,7 +430,7 @@
     <span class="nav-text">Available external plugins</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../contributions.html">Contributions</a>
+    <a class="nav-link" href="../../jme3/contributions.html">Contributions</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../sdk/neotexture.html">Neo Texture Editor for procedural textures</a>
@@ -422,298 +507,111 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../documentation.html">Docs</a></li>
-    <li><a href="collision_and_intersection.html">Collision and Intersection</a></li>
+    <li>Core Engine</li>
+    <li>Manage the Scene Graph</li>
+    <li><a href="save_and_load.html">Saving and Loading Nodes</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/master/docs/modules/ROOT/pages/jme3/advanced/collision_and_intersection.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/core/pages/export/save_and_load.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Collision and Intersection</h1>
+<h1 class="page">Saving and Loading Games (.j3o)</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The term collision can be used to refer to <a href="physics_listeners.html" class="page">physical interactions</a> (where <a href="physics.html" class="page">physical objects</a> collide, push and bump off one another), and also to non-physical <em>intersections</em> in 3D space. This article is about the non-physical (mathematical) collisions.</p>
+<p>Spatials (that is Nodes and Geometries) can contain audio and light nodes, particle emitters, controls, and user data (player score, health, inventory, etc). For your game distribution, you must convert all original models to a faster binary format. You save individual Spatials as well as scenes using <code>com.jme3.export.binary.BinaryExporter</code>.</p>
 </div>
 <div class="paragraph">
-<p>Non-physical collision detection is interesting because it uses less computing resources than physical collision detection. The non-physical calculations are faster because they do not have any side effects such as pushing other objects or bumping off of them. Tasks such as <a href="mouse_picking.html" class="page">mouse picking</a> are easily implemented using mathematical techniques such as ray casting and intersections.  Experienced developers optimize their games by finding ways to simulate certain (otherwise expensive physical) interactions in a non-physical way.</p>
+<p>The jMonkeyEngine&#8217;s binary file format is called <code>.j3o</code>. You can convert, view and edit .j3o files and their materials in the jMonkeyEngine <a href="../../sdk/sdk.html" class="page">SDK</a> and compose scenes (this does not include editing meshes). For the conversion, you can either use the BinaryExporters, or a context menu in the SDK.</p>
 </div>
-<div class="paragraph">
-<p><strong>Example:</strong> One example for an optimization is a physical vehicle&#8217;s wheels. You could make the wheels fully physical disks, and have jME calculate every tiny force – sounds very accurate? It&#8217;s total overkill and too slow for a racing game. A more performant solution is to cast four invisible rays down from the vehicle and calculate the intersections with the floor. These non-physical wheels require (in the simplest case) only four calculations per tick to achieve an effect that players can hardly distinguish from the real thing.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="collidable"><a class="anchor" href="#collidable"></a>Collidable</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The interface com.jme3.collision.Collidable declares one method that returns how many collisions were found between two Collidables: <code>collideWith(Collidable other, CollisionResults results)</code>.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A <code>com.jme3.collision.CollisionResults</code> object is an ArrayList of comparable <code>com.jme3.collision.CollisionResult</code> objects.</p>
-</li>
-<li>
-<p>You can iterate over the CollisionResults to identify the other parties involved in the collision.<br>
-Note that jME counts <em>all</em> collisions, this means a ray intersecting a box will be counted as two hits, one on the front where the ray enters, and one on the back where the ray exits.</p>
-</li>
-</ul>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">CollisionResults Method</th>
-<th class="tableblock halign-left valign-top">Usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>size()</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Returns the number of CollisionResult objects.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>getClosestCollision()</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Returns the CollisionResult with the lowest distance.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>getFarthestCollision()</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Returns the CollisionResult with the farthest distance.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>getCollision(i)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Returns the CollisionResult at index i.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>A CollisionResult object contains information about the second party of the collision event.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">CollisionResult Method</th>
-<th class="tableblock halign-left valign-top">Usage</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>getContactPoint()</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Returns the contact point coordinate on the second party, as Vector3f.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>getContactNormal()</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Returns the Normal vector at the contact point, as Vector3f.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>getDistance()</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Returns the distance between the Collidable and the second party, as float.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>getGeometry()</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Returns the Geometry of the second party.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>getTriangle(t)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Binds t to the triangle t on the second party&#8217;s mesh that was hit.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>getTriangleIndex()</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Returns the index of the triangle on the second party&#8217;s mesh that was hit.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="sect2">
-<h3 id="code-sample"><a class="anchor" href="#code-sample"></a>Code Sample</h3>
-<div class="paragraph">
-<p>Assume you have two collidables a and b and want to detect collisions between them. The collision parties can be Geometries, Nodes with Geometries attached (including the rootNode), Planes, Quads, Lines, or Rays. An important restriction is that you can only collide geometry vs bounding volumes or rays. (This means for example that a must be of Type Node or Geometry and b respectively of Type BoundingBox, BoundingSphere or Ray.)</p>
-</div>
-<div class="paragraph">
-<p>The following code snippet can be triggered by listeners (e.g. after an input action such as a click), or timed in the update loop.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  // Calculate detection results
-  CollisionResults results = new CollisionResults();
-  a.collideWith(b, results);
-  System.out.println("Number of Collisions between" +
-      a.getName()+ " and " + b.getName() + ": " + results.size());
-  // Use the results
-  if (results.size() &gt; 0) {
-    // how to react when a collision was detected
-    CollisionResult closest  = results.getClosestCollision();
-    System.out.println("What was hit? " + closest.getGeometry().getName() );
-    System.out.println("Where was it hit? " + closest.getContactPoint() );
-    System.out.println("Distance? " + closest.getDistance() );
-  } else {
-    // how to react when no collision occured
-  }
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>You can also loop over all results and trigger different reactions depending on what was hit and where it was hit. In this example, we simply print info about them.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  // Calculate Results
-  CollisionResults results = new CollisionResults();
-  a.collideWith(b, results);
-  System.out.println("Number of Collisions between" + a.getName()+ " and "
-   + b.getName() " : " + results.size());
-  // Use the results
-  for (int i = 0; i &lt; results.size(); i++) {
-    // For each hit, we know distance, impact point, name of geometry.
-    float     dist = results.getCollision(i).getDistance();
-    Vector3f    pt = results.getCollision(i).getContactPoint();
-    String   party = results.getCollision(i).getGeometry().getName();
-    int        tri = results.getCollision(i).getTriangleIndex();
-    Vector3f  norm = results.getCollision(i).getTriangle(new Triangle()).getNormal();
-    System.out.println("Details of Collision #" + i + ":");
-    System.out.println("  Party " + party + " was hit at " + pt + ", " + dist + " wu away.");
-    System.out.println("  The hit triangle #" + tri + " has a normal vector of " + norm);
-  }</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Knowing the distance of the collisions is useful for example when you intersect Lines and Rays with other objects.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="bounding-volumes"><a class="anchor" href="#bounding-volumes"></a>Bounding Volumes</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A <code>com.jme3.bounding.BoundingVolume</code> is an interface for dealing with containment of a collection of points. All BoundingVolumes are <code>Collidable</code> and are used as optimization to calculate non-physical collisions more quickly: It&#8217;s always faster to calculate an intersection between simple shapes like spheres and boxes than between complex shapes like models.</p>
-</div>
-<div class="paragraph">
-<p>jME3 computes bounding volumes for all objects. These bounding volumes are later used for frustum culling, which is making sure only objects visible on-screen are actually sent for rendering.</p>
-</div>
-<div class="paragraph">
-<p>All fast-paced action and shooter games use BoundingVolumes as an optimization. Wrap all complex models into simpler shapes – in the end, you get equally useful collision detection results, but faster. <a href="http://en.wikipedia.org/wiki/Bounding_volume">More about bounding volumes&#8230;&#8203;</a></p>
-</div>
-<div class="paragraph">
-<p>Supported types:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Type.AABB = Axis-aligned bounding box, that means it doesn&#8217;t rotate, which makes it less precise. A <code>com.jme3.bounding.BoundingBox</code> is an axis-aligned cuboid used as a container for a group of vertices of a piece of geometry. A BoundingBox has a center and extents from that center along the x, y and z axis. This is the default bounding volume, since it is fairly fast to generate and gives better accuracy than the bounding sphere.</p>
-</li>
-<li>
-<p>Type.Sphere: <code>com.jme3.bounding.BoundingSphere</code> is a sphere used as a container for a group of vertices of a piece of geometry. A BoundingSphere has a center and a radius.</p>
-</li>
-<li>
-<p>Type.OBB = Oriented bounding box. This bounding box is more precise because it can rotate with its content, but is computationally more expensive. (Currently not supported.)</p>
-</li>
-<li>
-<p>Type.Capsule = Cylinder with rounded ends, also called “swept sphere. Typically used for mobile characters. (Currently not supported.)</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
+<div class="admonitionblock important">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Note: If you are looking for bounding volumes for physical objects, use <a href="physics.html" class="page">CollisionShapes</a>.</p>
+<p>The jMonkeyEngine&#8217;s serialization system is the <code>com.jme3.export.Savable</code> interface. JME3&#8217;s BinaryExporter can write standard Java objects, JME3 objects, and primitive data types that are included in a <a href="#jme3/advanced/spatial.adoc" class="page unresolved">spatial&#8217;s user data</a>. If you use custom game data classes, see below how to make them “Savable.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="sect2">
-<h3 id="usage"><a class="anchor" href="#usage"></a>Usage</h3>
 <div class="paragraph">
-<p>For example you can use Bounding Volumes on custom meshes, or complex non-physical shapes.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mesh.setBound(new BoundingSphere());
-mesh.updateBound();</code></pre>
-</div>
-</div>
+<p>There is also a com.jme3.export.xml.XMLExporter and com.jme3.export.xml.XMLImporter that similarly converts jme3 spatials to an XML format. But you wouldn&#8217;t use that to load models at runtime (quite slow).</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="mesh-and-scene-graph-collision"><a class="anchor" href="#mesh-and-scene-graph-collision"></a>Mesh and Scene Graph Collision</h2>
+<h2 id="sample-code"><a class="anchor" href="#sample-code"></a>Sample Code</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>One of the supported <code>Collidable</code>s are meshes and scene graph objects. To execute a collision detection query against a scene graph, use <code>Spatial.collideWith()</code>. This will traverse the scene graph and return any mesh collisions that were detected. Note that the first collision against a particular scene graph may take a long time, this is because a special data structure called <a href="http://en.wikipedia.org/wiki/Bounding_interval_hierarchy">Bounding Interval Hierarchy (BIH)</a> needs to be generated for the meshes. At a later point, the mesh could change and the BIH tree would become out of date, in that case, call <a href="https://javadoc.jmonkeyengine.org/v3.3.2-stable/com/jme3/scene/Mesh.html#createCollisionData--">Mesh.createCollisionData()</a> on the changed mesh to update the BIH tree.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="intersection"><a class="anchor" href="#intersection"></a>Intersection</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A <code>com.jme3.math.Ray</code> is an infinite line with a beginning, a direction, and no end; whereas a <code>com.jme3.math.Line</code> is an infinite line with only a direction (no beginning, no end).</p>
-</div>
-<div class="paragraph">
-<p>Rays are used to perform line-of-sight calculations. This means you can detect what users were “aiming at when they clicked or pressed a key. You can also use this to detect whether game characters can see something (or someone) or not.</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Click to select:</strong> You can determine what a user has clicked by casting a ray from the camera forward in the direction of the camera. Now identify the closest collision of the ray with the rootNode, and you have the clicked object.</p>
-</li>
-<li>
-<p><strong>Line of sight:</strong> Cast a ray from a player in the direction of another player. Then you detect all collisions of this ray with other entities (walls versus foliage versus window panes) and use this to calculate how likely it is that one can see the other.</p>
+<p><a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-examples/src/main/java/jme3test/tools/TestSaveGame.java">TestSaveGame.java</a></p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="saving-a-node"><a class="anchor" href="#saving-a-node"></a>Saving a Node</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following example overrides <code>stop()</code> in SimpleApplication to save the rootNode to a file when the user quits the application. The saved rootNode is a normal .j3o binary file that you can open in the <a href="../../sdk/sdk.html" class="page">SDK</a>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Note that when you save a model that has textures, the references to those textures are stored as absolute paths, so when loading the j3o file again, the textures have to be accessible at the exact location (relative to the assetmanager root, by default the <code>assets</code> directory) they were loaded from. This is why the SDK manages the conversion on the project level.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  /* This is called when the user quits the app. */
+  @Override
+  public void stop() {
+    String userHome = System.getProperty("user.home");
+    BinaryExporter exporter = BinaryExporter.getInstance();
+    File file = new File(userHome+"/Models/"+"MyModel.j3o");
+    try {
+      exporter.save(rootNode, file);
+    } catch (IOException ex) {
+      Logger.getLogger(Main.class.getName()).log(Level.SEVERE, "Error: Failed to save game!", ex);
+    }
+    super.stop(); // continue quitting the game
+  }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="loading-a-node"><a class="anchor" href="#loading-a-node"></a>Loading a Node</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following example overrides <code>simpleInitApp()</code> in SimpleApplication to load <code>Models/MyModel.j3o</code> when the game is initialized.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">  @Override
+  public void simpleInitApp() {
+     String userHome = System.getProperty("user.home");
+     assetManager.registerLocator(userHome, FileLocator.class);
+     Node loadedNode = (Node)assetManager.loadModel("Models/MyModel.j3o");
+     loadedNode.setName("loaded node");
+     rootNode.attachChild(loadedNode);
+  }</code></pre>
+</div>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -723,31 +621,215 @@ mesh.updateBound();</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>These simple but powerful ray-surface intersection tests are called Ray Casting. As opposed to the more advanced Ray Tracing technique, Ray Casting does not follow the ray&#8217;s reflection after the first hit – the ray just goes straight on.</p>
+<p>Here you see why we save user data inside spatials – so it can be saved and loaded together with the .j3o file. If you have game data outside Spatials, you have to remember to save() and load(), and get() and set() it yourself.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Learn the details of how to implement <a href="mouse_picking.html" class="page">Mouse Picking</a> here.</p>
 </div>
-<hr>
+</div>
+<div class="sect1">
+<h2 id="custom-savable-class"><a class="anchor" href="#custom-savable-class"></a>Custom Savable Class</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>TODO:</p>
+<p>JME&#8217;s BinaryExporter can write standard Java objects (String, ArrayList, buffers, etc), JME objects (Savables, such as Material), and primitive data types (int, float, etc). If you are using any custom class together with a Spatial, then the custom class must implement the <code>com.jme3.export.Savable</code> interface. There are two common cases where this is relevant:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Bounding Interval Hierarchy (<code>com.jme3.collision.bih.BIHNode</code>)</p>
+<p>The Spatial is carrying any <a href="#jme3/advanced/custom_controls.adoc" class="page unresolved">Custom Controls</a>.<br>
+Example: You used something like <code>mySpatial.addControl(myControl);</code></p>
 </li>
 <li>
-<p>com.jme3.scene.CollisionData</p>
+<p>The Spatial&#8217;s user data can contain a custom Java object.<br>
+Example: You used something like <code>mySpatial.setUserData("inventory", myInventory);</code></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>If your custom classes (the user data or the Controls) do not implement Savable, then the BinaryImporter/BinaryExporter cannot save the Spatial!</p>
+</div>
+<div class="paragraph">
+<p>So every time you create a custom Control or custom user data class, remember to implement Savable:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import com.jme3.export.InputCapsule;
+import com.jme3.export.JmeExporter;
+import com.jme3.export.JmeImporter;
+import com.jme3.export.OutputCapsule;
+import com.jme3.export.Savable;
+import com.jme3.material.Material;
+import java.io.IOException;
+
+public class MyCustomClass implements Savable {
+    private int      someIntValue;   // some custom user data
+    private float    someFloatValue; // some custom user data
+    private Material someJmeObject;  // some custom user data
+
+    ...
+    // your other code...
+    ...
+
+    public void write(JmeExporter ex) throws IOException {
+        OutputCapsule capsule = ex.getCapsule(this);
+        capsule.write(someIntValue,   "someIntValue",   1);
+        capsule.write(someFloatValue, "someFloatValue", 0f);
+        capsule.write(someJmeObject,  "someJmeObject",  new Material());
+    }
+
+    public void read(JmeImporter im) throws IOException {
+        InputCapsule capsule = im.getCapsule(this);
+        someIntValue   = capsule.readInt(    "someIntValue",   1);
+        someFloatValue = capsule.readFloat(  "someFloatValue", 0f);
+        someJmeObject  = capsule.readSavable("someJmeObject",  new Material());
+    }
+}</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>To make a custom class savable:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Implement <code>Savable</code> and add the <code>write()</code> and <code>read()</code> methods as shown in the example above.</p>
+</li>
+<li>
+<p>Do the following for each non-temporary class field:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add one line that <code>write()</code>s the data to the JmeExport output capsule.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Specify the variable to save, give it a String name (can be the same as the variable name), and specify a default value.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add one line that <code>read…()</code>s the data to the JmeImport input capsule.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>On the left side of the assignment, specify the class field that you are restoring</p>
+</li>
+<li>
+<p>On the right side, use the appropriate <code>capsule.read…()</code> method for the data type. Specify the String name of the variable (must be the same as you used in the <code>write()</code> method), and again specify a default value.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As with all serialization, remember that if you ever change data types in custom classes, the updated read() methods will no longer be able to read your old files. Also there has to be a constructor that takes no Parameters.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="default-value"><a class="anchor" href="#default-value"></a>Default Value</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The default value plays an important role in what data is saved to file.</p>
+</div>
+<div class="listingblock">
+<div class="title">write()</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void write(int value, String name, int defVal) throws IOException {
+    if (value == defVal)
+        return;
+    writeAlias(name, BinaryClassField.INT);
+    write(value);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The write methods of the <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/445f7ed010199d30c484fe75bacef4b87f2eb38e/jme3-core/src/plugins/java/com/jme3/export/binary/BinaryOutputCapsule.java">BinaryOutputCapsule.java </a> class do not write the <code>defVal</code> to file. Instead, they check to see if <code>value</code> is equal to <code>defVal</code>, and if so, will not write anything at all.</p>
+</div>
+<div class="paragraph">
+<p>There are very good reasons to do this.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>It takes less space if everything is a default value.</p>
+</li>
+<li>
+<p>You may decide on new defaults later and your objects will automatically upgrade if they didn’t have specifically overridden values.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">read()</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public int readInt(String name, int defVal) throws IOException {
+    BinaryClassField field = cObj.nameFields.get(name);
+    if (field == null || !fieldData.containsKey(field.alias))
+        return defVal;
+    return ((Integer) fieldData.get(field.alias)).intValue();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When reading your saved file, the <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/445f7ed010199d30c484fe75bacef4b87f2eb38e/jme3-core/src/plugins/java/com/jme3/export/binary/BinaryInputCapsule.java">BinaryInputCapsule.java</a> class will see that the <code>name</code> field is <code>null</code> and this is when the defVal is set.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you rely on the compiler to initialize class or instance variables for you, this can lead too unintended consequences.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">capsule.write(someIntValue,   "someIntValue",   1);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you let the compiler initialize <code>someIntValue</code>, it will initialize to zero and if it&#8217;s not changed after initialization, zero will be written to file.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">someIntValue   = capsule.readInt(    "someIntValue",   1);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now when <code>read</code> is called, it will see the &#8220;someIntValue&#8221; name and set the <code>someIntValue</code> variable to zero. Not one, as you were expecting. Keep this in mind when using Savable.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="../asset/asset_manager.html">Asset Manager</a></span>
+  <span class="next"><a href="../collision/collision_and_intersection.html">Collision and Intersection</a></span>
+</nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
