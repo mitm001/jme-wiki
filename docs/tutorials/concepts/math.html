@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Introduction to Mathematical Functionality :: jMonkeyEngine Docs</title>
-    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/tutorials/intermediate/math.html">
-    <link rel="prev" href="math_for_dummies.html">
-    <link rel="next" href="math_cheet_sheet.html">
+    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/tutorials/concepts/math.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
@@ -114,40 +112,40 @@
     <span class="nav-text">Key Concepts</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="best_practices.html">Best Practices</a>
+    <a class="nav-link" href="#intermediate/best_practices.adoc">Best Practices</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="optimization.html">Optimization</a>
+    <a class="nav-link" href="#intermediate/optimization.adoc">Optimization</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq.html">Frequently Asked Questions</a>
+    <a class="nav-link" href="#intermediate/faq.adoc">Frequently Asked Questions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="math_for_dummies.html">Math for Dummies</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="math.html">Math overview</a>
+    <a class="nav-link" href="#intermediate/math_for_dummies.adoc">Math for Dummies</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="math_cheet_sheet.html">3D math "cheat sheet"</a>
+    <a class="nav-link" href="#intermediate/math.adoc">Math overview</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="rotate.html">3-D Rotation</a>
+    <a class="nav-link" href="#intermediate/math_cheet_sheet.adoc">3D math "cheat sheet"</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="math_video_tutorials.html">Math video tutorial series</a>
+    <a class="nav-link" href="#intermediate/rotate.adoc">3-D Rotation</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="multi-media_asset_pipeline.html">Multi-Media Asset Pipeline</a>
+    <a class="nav-link" href="#intermediate/math_video_tutorials.adoc">Math video tutorial series</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scenegraph_for_dummies.html">Scene Graph for Dummies</a>
+    <a class="nav-link" href="#intermediate/multi-media_asset_pipeline.adoc">Multi-Media Asset Pipeline</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="terminology.html">3D Graphics Terminology</a>
+    <a class="nav-link" href="#intermediate/scenegraph_for_dummies.adoc">Scene Graph for Dummies</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transparency_sorting.html">Transparency Sorting</a>
+    <a class="nav-link" href="#intermediate/terminology.adoc">3D Graphics Terminology</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#intermediate/transparency_sorting.adoc">Transparency Sorting</a>
   </li>
 </ul>
   </li>
@@ -965,11 +963,10 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../documentation.html">Docs</a></li>
-    <li>Key Concepts</li>
-    <li><a href="math.html">Math overview</a></li>
+    <li><a href="math.html">Introduction to Mathematical Functionality</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/tutorials/pages/intermediate/math.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/tutorials/pages/concepts/math.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
@@ -983,7 +980,7 @@
 <p>I&#8217;ll discuss how these are used in the system for the core functionality. Including Transforming, Visibility Determination, Collision Detection, and the Coordinate System. Note, that these are low level details. Further chapters will discuss how to use these various systems from a high level perspective.</p>
 </div>
 <div class="paragraph">
-<p>To get a visual introduction to math in jME3 for the absolute beginner, check out our <a href="math_for_dummies.html" class="page">Math for Dummies</a> introduction class.</p>
+<p>To get a visual introduction to math in jME3 for the absolute beginner, check out our <a href="#intermediate/math_for_dummies.adoc" class="page unresolved">Math for Dummies</a> introduction class.</p>
 </div>
 </div>
 </div>
@@ -1091,7 +1088,7 @@ object.setSomeColor(red);</code></pre>
 <div class="sect2">
 <h3 id="definition-3"><a class="anchor" href="#definition-3"></a>Definition</h3>
 <div class="paragraph">
-<p>A Matrix is typically used as a <em>linear transformation</em> to map vectors to vectors. That is: Y = MX where X is a Vector and M is a Matrix applying any or all transformations (scale, <a href="rotate.html" class="page">rotate</a>, translate).</p>
+<p>A Matrix is typically used as a <em>linear transformation</em> to map vectors to vectors. That is: Y = MX where X is a Vector and M is a Matrix applying any or all transformations (scale, <a href="#intermediate/rotate.adoc" class="page unresolved">rotate</a>, translate).</p>
 </div>
 <div class="paragraph">
 <p>There are a few special matrices:</p>
@@ -1530,7 +1527,7 @@ object.setSomeColor(red);</code></pre>
 <div class="sect2">
 <h3 id="angle-axis"><a class="anchor" href="#angle-axis"></a>Angle Axis</h3>
 <div class="paragraph">
-<p>You might wish to represent your rotations as Angle Axis pairs. That is, you define a axis of rotation and the angle with which to <a href="rotate.html" class="page">rotate</a> about this axis. <a href="../../jme3/quaternion.html" class="page">Quaternions</a> defines a method <code>fromAngleAxis</code> (and <code>fromAngleNormalAxis</code>) to create a Quaternion from this pair. This is acutally used quite a bit in jME demos to continually rotate objects. You can also obtain a Angle Axis rotation from an existing Quaternion using <code>toAngleAxis</code>.</p>
+<p>You might wish to represent your rotations as Angle Axis pairs. That is, you define a axis of rotation and the angle with which to <a href="#intermediate/rotate.adoc" class="page unresolved">rotate</a> about this axis. <a href="../../jme3/quaternion.html" class="page">Quaternions</a> defines a method <code>fromAngleAxis</code> (and <code>fromAngleNormalAxis</code>) to create a Quaternion from this pair. This is acutally used quite a bit in jME demos to continually rotate objects. You can also obtain a Angle Axis rotation from an existing Quaternion using <code>toAngleAxis</code>.</p>
 </div>
 <div class="sect3">
 <h4 id="example-rotate-a-spatial-using-fromangleaxis"><a class="anchor" href="#example-rotate-a-spatial-using-fromangleaxis"></a>Example - Rotate a Spatial Using fromAngleAxis</h4>
@@ -2033,7 +2030,7 @@ Vector3f point = r.random();</code></pre>
 <div class="sect2">
 <h3 id="usage-3"><a class="anchor" href="#usage-3"></a>Usage</h3>
 <div class="paragraph">
-<p>jME&#8217;s Triangle class is a simple data class. It contains three <a href="terminology.html#vectors" class="page">Vector3f</a> objects that represent the three points of the triangle. These can be retrieved via the <code>get</code> method. The <code>get</code> method, obtains the point based on the index provided. Similarly, the values can be set via the <code>set</code> method.</p>
+<p>jME&#8217;s Triangle class is a simple data class. It contains three <a href="#intermediate/terminology.adoc#vectors" class="page unresolved">Vector3f</a> objects that represent the three points of the triangle. These can be retrieved via the <code>get</code> method. The <code>get</code> method, obtains the point based on the index provided. Similarly, the values can be set via the <code>set</code> method.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2080,10 +2077,6 @@ float z = ( (BoundingBox)spatial.getWorldBound()).getZExtent();</code></pre>
 </div>
 </div>
 </div>
-<nav class="pagination">
-  <span class="prev"><a href="math_for_dummies.html">Math for Dummies</a></span>
-  <span class="next"><a href="math_cheet_sheet.html">3D math "cheat sheet"</a></span>
-</nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>

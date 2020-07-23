@@ -3,15 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Optimization reference :: jMonkeyEngine Docs</title>
-    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/tutorials/intermediate/optimization.html">
-    <link rel="prev" href="best_practices.html">
-    <link rel="next" href="faq.html">
-    <meta name="keywords" content="performance">
+    <title>Scenegraph For Dummies :: jMonkeyEngine Docs</title>
+    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/tutorials/concepts/scenegraph_for_dummies.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
-<meta property="og:description" content="Optimization reference">
+<meta property="og:description" content="Scenegraph For Dummies">
 <meta property="og:title" content="jMonkeyEngine Docs">
 <link rel="stylesheet" href="../../../_/css/site-extra.css">
 <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
@@ -115,40 +112,40 @@
     <span class="nav-text">Key Concepts</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="best_practices.html">Best Practices</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="optimization.html">Optimization</a>
+    <a class="nav-link" href="#intermediate/best_practices.adoc">Best Practices</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="faq.html">Frequently Asked Questions</a>
+    <a class="nav-link" href="#intermediate/optimization.adoc">Optimization</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="math_for_dummies.html">Math for Dummies</a>
+    <a class="nav-link" href="#intermediate/faq.adoc">Frequently Asked Questions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="math.html">Math overview</a>
+    <a class="nav-link" href="#intermediate/math_for_dummies.adoc">Math for Dummies</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="math_cheet_sheet.html">3D math "cheat sheet"</a>
+    <a class="nav-link" href="#intermediate/math.adoc">Math overview</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="rotate.html">3-D Rotation</a>
+    <a class="nav-link" href="#intermediate/math_cheet_sheet.adoc">3D math "cheat sheet"</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="math_video_tutorials.html">Math video tutorial series</a>
+    <a class="nav-link" href="#intermediate/rotate.adoc">3-D Rotation</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="multi-media_asset_pipeline.html">Multi-Media Asset Pipeline</a>
+    <a class="nav-link" href="#intermediate/math_video_tutorials.adoc">Math video tutorial series</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="scenegraph_for_dummies.html">Scene Graph for Dummies</a>
+    <a class="nav-link" href="#intermediate/multi-media_asset_pipeline.adoc">Multi-Media Asset Pipeline</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="terminology.html">3D Graphics Terminology</a>
+    <a class="nav-link" href="#intermediate/scenegraph_for_dummies.adoc">Scene Graph for Dummies</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="transparency_sorting.html">Transparency Sorting</a>
+    <a class="nav-link" href="#intermediate/terminology.adoc">3D Graphics Terminology</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#intermediate/transparency_sorting.adoc">Transparency Sorting</a>
   </li>
 </ul>
   </li>
@@ -966,128 +963,41 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../documentation.html">Docs</a></li>
-    <li>Key Concepts</li>
-    <li><a href="optimization.html">Optimization</a></li>
+    <li><a href="scenegraph_for_dummies.html">Scenegraph For Dummies</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/tutorials/pages/intermediate/optimization.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/tutorials/pages/concepts/scenegraph_for_dummies.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Optimization reference</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>This page is intended as a reference collection of optimization tricks that can be used to speed up JME3 applications.</p>
-</div>
-</div>
-</div>
+<h1 class="page">Scenegraph For Dummies</h1>
 <div class="sect1">
-<h2 id="maintain-low-geometry-count"><a class="anchor" href="#maintain-low-geometry-count"></a>Maintain low Geometry count</h2>
+<h2 id="jmonkeyengine3-scene-graph-for-dummies"><a class="anchor" href="#jmonkeyengine3-scene-graph-for-dummies"></a>jMonkeyEngine3 Scene Graph for Dummies</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The more Geometry objects are added to the scene, the harder it gets to handle them in a speedy fashion.
-The reason for this is that a render command must be done for every object, potentially creating a bottleneck between the CPU and the graphics card.</p>
-</div>
-<div class="paragraph">
-<p><strong>Possible optimization techniques</strong></p>
-</div>
+<iframe src=https://wiki.jmonkeyengine.org/tutorials/scenegraph width="100%" height="850px" alt=""></iframe>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Use GeometryBatchFactory.optimize(node) to merge the meshes of the geometries contained in the given node into fewer batches, each based on common Materials used.<br>
-You can optimize nodes using the SceneComposer in the SDK as well: Right-click a node and select &#8220;Optimize Geometry&#8221;.</p>
+<p>You can open this presentation in <a href="https://wiki.jmonkeyengine.org/tutorials/scenegraph">Fullscreen Mode</a>.</p>
+</li>
+<li>
+<p>When using <a href="http://www.apple.com/safari/">Safari</a> as a browser the presentation is animated.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><strong>Side-effects</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Using GeometryBatchFactory merges individual Geometries into a single mesh. Thereby it becomes hard to apply specific Materials or to remove a single Geometry. Therefore it should be used for static Geometry only that does not require frequent changes or individual materials/texturing.</p>
-</li>
-<li>
-<p>Using a <a href="../../jme3/advanced/texture_atlas.html" class="page">Texture Atlas</a> provides limited individual texturing of batched geometries.</p>
-</li>
-<li>
-<p>Using the still experimental BatchNode allows batching Geometry while keeping the single Geometry objects movable separately (similar to animation, the buffer gets updated per Geometry position).</p>
-</li>
-</ul>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="avoid-creating-new-objects"><a class="anchor" href="#avoid-creating-new-objects"></a>Avoid creating new objects</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Different Java implementations use different garbage collection algorithms, so depending on the platforms you target, different advice applies.</p>
-</div>
-<div class="paragraph">
-<p>The major variants are Oracle&#8217;s JRE, old (pre-Gingerbread) Androids, and newer (Gingerbread or later) Androids.</p>
-</div>
-<div class="paragraph">
-<p>Oracle&#8217;s JRE is a copying collector. This means that it does not need to do any work for objects that have become unreachable, it just keeps copying live objects to new memory areas and recycles the now-unused area as a whole.
-Older objects are copied less often, so the garbage collection overhead is roughly proportional to the rate at which your code creates new objects that survive for, say, more than a minute.</p>
-</div>
-<div class="paragraph">
-<p>Gingerbread and newer Androids use a garbage collector that does some optimization tricks with local variables, but you should avoid creating and forgetting lots of objects in the scene graph.</p>
-</div>
-<div class="paragraph">
-<p>Older Androids use a very naive garbage collector that needs to do real work for every object, both during creation and during collection. Creating local variables can build up a heap of work, particularly if the function is called often.</p>
-</div>
-<div class="paragraph">
-<p>To avoid creating a temporary object, use <em>local methods</em> to overwrite the contents of an existing object instead of creating a new temporary object for the result.</p>
-</div>
-<div class="paragraph">
-<p>E.g. when you use math operations like <code>vectorA.mult(vectorB);</code>, they create new objects for the result.</p>
-</div>
-<div class="paragraph">
-<p>Check your math operations for opportunities to use the <em>local</em> version of the math operations, e.g. <code>vectorA.multLocal(vectorB)</code>. Local methods store the result in vectorA and do not create a new object.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="avoid-large-objects-in-physics"><a class="anchor" href="#avoid-large-objects-in-physics"></a>Avoid large objects in physics</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To offload much computation to the less CPU intense physics broadphase collision check, avoid having large meshes that cover e.g. the whole map of your level. Instead, separate the collision shapes into multiple smaller chunks. Obviously, don&#8217;t exaggerate the chunking, because having excessive amounts of physics objects similarly cause performance problems.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="check-the-statistics"><a class="anchor" href="#check-the-statistics"></a>Check the Statistics</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>SimpleApplication displays a HUD with statistics. Use <code>app.setDisplayStatView(true);</code> to activate it, and false to deactivate it.
-The StatsView counts Objects,Uniforms,Triangles,Vertices are in the scene, and it counts how many FrameBuffers, Textures, or Shaders:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>… were switched in the last frame (S)</p>
-</li>
-<li>
-<p>… were used during the last frame (F)</p>
-</li>
-<li>
-<p>… exist in OpenGL memory (M)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For example, <code>Textures (M)</code> tells you how many textures are currently in OpenGL memory.</p>
-</div>
-<div class="paragraph">
-<p>Generally jME3 is well optimized and optimizes these things correctly. Read <a href="../../jme3/advanced/statsview.html" class="page">statsview</a> to learn the details about how to interpret the statistics, how to tell whether your values are off, or whether they point out a problem.</p>
-</div>
-</div>
-</div>
-<nav class="pagination">
-  <span class="prev"><a href="best_practices.html">Best Practices</a></span>
-  <span class="next"><a href="faq.html">Frequently Asked Questions</a></span>
-</nav>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
