@@ -3,14 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Exporting Models as Ogre XML meshes from Blender :: jMonkeyEngine Docs</title>
-    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/tutorials/advanced/modeling/blender/blender_ogre_export.html">
-    <link rel="prev" href="blender_gltf.html">
-    <link rel="next" href="blender_ogre_compatibility.html">
+    <title>Blender Buffer Clearing :: jMonkeyEngine Docs</title>
+    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/tutorials/how-to/modeling/blender/blender_buffer_clearing.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../../../_/css/site.css">
 <meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
-<meta property="og:description" content="Exporting Models as Ogre XML meshes from Blender">
+<meta property="og:description" content="Blender Buffer Clearing">
 <meta property="og:title" content="jMonkeyEngine Docs">
 <link rel="stylesheet" href="../../../../../_/css/site-extra.css">
 <link rel="icon" href="../../../../../_/img/favicon.ico" type="image/x-icon">
@@ -160,26 +158,26 @@
     <span class="nav-text">How to Model</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../3dsmax/3dsmax.html">3dsmax</a>
+    <a class="nav-link" href="#advanced/modeling/3dsmax/3dsmax.adoc">3dsmax</a>
   </li>
   <li class="nav-item" data-depth="3">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="blender.html">Blender</a>
+    <a class="nav-link" href="#advanced/modeling/blender/blender.adoc">Blender</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="blender_buffer_clearing.html">Buffer Clearing</a>
+    <a class="nav-link" href="#advanced/modeling/blender/blender_buffer_clearing.adoc">Buffer Clearing</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="blender_gltf.html">Export as GlTF</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="4">
-    <a class="nav-link" href="blender_ogre_export.html">Export as Ogre XML</a>
+    <a class="nav-link" href="#advanced/modeling/blender/blender_gltf.adoc">Export as GlTF</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="blender_ogre_compatibility.html">Ogre Compatibility</a>
+    <a class="nav-link" href="#advanced/modeling/blender/blender_ogre_export.adoc">Export as Ogre XML</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="makehuman_blender_ogrexml_toolchain.html">MakeHuman toolchain</a>
+    <a class="nav-link" href="#advanced/modeling/blender/blender_ogre_compatibility.adoc">Ogre Compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="#advanced/modeling/blender/makehuman_blender_ogrexml_toolchain.adoc">MakeHuman toolchain</a>
   </li>
 </ul>
   </li>
@@ -194,7 +192,7 @@
     <span class="nav-text">Mixamo</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="mixamo.html">Blender Models</a>
+    <a class="nav-link" href="#advanced/modeling/blender/mixamo.adoc">Blender Models</a>
   </li>
   <li class="nav-item" data-depth="4">
     <button class="nav-item-toggle"></button>
@@ -219,23 +217,23 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../debugging.html">Debugging with Wireframes</a>
+    <a class="nav-link" href="#advanced/debugging.adoc">Debugging with Wireframes</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Java Tips</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../java/localization.html">Localization</a>
+    <a class="nav-link" href="#advanced/java/localization.adoc">Localization</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../java/swing_canvas.html">Swing Canvas</a>
+    <a class="nav-link" href="#advanced/java/swing_canvas.adoc">Swing Canvas</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../java/logging.html">Logging</a>
+    <a class="nav-link" href="#advanced/java/logging.adoc">Logging</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../java/read_graphic_card_capabilites.html">Read Graphics Capabilites</a>
+    <a class="nav-link" href="#advanced/java/read_graphic_card_capabilites.adoc">Read Graphics Capabilites</a>
   </li>
 </ul>
   </li>
@@ -248,13 +246,13 @@
     <span class="nav-text">Physically Based Rendering</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../../articles/pbr/pbr_part1.html">PBR – Part one</a>
+    <a class="nav-link" href="#advanced/articles/pbr/pbr_part1.adoc">PBR – Part one</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../../articles/pbr/pbr_part2.html">PBR – Part two</a>
+    <a class="nav-link" href="#advanced/articles/pbr/pbr_part2.adoc">PBR – Part two</a>
   </li>
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../../articles/pbr/pbr_part3.html">PBR – Part three</a>
+    <a class="nav-link" href="#advanced/articles/pbr/pbr_part3.adoc">PBR – Part three</a>
   </li>
 </ul>
   </li>
@@ -965,113 +963,99 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../../../documentation.html">Docs</a></li>
-    <li>Articles and How-to&#8217;s</li>
-    <li>How to Model</li>
-    <li><a href="blender.html">Blender</a></li>
-    <li><a href="blender_ogre_export.html">Export as Ogre XML</a></li>
+    <li><a href="blender_buffer_clearing.html">Blender Buffer Clearing</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/tutorials/pages/advanced/modeling/blender/blender_ogre_export.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/tutorials/pages/how-to/modeling/blender/blender_buffer_clearing.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Exporting Models as Ogre XML meshes from Blender</h1>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
+<h1 class="page">Blender Buffer Clearing</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p><a href="#jme3/external/blender/blender_buffer_clearing.adoc" class="page unresolved">Blender Buffer Clearing</a> should be performed prior to exporting any model from Blender.</p>
+<p>Before exporting your Blender models, its is recommended that you clean the buffers of any unneeded <code>Action</code>, <code>Material</code>, <code>Texture</code> or <code>UV Image</code>. This is a straight forward process that only takes a few minutes. Failure to do so can lead you into a morass of problems, like having more than one AnimControl, duplicate materials and textures, wasted space from worthless images, just to mention a few potential troubles.</p>
 </div>
-</td>
-</tr>
-</table>
 </div>
-<div class="paragraph">
-<p>To export your models as Ogre XML meshes with materials:</p>
 </div>
+<div class="sect1">
+<h2 id="material-texture-uv-image-buffers"><a class="anchor" href="#material-texture-uv-image-buffers"></a>Material, Texture, UV Image Buffers</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>jMonkeyEngine requires a material file to be named the same name as the model so prior to opening the export dialog make it so. The model will export files named <code>ModelName.mesh.xml</code> with a <code>ModelName.material</code>, plus (optionally) <code>ModelName.skeleton.xml</code>, and some JPG files.</p>
+<p>Open the <code>UV Image Editor</code>, <code>Material Tab</code> or <code>Texture Tab</code>.</p>
 </li>
 <li>
-<p>Open the menu <code><span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Export</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Ogre3D</b></span></code> to open the exporter dialog.</p>
+<p>Select the <b class="button">Browse</b> button located next to the material, texture or UV Image name to load the item to be cleared.</p>
 </li>
 <li>
-<p>In the <code>File Path</code> field: Select a target sub-directory of your <code>Project Assets/Textures/</code> directory. E.g. <code>Project Assets/Textures/ModelName/</code>. See <a href="../../../concepts/best_practices.html" class="page">Best Practices</a>.</p>
+<p>While holding <kbd>Shift</kbd> down, click the <b class="button">X</b> button, also known as the <b class="button">Unlink datablock</b> button, located next to the loaded item. An item that is unlinked will show a <code>0</code> before it when viewed by selecting the <b class="button">Browse</b> button and will not be saved if you exit Blender.</p>
 </li>
 <li>
-<p>In the panel at the bottom left of the export window toggle the following export settings:
--  Swap Axis: xz-y</p>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> Separate materials</p>
+<p>Save your file.</p>
 </li>
 <li>
-<p><i class="fa fa-square-o"></i> Only Deformable Bones <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
-</li>
-<li>
-<p><i class="fa fa-square-o"></i> Export Scene <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
-</li>
-<li>
-<p><i class="fa fa-square-o"></i> Export Selected Only <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup></p>
-</li>
-<li>
-<p><i class="fa fa-check-square-o"></i> Export Meshes</p>
-</li>
-<li>
-<p><i class="fa fa-square-o"></i> Export Meshes Overwrite <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup></p>
-</li>
-<li>
-<p><i class="fa fa-square-o"></i> Armature Animation <sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup></p>
-</li>
-<li>
-<p>Trim Weights <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup></p>
-</li>
-<li>
-<p><i class="fa fa-check-square-o"></i> Export Materials</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Click Export Ogre.</p>
+<p>From the <code>Info</code> header select <code><span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Open Recent</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Your Saved File</b></span></code>, to close and re-open your file.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>You can now use the <a href="../../../../sdk/sdk.html" class="page">jMonkeyEngine SDK</a> to <a href="../../../../sdk/model_loader_and_viewer.html" class="page">load and view models</a>. You can <a href="../../../../sdk/scene_composer.html" class="page">create scenes</a> from them and write code that loads them into your application.</p>
-</div>
-<div id="footnotes">
-<hr>
-<div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. Optional: If selected, and you have an Armature with the model, only the deform bones are exported.
-</div>
-<div class="footnote" id="_footnotedef_2">
-<a href="#_footnoteref_2">2</a>. Toggle this to export your model in DotScene format
-</div>
-<div class="footnote" id="_footnotedef_3">
-<a href="#_footnoteref_3">3</a>. Optional: If selected, you manually choose each object you want exported prior to opening the export dialog.
-</div>
-<div class="footnote" id="_footnotedef_4">
-<a href="#_footnoteref_4">4</a>. Optional: If selected, it will overwrite the existing files in the target directory
-</div>
-<div class="footnote" id="_footnotedef_5">
-<a href="#_footnoteref_5">5</a>. Optional: Only used if the model contains an armature.
-</div>
-<div class="footnote" id="_footnotedef_6">
-<a href="#_footnoteref_6">6</a>. Occasionally when exporting you may get a warning complaining about vertices weighted to too many bones. You are then asked to try increasing the trim weights option. Slightly increase this spinner and try exporting again. Repeat the process until the warning goes away.
+<p>The exception to this rule is the <code>Linked Action</code> buffer, for animations, located in the <code>Dope Sheet Editor</code>.</p>
 </div>
 </div>
-<nav class="pagination">
-  <span class="prev"><a href="blender_gltf.html">Export as GlTF</a></span>
-  <span class="next"><a href="blender_ogre_compatibility.html">Ogre Compatibility</a></span>
-</nav>
+</div>
+<div class="sect1">
+<h2 id="the-linked-action-buffer"><a class="anchor" href="#the-linked-action-buffer"></a>The Linked Action Buffer</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <code>Dope Sheet Editor</code>, change the context to <code>Action Editor</code>.</p>
+</li>
+<li>
+<p>Click the <code>Action to be linked</code> button and select the action you want cleared.</p>
+</li>
+<li>
+<p>Deselect the <b class="button">F</b> button to prevent it from saving.</p>
+</li>
+<li>
+<p>Change the editor type from <code>Dope Sheet</code> to <code>NLA Editor</code>. You will see the action listed.</p>
+</li>
+<li>
+<p>Click the <span class="icon"><i class="fa fa-angle-double-down"></i></span>  button next to the action to push it into the stack.</p>
+</li>
+<li>
+<p>Click the small start next to the track name.</p>
+</li>
+<li>
+<p>With the mouse inside the <code>NLA Track List</code>,  press <kbd>X</kbd> to delete both the track and strip.</p>
+</li>
+<li>
+<p>Save your file.</p>
+</li>
+<li>
+<p>From the <code>Info</code> header, select <code><span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Open Recent</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Your Saved File</b></span></code>.</p>
+</li>
+<li>
+<p>Save your file again.</p>
+</li>
+<li>
+<p>From the <code>Info</code> header, select <code><span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Open Recent</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Your Saved File</b></span></code> again.</p>
+</li>
+<li>
+<p>Change back to the <code>Dope Sheet Editor</code>.</p>
+</li>
+<li>
+<p>Click the <b class="button">Browse Action to be linked</b> button and you will see only the baked action remains and the buffer is now clear of unwanted actions. Select your action.</p>
+</li>
+<li>
+<p>Save your file.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
