@@ -1020,7 +1020,7 @@
 <p>Purpose:</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" colspan="2"><div class="content"><div class="paragraph">
-<p>A Spatial is an abstract data structure that stores user data and transformations (= translation, rotation, scale) of elements of the 3D scene graph. Spatials can be saved and loaded using the <a href="#jme3/advanced/asset_manager.adoc" class="page unresolved">Asset Manager</a>.</p>
+<p>A Spatial is an abstract data structure that stores user data and transformations (= translation, rotation, scale) of elements of the 3D scene graph. Spatials can be saved and loaded using the <a href="../asset/asset_manager.html" class="page">Asset Manager</a>.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1040,7 +1040,7 @@
 <p>A Geometry represents a <strong>visible</strong> 3D object in the scene graph.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A Node is an <strong>invisible “handle</strong> for a group of Spatials in the scene graph.</p>
+<p>A Node is an <strong>invisible &#8220;handle&#8221;</strong> for a group of Spatials in the scene graph.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1090,7 +1090,7 @@ no mesh, no material.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>You never create a Spatial with <code><strike>Spatial s = new Spatial();</strike></code>! A Spatial is an abstract concept, like a mammal (there is no actual creature called “mammal walking around here). You create either a com.jme3.scene.Node or com.jme3.scene.Geometry instance. Some methods, however, require a <code>Spatial</code> type as argument: This is because they are able to accept both Nodes and Geometries as arguments. In this case, you simply <em>cast</em> a Node or Geometry to Spatial.</p>
+<p>You never create a Spatial with <code><strike>Spatial s = new Spatial();</strike></code>! A Spatial is an abstract concept, like a mammal (there is no actual creature called &#8220;mammal&#8221; walking around here). You create either a com.jme3.scene.Node or com.jme3.scene.Geometry instance. Some methods, however, require a <code>Spatial</code> type as argument: This is because they are able to accept both Nodes and Geometries as arguments. In this case, you simply <em>cast</em> a Node or Geometry to Spatial.</p>
 </div>
 </td>
 </tr>
@@ -1107,7 +1107,7 @@ no mesh, no material.</p>
 <p><strong>Shapes:</strong> The simplest type of Meshes are jME&#8217;s default <a href="#jme3/advanced/shape.adoc" class="page unresolved">Shape</a>s such as cubes and spheres. You can use several Shapes to build complex Geometries. Shapes are built-in and can be created without using the AssetManager.</p>
 </li>
 <li>
-<p><strong>3D Models:</strong> <a href="#jme3/advanced/3d_models.adoc" class="page unresolved">3D models and scenes</a> are also made up of meshes, but are more complex than Shapes. You create Models and Scenes in external 3D Mesh Editors and export them as Ogre XML or Wavefront OBJ. Use the <a href="#jme3/advanced/asset_manager.adoc" class="page unresolved">Asset Manager</a> to load models into a your jME3 game.</p>
+<p><strong>3D Models:</strong> <a href="#jme3/advanced/3d_models.adoc" class="page unresolved">3D models and scenes</a> are also made up of meshes, but are more complex than Shapes. You create Models and Scenes in external 3D Mesh Editors and export them as Ogre XML or Wavefront OBJ. Use the <a href="../asset/asset_manager.html" class="page">Asset Manager</a> to load models into a your jME3 game.</p>
 </li>
 <li>
 <p><strong>Custom Meshes:</strong> Advanced users can create <a href="#jme3/advanced/custom_meshes.adoc" class="page unresolved">Custom Meshes</a> programmatically.</p>
@@ -1137,7 +1137,7 @@ no mesh, no material.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Usually there is no need to manually use any of the <code>clone()</code> methods on models. Using the <a href="#jme3/advanced/asset_manager.adoc" class="page unresolved">Asset Manager</a>'s <code>loadModel()</code> method will automatically do the right thing for your models.</p>
+<p>Usually there is no need to manually use any of the <code>clone()</code> methods on models. Using the <a href="../asset/asset_manager.html" class="page">Asset Manager</a>'s <code>loadModel()</code> method will automatically do the right thing for your models.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1147,7 +1147,7 @@ no mesh, no material.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>“Box worlds are not made up of statically cloned <code>Box()</code> shapes, this would still be too slow for large worlds. To learn how to make real fast box worlds, search the web for <em>voxelization</em> techniques.</p>
+<p>&#8220;Box&#8221; worlds are not made up of statically cloned <code>Box()</code> shapes, this would still be too slow for large worlds. To learn how to make real fast box worlds, search the web for <em>voxelization</em> techniques.</p>
 </div>
 </td>
 </tr>
@@ -1278,7 +1278,7 @@ playerNode.getControl(PlayerControl.class).setHealth(99);</code></pre>
 <p><strong>Face culling</strong> means not drawing certain polygons of a mesh. Face culling behaviour is a property of the material.</p>
 </div>
 <div class="paragraph">
-<p>Usage: The “inside of a mesh (the so called backface) is typically never visible to the player, and as an optimization, the <code>Back</code> mode skips calculating all backfaces by default. Activating the <code>Off</code> or <code>Front</code> modes can be useful when you are debugging <a href="#jme3/advanced/custom_meshes.adoc" class="page unresolved">custom meshes</a> and try to identify accidental inside-out faces.</p>
+<p>Usage: The &#8220;inside&#8221; of a mesh (the so called backface) is typically never visible to the player, and as an optimization, the <code>Back</code> mode skips calculating all backfaces by default. Activating the <code>Off</code> or <code>Front</code> modes can be useful when you are debugging <a href="#jme3/advanced/custom_meshes.adoc" class="page unresolved">custom meshes</a> and try to identify accidental inside-out faces.</p>
 </div>
 <div class="paragraph">
 <p>You can switch the com.jme3.material.RenderState.FaceCullMode to either:</p>
@@ -1289,7 +1289,7 @@ playerNode.getControl(PlayerControl.class).setHealth(99);</code></pre>
 <p><code>FaceCullMode.Back</code> (default) – Only the frontsides of a mesh are drawn. Backface culling is the default behaviour.</p>
 </li>
 <li>
-<p><code>FaceCullMode.Front</code> – Only the backsides of a mesh are drawn. A mesh with frontface culling will most likely be invisible. Used for debugging “inside-out custom meshes.</p>
+<p><code>FaceCullMode.Front</code> – Only the backsides of a mesh are drawn. A mesh with frontface culling will most likely be invisible. Used for debugging &#8220;inside-out&#8221; custom meshes.</p>
 </li>
 <li>
 <p><code>FaceCullMode.FrontAndBack</code> – Use this to make a mesh temporarily invisible.</p>
@@ -1308,7 +1308,7 @@ playerNode.getControl(PlayerControl.class).setHealth(99);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p><strong>View frustum culling</strong> refers to not drawing (and not even calculating) certain whole models in the scene. At any given moment, half of the scene is behind the player and out of sight anyway. View frustum culling is an optimization to not calculate scene elements that are not visible – elements that are “outside the view frustrum.</p>
+<p><strong>View frustum culling</strong> refers to not drawing (and not even calculating) certain whole models in the scene. At any given moment, half of the scene is behind the player and out of sight anyway. View frustum culling is an optimization to not calculate scene elements that are not visible – elements that are &#8220;outside&#8221; the view frustrum.</p>
 </div>
 <div class="paragraph">
 <p>The decision what is visible and what not, is done automatically by the engine (<code>CullHint.Dynamic</code>). Optionally, you can manually control whether the engine culls individual spatials (and children) from the scene graph:</p>
