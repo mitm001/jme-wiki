@@ -859,7 +859,7 @@
     <a class="nav-link" href="../../sdk/filters.html">Post-Processor Filter Editor and Viewer</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="#ROOT:jme3/advanced/application_states.adoc">Application States</a>
+    <a class="nav-link" href="../app/state/application_states.html">Application States</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="#ROOT:jme3/advanced/custom_controls.adoc">Custom Controls</a>
@@ -985,7 +985,7 @@
 <p>This document contains typical NiftyGUI usecase scenarios, such as adding effects, game states, and creating typical game screens.</p>
 </div>
 <div class="paragraph">
-<p>Requirements: These tips assume that you have read and understood the <a href="#../../jme3/advanced/nifty_gui.adoc" class="page unresolved">Creating JME3 User Interfaces with Nifty GUI</a> tutorial, and have already laid out a basic <abbr title="Graphical User Interface">GUI</abbr> that interacts with your JME3 application. Here you learn how you integrate the <abbr title="Graphical User Interface">GUI</abbr> better, and add effects and advanced controls.</p>
+<p>Requirements: These tips assume that you have read and understood the <a href="nifty_gui.html" class="page">Creating JME3 User Interfaces with Nifty GUI</a> tutorial, and have already laid out a basic <abbr title="Graphical User Interface">GUI</abbr> that interacts with your JME3 application. Here you learn how you integrate the <abbr title="Graphical User Interface">GUI</abbr> better, and add effects and advanced controls.</p>
 </div>
 </div>
 </div>
@@ -1012,7 +1012,7 @@
 <p>(Aside: Additionally, the Stopped state often contains a LoadScreen, LogonScreen, OptionsScreen, CharacterCreationScreen, HighScoreScreen, CreditsScreen, etc. Some games let you access the OptionsScreen in the Paused state as well. The Running state can also contain an InventoryScreen, ItemShopScreen, StatsScreen, SkillScreen, etc.)</p>
 </div>
 <div class="paragraph">
-<p>In JME, game states are implemented as custom <a href="#../../jme3/advanced/application_states.adoc" class="page unresolved">AppState</a> objects. Write each AppState so it brings its own input mappings, rootNode content, update loop behaviour, etc with it.</p>
+<p>In JME, game states are implemented as custom <a href="#jme3/advanced/application_states.adoc" class="page unresolved">AppState</a> objects. Write each AppState so it brings its own input mappings, rootNode content, update loop behaviour, etc with it.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1036,7 +1036,7 @@
 <h2 id="get-access-to-application-and-update-loop"><a class="anchor" href="#get-access-to-application-and-update-loop"></a>Get Access to Application and Update Loop</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Since you are writing a jME3 application, you can additionally make any ScreenController class extend the <a href="#../../jme3/advanced/application_states.adoc" class="page unresolved">BaseAppState</a> class.
+<p>Since you are writing a jME3 application, you can additionally make any ScreenController class extend the <a href="#jme3/advanced/application_states.adoc" class="page unresolved">BaseAppState</a> class.
 This gives the ScreenController access to the application object and to the update loop!</p>
 </div>
 <div class="listingblock">
@@ -1172,7 +1172,7 @@ your ScreenController in the controller attribute of the &lt;screen&gt; tag in t
 <p>${ENV.key}</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Looks up <code>key</code> in the environment variables. Use it like Java&#8217;s System.getEnv(“key).</p>
+<p>Looks up <code>key</code> in the environment variables. Use it like Java&#8217;s System.getEnv("key").</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1180,7 +1180,7 @@ your ScreenController in the controller attribute of the &lt;screen&gt; tag in t
 <p>${PROP.key}</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>looks up <code>key</code> in the Nifty properties. Use Nifty.setGlobalproperties(properties) and Nifty.getGlobalproperties(“key). Or SystemGetProperties(key);</p>
+<p>looks up <code>key</code> in the Nifty properties. Use Nifty.setGlobalproperties(properties) and Nifty.getGlobalproperties("key"). Or SystemGetProperties(key);</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1215,7 +1215,7 @@ your ScreenController in the controller attribute of the &lt;screen&gt; tag in t
 <h2 id="create-a-loading-screen"><a class="anchor" href="#create-a-loading-screen"></a>Create a "Loading&#8230;&#8203;" Screen</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Get the full <a href="#../../jme3/advanced/loading_screen.adoc" class="page unresolved">Loading Screen</a> tutorial here.</p>
+<p>Get the full <a href="#jme3/advanced/loading_screen.adoc" class="page unresolved">Loading Screen</a> tutorial here.</p>
 </div>
 </div>
 </div>
@@ -1223,7 +1223,7 @@ your ScreenController in the controller attribute of the &lt;screen&gt; tag in t
 <h2 id="create-a-popup-menu"><a class="anchor" href="#create-a-popup-menu"></a>Create a Popup Menu</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Get the full <a href="#../../jme3/advanced/nifty_gui_popup_menu.adoc" class="page unresolved">Nifty GUI PopUp Menu</a> tutorial here.</p>
+<p>Get the full <a href="#jme3/advanced/nifty_gui_popup_menu.adoc" class="page unresolved">Nifty GUI PopUp Menu</a> tutorial here.</p>
 </div>
 </div>
 </div>
@@ -1395,7 +1395,7 @@ nifty.addXml("Interface/Screens/OptionsScreen.xml");</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Learn more about how to create styles by looking at the <a href="https://github.com/nifty-gui/nifty-gui/wiki/Working-from-Source">Nifty GUI source code</a> for “nifty-style-black”. Copy it as a template and change it to create your own style.</p>
+<p>Learn more about how to create styles by looking at the <a href="https://github.com/nifty-gui/nifty-gui/wiki/Working-from-Source">Nifty GUI source code</a> for &#8220;nifty-style-black&#8221;. Copy it as a template and change it to create your own style.</p>
 </div>
 <hr>
 <div class="paragraph">

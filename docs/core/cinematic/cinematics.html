@@ -858,7 +858,7 @@
     <a class="nav-link" href="../../sdk/filters.html">Post-Processor Filter Editor and Viewer</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="#ROOT:jme3/advanced/application_states.adoc">Application States</a>
+    <a class="nav-link" href="../app/state/application_states.html">Application States</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="#ROOT:jme3/advanced/custom_controls.adoc">Custom Controls</a>
@@ -980,10 +980,10 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>JME3 cinematics (com.jme.cinematic) allow you to remote control nodes and cameras in a 3D game: You can script and and play cinematic scenes. You can use cinematics to create <a href="http://en.wikipedia.org/wiki/Cutscene">cutscenes</a> and movies/trailers for your game. Another good use case is efficient “destruction physics: Playing back prerecorded flying pieces of debris for demolitions is much faster than calculating them with live physics.</p>
+<p>JME3 cinematics (com.jme.cinematic) allow you to remote control nodes and cameras in a 3D game: You can script and and play cinematic scenes. You can use cinematics to create <a href="http://en.wikipedia.org/wiki/Cutscene">cutscenes</a> and movies/trailers for your game. Another good use case is efficient &#8220;destruction&#8221; physics: Playing back prerecorded flying pieces of debris for demolitions is much faster than calculating them with live physics.</p>
 </div>
 <div class="paragraph">
-<p>Internally, Cinematics are implemented as <a href="#../../jme3/advanced/application_states.adoc" class="page unresolved">AppStates</a>.</p>
+<p>Internally, Cinematics are implemented as <a href="#jme3/advanced/application_states.adoc" class="page unresolved">AppStates</a>.</p>
 </div>
 <div class="paragraph">
 <p>Short overview of the cinematic process:</p>
@@ -1149,7 +1149,7 @@ stateManager.attach(cinematic);</code></pre>
 <p>SoundEvent</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Use a SoundEvent to play a <a href="#../../jme3/advanced/audio.adoc" class="page unresolved">sound</a> at a given time for the given duration.</p>
+<p>Use a SoundEvent to play a <a href="#jme3/advanced/audio.adoc" class="page unresolved">sound</a> at a given time for the given duration.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1157,7 +1157,7 @@ stateManager.attach(cinematic);</code></pre>
 <p>GuiEvent</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Displays a <a href="#../../jme3/advanced/nifty_gui.adoc" class="page unresolved">Nifty GUI</a> at a given time for the given duration. Use it to display subtitles or HUD elements. Bind the Nifty <abbr title="Graphical User Interface">GUI</abbr> XML to the cinematic using <code>cinematic.bindUi(“path/to/nifty/file.xml);</code></p>
+<p>Displays a <a href="../gui/nifty_gui.html" class="page">Nifty GUI</a> at a given time for the given duration. Use it to display subtitles or HUD elements. Bind the Nifty <abbr title="Graphical User Interface">GUI</abbr> XML to the cinematic using <code>cinematic.bindUi("path/to/nifty/file.xml");</code></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1165,7 +1165,7 @@ stateManager.attach(cinematic);</code></pre>
 <p>AnimationEvent</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Use this to start playing a model <a href="#../../jme3/advanced/animation.adoc" class="page unresolved">animation</a> at a given time (a character walking animation for example)</p>
+<p>Use this to start playing a model <a href="#jme3/advanced/animation.adoc" class="page unresolved">animation</a> at a given time (a character walking animation for example)</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1192,7 +1192,7 @@ stateManager.attach(cinematic);</code></pre>
 <p><code>thingNode</code> is the Spatial to be moved.</p>
 </li>
 <li>
-<p><code>path</code> is a complex <a href="#../../jme3/advanced/motionpath.adoc" class="page unresolved">MotionPath</a>.</p>
+<p><code>path</code> is a complex <a href="#jme3/advanced/motionpath.adoc" class="page unresolved">MotionPath</a>.</p>
 </li>
 </ul>
 </div>
@@ -1324,7 +1324,7 @@ stateManager.attach(cinematic);</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p><code>audioPath</code> is the path to an audio file as String, e.g. “Sounds/mySound.wav.</p>
+<p><code>audioPath</code> is the path to an audio file as String, e.g. &#8220;Sounds/mySound.wav&#8221;.</p>
 </li>
 <li>
 <p><code>isStream</code> toggles between streaming and buffering. Set to true to stream long audio file, set to false to play short buffered sounds.</p>
