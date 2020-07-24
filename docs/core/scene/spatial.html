@@ -1110,7 +1110,7 @@ no mesh, no material.</p>
 <p><strong>3D Models:</strong> <a href="#jme3/advanced/3d_models.adoc" class="page unresolved">3D models and scenes</a> are also made up of meshes, but are more complex than Shapes. You create Models and Scenes in external 3D Mesh Editors and export them as Ogre XML or Wavefront OBJ. Use the <a href="../asset/asset_manager.html" class="page">Asset Manager</a> to load models into a your jME3 game.</p>
 </li>
 <li>
-<p><strong>Custom Meshes:</strong> Advanced users can create <a href="#jme3/advanced/custom_meshes.adoc" class="page unresolved">Custom Meshes</a> programmatically.</p>
+<p><strong>Custom Meshes:</strong> Advanced users can create <a href="custom_meshes.html" class="page">Custom Meshes</a> programmatically.</p>
 </li>
 </ul>
 </div>
@@ -1278,7 +1278,7 @@ playerNode.getControl(PlayerControl.class).setHealth(99);</code></pre>
 <p><strong>Face culling</strong> means not drawing certain polygons of a mesh. Face culling behaviour is a property of the material.</p>
 </div>
 <div class="paragraph">
-<p>Usage: The &#8220;inside&#8221; of a mesh (the so called backface) is typically never visible to the player, and as an optimization, the <code>Back</code> mode skips calculating all backfaces by default. Activating the <code>Off</code> or <code>Front</code> modes can be useful when you are debugging <a href="#jme3/advanced/custom_meshes.adoc" class="page unresolved">custom meshes</a> and try to identify accidental inside-out faces.</p>
+<p>Usage: The &#8220;inside&#8221; of a mesh (the so called backface) is typically never visible to the player, and as an optimization, the <code>Back</code> mode skips calculating all backfaces by default. Activating the <code>Off</code> or <code>Front</code> modes can be useful when you are debugging <a href="custom_meshes.html" class="page">custom meshes</a> and try to identify accidental inside-out faces.</p>
 </div>
 <div class="paragraph">
 <p>You can switch the com.jme3.material.RenderState.FaceCullMode to either:</p>
