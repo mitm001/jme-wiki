@@ -984,7 +984,7 @@
 <p>The ComboMoves class allows you to define combinations of inputs that trigger special actions. Entering an input combo correctly can bring the player incremental rewards, such as an increased chance to hit, an increased effectiveness, or decreased change of being blocked, whatever the game designer chooses. <a href="http://en.wikipedia.org/wiki/Combo_%28video_gaming%29">More background info</a></p>
 </div>
 <div class="paragraph">
-<p>Combos are usually a series of inputs, in a fixed order: For example a keyboard combo can look  like: “press Down, then Down+Right together, then Right.</p>
+<p>Combos are usually a series of inputs, in a fixed order: For example a keyboard combo can look  like: &#8220;press&#8221; Down, then Down+Right together, then Right.</p>
 </div>
 <div class="paragraph">
 <p>Usage:</p>
@@ -1032,7 +1032,7 @@
 <h2 id="create-input-triggers"><a class="anchor" href="#create-input-triggers"></a>Create Input Triggers</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>First you <a href="#../../jme3/advanced/input_handling.adoc" class="page unresolved">define your game&#8217;s inputs</a> as you usually do: Implement the com.jme3.input.controls.ActionListener interface for your class, and add triggers mappings such as com.jme3.input.controls.KeyTrigger and com.jme3.input.KeyInput.</p>
+<p>First you <a href="#input/input_handling.adoc.adoc" class="page unresolved">define your game&#8217;s inputs</a> as you usually do: Implement the com.jme3.input.controls.ActionListener interface for your class, and add triggers mappings such as com.jme3.input.controls.KeyTrigger and com.jme3.input.KeyInput.</p>
 </div>
 <div class="paragraph">
 <p>For example:</p>
@@ -1057,7 +1057,7 @@ inputManager.addListener(this, "Left", "Right", "Up", "Down", "Attack1");</code>
 <p>For each of  your combo moves, you specify the series of inputs that will trigger it. The order in which you define them is the order the player has to press them for the step to be recorded. When all steps have been recorded, the combo is triggered.</p>
 </div>
 <div class="paragraph">
-<p>The following example shows how a fireball combo move is triggered by pressing the navigation keys for “down, down+right, right, in this order.</p>
+<p>The following example shows how a fireball combo move is triggered by pressing the navigation keys for &#8220;down, down+right, right&#8221;, in this order.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1096,7 +1096,7 @@ fireball.setUseFinalState(false);</code></pre>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>press(“A).done(); +press(“A,“B).done();</p>
+<p>press(&#8220;A&#8221;).done(); +press(&#8220;A&#8221;,&#8220;B&#8221;).done();</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Combo step is recorded if A is entered. +Combo step is recorded if A and B are entered simultaneously.</p>
@@ -1104,7 +1104,7 @@ fireball.setUseFinalState(false);</code></pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>notPress(“A).done(); +notPress(“A,“B).done();</p>
+<p>notPress(&#8220;A&#8221;).done(); +notPress(&#8220;A&#8221;,&#8220;B&#8221;).done();</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Combo step is recorded if A is released. +Combo step is recorded if A and B are both released.</p>
@@ -1112,7 +1112,7 @@ fireball.setUseFinalState(false);</code></pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>press(“A).notPress(“B).done();</p>
+<p>press(&#8220;A&#8221;).notPress(&#8220;B&#8221;).done();</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Combo step is recorded if A is entered, and not B</p>
@@ -1120,7 +1120,7 @@ fireball.setUseFinalState(false);</code></pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>press(“A).notPress(“B).timeElapsed(0.11f).done();</p>
+<p>press(&#8220;A&#8221;).notPress(&#8220;B&#8221;).timeElapsed(0.11f).done();</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Combo step is recorded a certain time after A and not B is entered. +etc, etc …</p>
@@ -1131,7 +1131,7 @@ fireball.setUseFinalState(false);</code></pre>
 <p>setPriority(0.5f);</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>If there is an ambiguity, a high-priority combo will trigger instead of a low-priority combo. This prevents that a similar looking combo step “hijacks another Combo. Use only once per ComboMove.</p>
+<p>If there is an ambiguity, a high-priority combo will trigger instead of a low-priority combo. This prevents that a similar looking combo step &#8220;hijacks&#8221; another Combo. Use only once per ComboMove.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1145,7 +1145,7 @@ fireball.setUseFinalState(false);</code></pre>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The <code>press()</code> and <code>notPress()</code> methods accept sets of Input Triggers, e.g. <code>fireball.press(“A,“B,“C).done()</code>.</p>
+<p>The <code>press()</code> and <code>notPress()</code> methods accept sets of Input Triggers, e.g. <code>fireball.press(&#8220;A&#8221;,&#8220;B&#8221;,&#8220;C&#8221;).done()</code>.</p>
 </div>
 <div class="paragraph">
 <p>The following getters give you more information about the game state:</p>
@@ -1293,7 +1293,7 @@ public void simpleUpdate(float tpf){
 <p>(intrinsical:) RPGs typically calculate the success of an attack from the character&#8217;s in-game training level: The player plays the role of a character whose skill level is defined in numbers. RPGs typically do not offer any Combos.</p>
 </li>
 <li>
-<p>(extrinsical:) Sport and fighter games typically choose to reward the player&#8217;s “manual skills: The success of a special move solely depends on the player&#8217;s own dexterity. These games typically offer optional Combos.</p>
+<p>(extrinsical:) Sport and fighter games typically choose to reward the player&#8217;s &#8220;manual&#8221; skills: The success of a special move solely depends on the player&#8217;s own dexterity. These games typically offer optional Combos.</p>
 </li>
 </ul>
 </div>
