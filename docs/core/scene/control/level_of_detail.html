@@ -983,7 +983,7 @@
 <p>A mesh with a high level of detail has lots of polygons and looks good close up. But when the mesh is further away (and the detail is not visible), the high-polygon count slows down performance unnecessarily.</p>
 </div>
 <div class="paragraph">
-<p>One solution for this problem is to use high-detail meshes for objects close to the camera, and low-detail meshes for objects far from the camera. As the player moves through the scene, you must keep replacing close objects by more detailed meshes, and far objects by less detailed meshes. The goal is to keep few high-quality slow-rendering objects in the foreground, and many low-quality fast-rendering objects in the background. (Experienced users can compare this approach to <a href="#jme3/advanced/terrain.adoc" class="page unresolved">JME&#8217;s TerraMonkey terrain system</a>, which internally uses the specialized GeoMipMapping algorithm to generate a terrain&#8217;s Levels of Detail.)</p>
+<p>One solution for this problem is to use high-detail meshes for objects close to the camera, and low-detail meshes for objects far from the camera. As the player moves through the scene, you must keep replacing close objects by more detailed meshes, and far objects by less detailed meshes. The goal is to keep few high-quality slow-rendering objects in the foreground, and many low-quality fast-rendering objects in the background. (Experienced users can compare this approach to <a href="../../terrain/terrain.html" class="page">JME&#8217;s TerraMonkey terrain system</a>, which internally uses the specialized GeoMipMapping algorithm to generate a terrain&#8217;s Levels of Detail.)</p>
 </div>
 <div class="paragraph">
 <p>You see now why you may want to be able to generate Levels of Detail for complex Geometries automatically. JME3 supports a Java implementation of the Ogre engine&#8217;s LOD generator (originally by Péter Szücs and Stan Melax): You use <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-core/src/tools/java/jme3tools/optimize/LodGenerator.java">jme3tools.optimize.LodGenerator</a> in conjunction with <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/jme3-core/src/main/java/com/jme3/scene/control/LodControl.java">com.jme3.scene.control.LodControl</a>.</p>
@@ -1287,7 +1287,7 @@ the lower the quality.</p>
 <p><a href="http://www.melax.com/polychop">http://www.melax.com/polychop</a></p>
 </li>
 <li>
-<p><a href="#jme3/advanced/terrain.adoc" class="page unresolved">JME3 TerraMonkey Terrain</a></p>
+<p><a href="../../terrain/terrain.html" class="page">JME3 TerraMonkey Terrain</a></p>
 </li>
 </ul>
 </div>
