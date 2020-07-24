@@ -994,13 +994,13 @@
 <h2 id="technical-overview"><a class="anchor" href="#technical-overview"></a>Technical Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>jME3 has a complete, slightly adapted but fully wrapped Bullet <abbr title="Application Programming Interface">API</abbr> that uses normal jME math objects (Vector3f, Quaternion etc) as input/output data. All normal bullet objects like RigidBodies, Constraints (called “Joints in jME3) and the various collision shapes are available, all mesh formats can be converted from jME to bullet.</p>
+<p>jME3 has a complete, slightly adapted but fully wrapped Bullet <abbr title="Application Programming Interface">API</abbr> that uses normal jME math objects (Vector3f, Quaternion etc) as input/output data. All normal bullet objects like RigidBodies, Constraints (called &#8220;Joints&#8221; in jME3) and the various collision shapes are available, all mesh formats can be converted from jME to bullet.</p>
 </div>
 <div class="paragraph">
 <p>The PhysicsSpace object is the central object in bullet and all objects have to be added to it so they are physics-enabled. You can create multiple physics spaces as well to have multiple independent physics simulations or to run simulations in the background that you step at a different pace. You can also create a Bullet PhysicsSpace in jME3 with a <code>com.jme3.bullet.BulletAppState</code> which runs a PhysicsSpace along the update loop, which is the easiest way to instantiate a physics space. It can be run in a mode where it runs in parallel to rendering, yet syncs to the update loop so you can apply physics changes safely during the update() calls of Controls and SimpleApplication.</p>
 </div>
 <div class="paragraph">
-<p>The base bullet objects are also available as simple to use controls that can be attached to spatials to directly control these by physics forces and influences. The RigidBodyControl for example includes a simple constructor that automatically creates a hull collision shape or a mesh collision shape based on the given input mass and the mesh of the spatial it is attached to. This makes enabling physics on a Geometry as simple as “spatial.addControl(new RigidBodyControl(1));</p>
+<p>The base bullet objects are also available as simple to use controls that can be attached to spatials to directly control these by physics forces and influences. The RigidBodyControl for example includes a simple constructor that automatically creates a hull collision shape or a mesh collision shape based on the given input mass and the mesh of the spatial it is attached to. This makes enabling physics on a Geometry as simple as <code>spatial.addControl(new RigidBodyControl(1))</code>;</p>
 </div>
 <div class="paragraph">
 <p>Due to some differences in how bullet and jME handle the scene and other objects relations there is some things to remember about the controls implementation:</p>
@@ -1571,7 +1571,7 @@ Solid immobile floors, walls, static obstacles.</p>
 <p>Use for collision and intersection detection between physical objects. A GhostControl itself is <em>non-solid</em> and invisible. GhostControl moves with the Spatial it is attached to. Use GhostControls to <a href="collision/physics_listeners.html" class="page">implement custom game interactions</a> by adding it to a visible Geometry.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A monster&#8217;s “aggro radius, CharacterControl collisions, motion detectors, photo-electric alarm sensors, poisonous or radioactive perimeters, life-draining ghosts, etc.</p>
+<p>A monster&#8217;s &#8220;aggro&#8221; radius, CharacterControl collisions, motion detectors, photo-electric alarm sensors, poisonous or radioactive perimeters, life-draining ghosts, etc.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1629,10 +1629,10 @@ PhysicsVehicleWheel</p>
 <p>RagDollControl</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Special Control used for <a href="#jme3/advanced/ragdoll.adoc" class="page unresolved">collapsing, flailing, or falling characters</a></p>
+<p>Special Control used for <a href="#ragdoll.adoc" class="page unresolved">collapsing, flailing, or falling characters</a></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Falling persons, animals, robots, “Rag dolls</p>
+<p>Falling persons, animals, robots, &#8220;Rag&#8221; dolls</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2046,7 +2046,7 @@ Rubber ball: 1.0f</p>
 <p>Immobile obstacles: Floors, walls, buildings, …</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Remote-controlled solid objects: Airships, meteorites, elevators, doors; networked or remote-controlled NPCs; invisible “airhooks for hinges and joints.</p>
+<p>Remote-controlled solid objects: Airships, meteorites, elevators, doors; networked or remote-controlled NPCs; invisible &#8220;airhooks&#8221; for hinges and joints.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Interactive objects: Rolling balls, movable crates, falling pillars, zero-g space ship…</p>
@@ -2157,16 +2157,16 @@ setKinematic(false);</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Kinematics are solid and characters can “stand on them.</p>
+<p>Kinematics are solid and characters can &#8220;stand&#8221; on them.</p>
 </li>
 <li>
 <p>When they collide, Kinematics push dynamic objects, but a dynamic object never pushes a Kinematic.</p>
 </li>
 <li>
-<p>You can hang kinematics up “in mid-air and attach other PhysicsControls to them using <a href="#hinges_and_joints.adoc" class="page unresolved">hinges and joints</a>. Picture them as “air hooks for flying aircraft carriers, floating islands in the clouds, suspension bridges, swings, chains…</p>
+<p>You can hang kinematics up &#8220;in mid-air&#8221; and attach other PhysicsControls to them using <a href="#hinges_and_joints.adoc" class="page unresolved">hinges and joints</a>. Picture them as &#8220;air hooks&#8221; for flying aircraft carriers, floating islands in the clouds, suspension bridges, swings, chains…</p>
 </li>
 <li>
-<p>You can use Kinematics to create mobile remote-controlled physical objects, such as moving elevator platforms, flying blimps/airships. You have full control how Kinematics move, they never “fall or “topple over.</p>
+<p>You can use Kinematics to create mobile remote-controlled physical objects, such as moving elevator platforms, flying blimps/airships. You have full control how Kinematics move, they never &#8220;fall&#8221; or &#8220;topple&#8221; over.</p>
 </li>
 </ul>
 </div>
@@ -2280,7 +2280,7 @@ setKinematic(false);</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>It is technically possible to position PhysicsControls using setLocalTranslation(), e.g. to place them in their start position in the scene. However you must be very careful not to cause an “impossible state where one physical object overlaps with another! Within the game, you typically use the setters shown here exclusively.</p>
+<p>It is technically possible to position PhysicsControls using setLocalTranslation(), e.g. to place them in their start position in the scene. However you must be very careful not to cause an &#8220;impossible&#8221; state where one physical object overlaps with another! Within the game, you typically use the setters shown here exclusively.</p>
 </div>
 </td>
 </tr>
@@ -2357,7 +2357,7 @@ removeCollideWithGroup(COLLISION_GROUP_01)</p>
 <p>setCcdSweptSphereRadius(.5f)</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Bullet does not use the full collision shape for continuous collision detection, instead it uses a “swept sphere shape to approximate a motion, which can be imprecise and cause strange behaviors such as objects passing through one another or getting stuck. Only relevant for fast moving dynamic bodies.</p>
+<p>Bullet does not use the full collision shape for continuous collision detection, instead it uses a &#8220;swept&#8221; sphere shape to approximate a motion, which can be imprecise and cause strange behaviors such as objects passing through one another or getting stuck. Only relevant for fast moving dynamic bodies.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2384,7 +2384,7 @@ removeCollideWithGroup(COLLISION_GROUP_01)</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Multiple Objects Too Slow?</strong> Do not overuse PhysicsControls. Although PhysicsControls are put to “sleep” when they are not moving, creating a world solely out of dynamic physics objects will quickly bring you to the limits of your computer&#8217;s capabilities.<br>
+<p><strong>Multiple Objects Too Slow?</strong> Do not overuse PhysicsControls. Although PhysicsControls are put to &#8220;sleep&#8221; when they are not moving, creating a world solely out of dynamic physics objects will quickly bring you to the limits of your computer&#8217;s capabilities.<br>
 <strong>Solution:</strong> Improve performance by replacing some physical Spatials with non-physical Spatials. Use the non-physical ones for non-solid things for which you do not need to detect collisions – foliage, plants, effects, ghosts, all remote or unreachable objects.</p>
 </li>
 <li>
@@ -2392,7 +2392,7 @@ removeCollideWithGroup(COLLISION_GROUP_01)</p>
 <strong>Solution:</strong> A huge static city or terrain model should never be loaded as one huge mesh. Divide the scene into multiple physics objects, with each its own CollisionShape. Choose the most simple CollisionShape possible; use mesh-accurate shapes only for the few cases where precision is more important than speed. For example, you can use the very fast <code>PlaneCollisionShape</code> for flat streets, floors and the outside edge of the scene, if you keep these pieces separate.</p>
 </li>
 <li>
-<p><strong>Eject?</strong> If you have physical nodes jittering wildy and being ejected “for no apparent reason, it means you have created an impossible state – solid objects overlapping. This can happen when you position solid spatials too close to other solid spatials, e.g. when moving them with setLocalTranslation().<br>
+<p><strong>Eject?</strong> If you have physical nodes jittering wildy and being ejected for no apparent reason, it means you have created an impossible state – solid objects overlapping. This can happen when you position solid spatials too close to other solid spatials, e.g. when moving them with setLocalTranslation().<br>
 <strong>Solution:</strong> Use the debug mode to make CollisionShapes visible and verify that CollisionShapes do not overlap.</p>
 </li>
 </ul>
