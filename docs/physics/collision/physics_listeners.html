@@ -1010,10 +1010,10 @@
 <p>Attach a com.jme3.bullet.control.GhostControl to any Spatial to turn it into a PhysicsGhostObject. Ghost objects automatically follow their spatial and detect collisions. The attached ghost itself is invisible and non-solid (!) and doesn&#8217;t interfere with your game otherwise, it only passively reports collisions.</p>
 </div>
 <div class="paragraph">
-<p>You can leave the GhostControl non-solid and invisible and attach it to an (invisible) Node in the scene to create something like a motion detector. But a GhostControl also works fine when added to spatials that are solid (with RigidBodyControl) and visible (with Geometry). One use case for GhostControls is to check for collisions among <a href="#../../jme3/advanced/walking_character.adoc" class="page unresolved">CharacterControls</a> when the characters are walking.</p>
+<p>You can leave the GhostControl non-solid and invisible and attach it to an (invisible) Node in the scene to create something like a motion detector. But a GhostControl also works fine when added to spatials that are solid (with RigidBodyControl) and visible (with Geometry). One use case for GhostControls is to check for collisions among <a href="../control/walking_character.html" class="page">CharacterControls</a> when the characters are walking.</p>
 </div>
 <div class="paragraph">
-<p>The shape of the ghost depends on the CollisionShape that you gave the GhostControl. This means that the GhostControl&#8217;s shape can be different from the RigidBodyControl&#8217;s shape. For example, the non-solid ghost shape can be bigger than the solid shape of the Spatial (so you can “feel ahead).</p>
+<p>The shape of the ghost depends on the CollisionShape that you gave the GhostControl. This means that the GhostControl&#8217;s shape can be different from the RigidBodyControl&#8217;s shape. For example, the non-solid ghost shape can be bigger than the solid shape of the Spatial (so you can &#8220;feel&#8221; ahead).</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1135,7 +1135,7 @@ public void physicsTick(PhysicsSpace space, float tpf){
 <div class="sect2">
 <h3 id="when-not-to-use-collision-listener"><a class="anchor" href="#when-not-to-use-collision-listener"></a>When (Not) to Use Collision Listener</h3>
 <div class="paragraph">
-<p>If you do not implement the Collision Listener interface (com.jme3.bullet.collision.PhysicsCollisionListener), a collisions will just mean that physical forces between solid objects are applied automatically. If you just want “Balls rolling, bricks falling you do not need a listener.</p>
+<p>If you do not implement the Collision Listener interface (com.jme3.bullet.collision.PhysicsCollisionListener), a collisions will just mean that physical forces between solid objects are applied automatically. If you just want &#8220;Balls&#8221; rolling, bricks falling you do not need a listener.</p>
 </div>
 <div class="paragraph">
 <p>If however you want to respond to a collision event (com.jme3.bullet.collision.PhysicsCollisionEvent) with a custom action, then you need to implement the PhysicsCollisionListener interface. Typical actions triggered by collisions include:</p>
