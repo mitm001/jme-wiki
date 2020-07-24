@@ -981,7 +981,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>All Geometries need a Material to be visible. Every Material is based on a Material Definition. Material definitions provide the “logic for the material, and a shader draws the material according to the parameters specified in the definition. The J3MD file abstracts the shader and its configuration away from the user, allowing a simple interface where the user can simply set a few parameters on the material to change its appearance and the way its handled by the shaders.</p>
+<p>All Geometries need a Material to be visible. Every Material is based on a Material Definition. Material definitions provide the &#8220;logic&#8221; for the material, and a shader draws the material according to the parameters specified in the definition. The J3MD file abstracts the shader and its configuration away from the user, allowing a simple interface where the user can simply set a few parameters on the material to change its appearance and the way its handled by the shaders.</p>
 </div>
 <div class="paragraph">
 <p>The most common Material Definitions are included in the engine, advanced users can create custom ones. In this case you will also be interested in the <a href="#jme3/advanced/material_specification.adoc" class="page unresolved">in-depth developer specification of the jME3 material system</a>.</p>
@@ -1018,7 +1018,7 @@ myGeometry.setMaterial(mat);               // Use material on this Geometry.</co
 <h2 id="preparing-a-material"><a class="anchor" href="#preparing-a-material"></a>Preparing a Material</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In the <a href="#jme3/advanced/materials_overview.adoc" class="page unresolved">Materials Overview</a> list:</p>
+<p>In the <a href="materials_overview.html" class="page">Materials Overview</a> list:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1033,7 +1033,7 @@ myGeometry.setMaterial(mat);               // Use material on this Geometry.</co
 </div>
 </li>
 <li>
-<p>Look at the applicable parameters of the Material Definition and determine which parameters you need to achieve the desired effect (e.g. “glow or “color). Most parameters are optional!</p>
+<p>Look at the applicable parameters of the Material Definition and determine which parameters you need to achieve the desired effect (e.g. &#8220;glow&#8221; or &#8220;color&#8221;). Most parameters are optional!</p>
 </li>
 <li>
 <p>Create and save the necessary Texture files to your <code>assets/Textures</code> directory.</p>
@@ -1076,7 +1076,7 @@ myGeometry.setMaterial(mat);               // Use material on this Geometry.</co
 </div>
 </li>
 <li>
-<p>Configure your Material by setting the appropriate values listed in the <a href="#jme3/advanced/materials_overview.adoc" class="page unresolved">Materials Overview</a> table.</p>
+<p>Configure your Material by setting the appropriate values listed in the <a href="materials_overview.html" class="page">Materials Overview</a> table.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mat.setColor("Color", ColorRGBA.Yellow ); // and more</code></pre>
@@ -1112,19 +1112,19 @@ myGeometry.setMaterial(mat);               // Use material on this Geometry.</co
 <div class="ulist">
 <ul>
 <li>
-<p><code>mat.setColor(   “Color,       ColorRGBA.White );</code></p>
+<p><code>mat.setColor(   "Color",       ColorRGBA.White );</code></p>
 </li>
 <li>
-<p><code>mat.setTexture( “ColorMap,    assetManager.loadTexture(“Interface/Logo/Monkey.png ));</code></p>
+<p><code>mat.setTexture( "ColorMap",    assetManager.loadTexture("Interface/Logo/Monkey.png" ));</code></p>
 </li>
 <li>
-<p><code>mat.setFloat(   “Shininess,   5f);</code></p>
+<p><code>mat.setFloat(   "Shininess",   5f);</code></p>
 </li>
 <li>
-<p><code>mat.setBoolean( “SphereMap,   true);</code></p>
+<p><code>mat.setBoolean( "SphereMap",   true);</code></p>
 </li>
 <li>
-<p><code>mat.setVector3( “NormalScale, new Vector3f(1f,1f,1f));</code></p>
+<p><code>mat.setVector3( "NormalScale", new Vector3f(1f,1f,1f));</code></p>
 </li>
 </ul>
 </div>
