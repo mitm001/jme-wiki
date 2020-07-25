@@ -1003,13 +1003,13 @@
 '.source.asciidoc':
   'Cross reference internal element, same page':
     'prefix': 'xrefI'
-    'body': '&lt;&lt;${1:reference-a-section-in-the-same-page},${2:custom label text}&gt;&gt;'
+    'body': '&lt;&lt;${1:reference-a-section-in-the-same-page},${2:label text}&gt;&gt;'
   'Cross reference internal element, same module':
     'prefix': 'xrefIsm'
-    'body': '&lt;&lt;${1:target-page-filename}.adoc#${2:reference-section},${3:custom label text}&gt;&gt;'
+    'body': '&lt;&lt;${1:target-page-filename}.adoc#${2:reference-section},${3:label text}&gt;&gt;'
   'Cross reference internal element, named module':
     'prefix': 'xrefInm'
-    'body': 'xref:${1:module-name}:${2:target-page-filename}.adoc#${3:reference-section}[${4:label text}]'
+    'body': '&lt;&lt;${1:module-name}:${2:target-page-filename}.adoc#${3:reference-section},${4:label text}&gt;&gt;'
   'Cross reference page, same module':
     'prefix': 'xrefPsm'
     'body': 'xref:${1:target-page-filename}.adoc[${2:link text}]'
