@@ -986,7 +986,7 @@
 <p>This wiki is dedicated to who want to do research about Entity System.</p>
 </div>
 <div class="paragraph">
-<p>You should 've read a brief introduction here: <a href="#jme3/contributions/entitysystem/introduction.adoc" class="page unresolved">jme3:contributions:entitysystem:introduction</a></p>
+<p>You should 've read a brief introduction here: <a href="introduction.html" class="page">entitysystem:introduction</a></p>
 </div>
 <div class="paragraph">
 <p>And if you still have some concerning you are in the right place!</p>
@@ -1296,9 +1296,9 @@ Definition notations:
 </li>
 </ol>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Ideas similarities here actually is resulted from with decades of history of revolving of the paradigm. That's why you will see the same concepts of Entity system appear every where from a database to a repository. Of course because it have the same root.Check Pros and Cons chapter for full, detailed idea and design goals and successes.</pre>
+<pre class="highlightjs highlight"><code>Ideas similarities here actually is resulted from with decades of history of revolving of the paradigm. That's why you will see the same concepts of Entity system appear every where from a database to a repository. Of course because it have the same root.Check Pros and Cons chapter for full, detailed idea and design goals and successes.</code></pre>
 </div>
 </div>
 </div>
@@ -1341,7 +1341,7 @@ Definition notations:
 </ul>
 </div>
 <div class="paragraph">
-<p>Here is a short one to help you get start quickly : <a href="#jme3/contributions/entitysystem/terms.adoc" class="page unresolved">terms</a></p>
+<p>Here is a short one to help you get start quickly : <a href="terms.html" class="page">terms</a></p>
 </div>
 </div>
 </div>
@@ -1352,13 +1352,13 @@ Definition notations:
 <p>From more 'open' perspective the core elements can be viewed as, but remember the name as a noun can be mislead:
 <em>This resulted as a dicussion of @pspeed and toolforger, eventually is form a skeptical question, it&#8217;s really interesting by how we all see this problem confused at first!!</em></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>  Entity -&gt; ID. It just binds the components together, in the sense that there is one function that creates a bunch of components with the same ID, and one function to destroy all components for an ID. An entity is the set of objects that have the same ID, entities don’t exist as coherent objects inside the code.
+<pre class="highlightjs highlight"><code>  Entity -&gt; ID. It just binds the components together, in the sense that there is one function that creates a bunch of components with the same ID, and one function to destroy all components for an ID. An entity is the set of objects that have the same ID, entities don’t exist as coherent objects inside the code.
 
   Component -&gt; Facet. A position is a facet of an entity, as its velocity, its health, its armor, its whatever. If entities were Java objects, facets would be groups of interrelated properties.
 
-  System -&gt; Processor. A function that operates on a slice of components.</pre>
+  System -&gt; Processor. A function that operates on a slice of components.</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1377,7 +1377,7 @@ Definition notations:
 </td>
 <td class="content">
 <div class="paragraph">
-<p>This area contain some best gotchas and practical wisdom when working with ES. I change this to upper position in the page be cause I think practical works save us more than theories. This page can be called a “Design course after all without this section!!!</p>
+<p>This area contain some best gotchas and practical wisdom when working with ES. I change this to upper position in the page be cause I think practical works save us more than theories. This page can be called a &#8220;Design&#8221; course after all without this section!!!</p>
 </div>
 </td>
 </tr>
@@ -1385,9 +1385,9 @@ Definition notations:
 </div>
 <div class="sect2">
 <h3 id="system-processor"><a class="anchor" href="#system-processor"></a>System ~ Processor?</h3>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>  In a pure ES, this is not a thing, really. Some implementations force this on you because they couldn’t think how to do the ES job efficiently… but it’s still not a thing. All of your code that isn’t an ES is a “system”, technically.</pre>
+<pre class="highlightjs highlight"><code>  In a pure ES, this is not a thing, really. Some implementations force this on you because they couldn’t think how to do the ES job efficiently… but it’s still not a thing. All of your code that isn’t an ES is a "`system`", technically.</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1397,7 +1397,7 @@ Definition notations:
 <div class="sect2">
 <h3 id="entity-gameobject"><a class="anchor" href="#entity-gameobject"></a>Entity ~ GameObject?</h3>
 <div class="paragraph">
-<p>Entity should just be interpreted as a bunch of its Component. GameObject or anything else represented by an Entity is by accident. So no force to represent “all-every” gameobject as Entity; and no force that “all-every” Entity is gameobject.</p>
+<p>Entity should just be interpreted as a bunch of its Component. GameObject or anything else represented by an Entity is by accident. So no force to represent &#8220;all-every&#8221; gameobject as Entity; and no force that &#8220;all-every&#8221; Entity is gameobject.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1412,7 +1412,7 @@ Definition notations:
 <div class="sect2">
 <h3 id="some-insights"><a class="anchor" href="#some-insights"></a>Some insights</h3>
 <div class="paragraph">
-<p>This is the place to share the “real world difficuties when working with ES, here in JME3 or in other engines. In Practical wisdoms will raise some known solutions for them. This section may revive some part of the Cons or known issues sections but practically.</p>
+<p>This is the place to share the &#8220;real&#8221; world difficuties when working with ES, here in JME3 or in other engines. In Practical wisdoms will raise some known solutions for them. This section may revive some part of the Cons or known issues sections but practically.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1433,7 +1433,7 @@ Definition notations:
 <p>Because apply to each game, the scenarios and usecases are vary difference. Situation changes, a design which should be right can be a failure!  You may see the point.</p>
 </div>
 <div class="paragraph">
-<p>This topic start flame in almost every dicussions I&#8217;ve come through, someone should be like OOP versus COP, ES is not for all,..etc. At first, the debate should focus into a specific scope, specific genre. Here (this page) we still arrange the statements like general scope. But later in the interviews you can see some “real applications and implementations.</p>
+<p>This topic start flame in almost every dicussions I&#8217;ve come through, someone should be like OOP versus COP, ES is not for all,..etc. At first, the debate should focus into a specific scope, specific genre. Here (this page) we still arrange the statements like general scope. But later in the interviews you can see some &#8220;real&#8221; applications and implementations.</p>
 </div>
 <div class="sect3">
 <h4 id="should-be"><a class="anchor" href="#should-be"></a>Should be?</h4>
@@ -1552,7 +1552,7 @@ Definition notations:
 </ol>
 </div>
 <div class="paragraph">
-<p>Detailed explaination : <a href="#jme3/contributions/entitysystem/points.adoc" class="page unresolved">points</a></p>
+<p>Detailed explaination : <a href="points.html" class="page">points</a></p>
 </div>
 </div>
 </div>
@@ -1725,7 +1725,7 @@ Definition notations:
 <p>Read: <a href="http://gamearchitect.net/Articles/GameObjects1.html">http://gamearchitect.net/Articles/GameObjects1.html</a></p>
 </div>
 <div class="paragraph">
-<p>A lot of good things come if done “right”!</p>
+<p>A lot of good things come if done &#8220;right&#8221;!</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1769,7 +1769,7 @@ Definition notations:
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>No OOP: COP Done “right” means forget about almost all OOP things: Pure data, Class become Type, no inheritance, encapsulation…etc , no best of both world!</p>
+<p>No OOP: COP Done &#8220;right&#8221; means forget about almost all OOP things: Pure data, Class become Type, no inheritance, encapsulation…etc , no best of both world!</p>
 </li>
 <li>
 <p>Spliting dilemma: Same with OOP Classify problem: How to split, how to change the data when you change the splits?</p>
@@ -1815,7 +1815,7 @@ Definition notations:
 </table>
 </div>
 <div class="paragraph">
-<p>But for some reason its design ‘s consider good for real=time application like a “common” video Game, or “common” simmulation; especially common in MMO world.</p>
+<p>But for some reason its design ‘s consider good for real=time application like a &#8220;common&#8221; video Game, or &#8220;common&#8221; simmulation; especially common in MMO world.</p>
 </div>
 <div class="paragraph">
 <p>Here is a short of ‘why’ answers from a software architecture designer view, explain based on its borrowed ideas: [This is very different from various source you&#8217;ve read, because it&#8217;s not embeded any implementation details!!!]</p>
@@ -1905,7 +1905,7 @@ Definition notations:
 </ol>
 </div>
 <div class="paragraph">
-<p>(*) These lead to a lot of simple but efficient algorithm to get high performance in runtime for a software such like a “common” video game, which run in console, GPU, CPU which envolve and share the same model with cache and batch intructions, an a certain hearbeat…Notice the bottleneck of CPU-GPU and between different processing unit, platform is the most headache of Game designer for decade is ease with the regular workload; let the game run smoothly and stable, result into nice visual representation..</p>
+<p>(*) These lead to a lot of simple but efficient algorithm to get high performance in runtime for a software such like a &#8220;common&#8221; video game, which run in console, GPU, CPU which envolve and share the same model with cache and batch intructions, an a certain hearbeat…Notice the bottleneck of CPU-GPU and between different processing unit, platform is the most headache of Game designer for decade is ease with the regular workload; let the game run smoothly and stable, result into nice visual representation..</p>
 </div>
 </div>
 <div class="sect2">
@@ -1913,13 +1913,13 @@ Definition notations:
 <div class="paragraph">
 <p>From @pspeed:</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>  It is a bad design choice where:
+<pre class="highlightjs highlight"><code>  It is a bad design choice where:
   - there aren’t many entities and/or the behavior is so clearly defined that you’d just implement it one or two classes. Thing card games, a lot of puzzle games, etc..
   - the game is so simple that it’s just implemented as JME controls and a few app states. You could use an ES here but it would be wasted.
   - the game logic cuts across all objects nearly all the time. (I think of card games and puzzle games again.) This usually implies that there are few entities, though.
-  - the team doing the work will have trouble understanding an ES. To me this is a huge one. Sometimes our choice of technologies is not dictated by what might be technically best… but what is technically best for the skills of the team. For example, if your artist only knows Sketchup then Blender is probably not the right tool even if it is superior in many ways.</pre>
+  - the team doing the work will have trouble understanding an ES. To me this is a huge one. Sometimes our choice of technologies is not dictated by what might be technically best… but what is technically best for the skills of the team. For example, if your artist only knows Sketchup then Blender is probably not the right tool even if it is superior in many ways.</code></pre>
 </div>
 </div>
 </div>
@@ -1931,14 +1931,14 @@ Definition notations:
 <div class="paragraph">
 <p><strong>Why this section havs things from the Cons section but consider differrently?</strong></p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>In Cons section descible problem should be concerned, likely to be done wrong, or the limit of the design they can be solve in implementations or not is not important!</pre>
+<pre class="highlightjs highlight"><code>In Cons section descible problem should be concerned, likely to be done wrong, or the limit of the design they can be solve in implementations or not is not important!</code></pre>
 </div>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>Known issue is the problem persist in even the well designed; or persist due to the underlying infrastructure, application, programming language, etc!!</pre>
+<pre class="highlightjs highlight"><code>Known issue is the problem persist in even the well designed; or persist due to the underlying infrastructure, application, programming language, etc!!</code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -1947,23 +1947,20 @@ Definition notations:
 <p>Happen in non pure data solution, when Components don’t function independently of each other. Some means of communication is necessary
 • Two approaches (both viable):</p>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>– Direct communication using dynamic cast and function calls
-– Indirect communication using message passing</pre>
+<pre class="highlightjs highlight"><code>– Direct communication using dynamic cast and function calls
+– Indirect communication using message passing</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>In pure data solution, by not query or just loop through interested component at one update cycle, the Processor eases out the need of other communication, but in complex scenario, such as combine with outter event handling such as Network, where message passing is nature, the problem still persist!</p>
 </div>
-<div class="paragraph">
-<p>———————————————————–</p>
-</div>
 </div>
 <div class="sect3">
 <h4 id="script"><a class="anchor" href="#script"></a>Script</h4>
 <div class="paragraph">
-<p>The “script problem” happen by the same reason with the “communication problem” mixed with “pure data or not” problem. When an component is hard to inspect, its outter relationship hard to define and its property is rejected to change, how can you script it?</p>
+<p>The &#8220;script problem&#8221; happen by the same reason with the &#8220;communication problem&#8221; mixed with &#8220;pure&#8221; data or &#8220;not&#8221; problem. When an component is hard to inspect, its outter relationship hard to define and its property is rejected to change, how can you script it?</p>
 </div>
 <div class="paragraph">
 <p>Read: <a href="http://blog.gemserk.com/2011/11/13/scripting-with-artemis/">http://blog.gemserk.com/2011/11/13/scripting-with-artemis/</a></p>
@@ -2107,8 +2104,7 @@ So this chapter will mainly answer the BIG question:</p>
 <div class="sect3">
 <h4 id="spartan-used-for-slick-abandoned"><a class="anchor" href="#spartan-used-for-slick-abandoned"></a>Spartan: [used for Slick. abandoned]</h4>
 <div class="paragraph">
-<p>GoogleCode: <a href="https://code.google.com/archive/p/spartanframework/">https://code.google.com/archive/p/spartanframework/</a>
-————————————————————-</p>
+<p>GoogleCode: <a href="https://code.google.com/archive/p/spartanframework/">https://code.google.com/archive/p/spartanframework/</a></p>
 </div>
 </div>
 </div>
@@ -2123,7 +2119,7 @@ So this chapter will mainly answer the BIG question:</p>
 <p>Forum : <a href="https://hub.jmonkeyengine.org/c/user-code-projects/zay-es">https://hub.jmonkeyengine.org/c/user-code-projects/zay-es</a></p>
 </div>
 <div class="paragraph">
-<p>Wiki: <a href="#jme3/contributions/entitysystem.adoc" class="page unresolved">jme3:contributions:entitysystem</a></p>
+<p>Wiki: <a href="entitysystem.html" class="page">entitysystem</a></p>
 </div>
 <div class="paragraph">
 <p>Links: <a href="https://hub.jmonkeyengine.org/t/zay-es-links-more-chars-because-forum-is-dumb/27135">https://hub.jmonkeyengine.org/t/zay-es-links-more-chars-because-forum-is-dumb/27135</a></p>
@@ -2233,7 +2229,7 @@ So this chapter will mainly answer the BIG question:</p>
 <p><strong>Our wiki link</strong></p>
 </div>
 <div class="paragraph">
-<p>[4] <a href="#jme3/contributions/entitysystem/introduction.adoc" class="page unresolved">jme3:contributions:entitysystem:introduction</a></p>
+<p>[4] <a href="introduction.html" class="page">entitysystem:introduction</a></p>
 </div>
 <div class="paragraph">
 <p><strong>Beside of BLOB anti pattern, explain why ES suite as data in modern GPU, CPU!</strong></p>
