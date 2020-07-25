@@ -1042,7 +1042,7 @@ to check out the SimpleGrassTest.java file, because it contains a lot more infor
 <p>The reason for this is that the trees are lumped together in a process called geometry-batching. It is commonly used to reduce the number of drawing-calls for groups of objects that are very similar.</p>
 </div>
 <div class="paragraph">
-<p>What this means in practice is that your model is not just duplicated and spread out across the scene, they are in fact baked together into one single mesh (per “block). This process is also used for collision shapes. They are all compounded into one large collision shape, then added to this newly created clump of vertices. Basically.</p>
+<p>What this means in practice is that your model is not just duplicated and spread out across the scene, they are in fact baked together into one single mesh (per &#8220;block&#8221;). This process is also used for collision shapes. They are all compounded into one large collision shape, then added to this newly created clump of vertices. Basically.</p>
 </div>
 <div class="paragraph">
 <p><strong>In short</strong> - there are a couple of instances when the collision physics system may fail:</p>
@@ -1053,7 +1053,7 @@ to check out the SimpleGrassTest.java file, because it contains a lot more infor
 <p>If you do not supply a physics space to the forester, no physics will be enabled.</p>
 </li>
 <li>
-<p>If you do not check “true for enable physics when creating the tree-layer.</p>
+<p>If you do not check &#8220;true&#8221; for enable physics when creating the tree-layer.</p>
 </li>
 <li>
 <p>If you do not supply a collision mesh to the model.</p>
