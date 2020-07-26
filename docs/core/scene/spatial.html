@@ -1110,10 +1110,10 @@ no mesh, no material.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Shapes:</strong> The simplest type of Meshes are jME&#8217;s default <a href="#jme3/advanced/shape.adoc" class="page unresolved">Shape</a>s such as cubes and spheres. You can use several Shapes to build complex Geometries. Shapes are built-in and can be created without using the AssetManager.</p>
+<p><strong>Shapes:</strong> The simplest type of Meshes are jME&#8217;s default <a href="shape/shape.html" class="page">Shape</a>s such as cubes and spheres. You can use several Shapes to build complex Geometries. Shapes are built-in and can be created without using the AssetManager.</p>
 </li>
 <li>
-<p><strong>3D Models:</strong> <a href="#jme3/advanced/3d_models.adoc" class="page unresolved">3D models and scenes</a> are also made up of meshes, but are more complex than Shapes. You create Models and Scenes in external 3D Mesh Editors and export them as Ogre XML or Wavefront OBJ. Use the <a href="../asset/asset_manager.html" class="page">Asset Manager</a> to load models into a your jME3 game.</p>
+<p><strong>3D Models:</strong> <a href="3d_models.html" class="page">3D models and scenes</a> are also made up of meshes, but are more complex than Shapes. You create Models and Scenes in external 3D Mesh Editors and export them as Ogre XML or Wavefront OBJ. Use the <a href="../asset/asset_manager.html" class="page">Asset Manager</a> to load models into a your jME3 game.</p>
 </li>
 <li>
 <p><strong>Custom Meshes:</strong> Advanced users can create <a href="custom_meshes.html" class="page">Custom Meshes</a> programmatically.</p>
@@ -1127,7 +1127,7 @@ no mesh, no material.</p>
 <h2 id="what-is-a-clone"><a class="anchor" href="#what-is-a-clone"></a>What is a Clone?</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Cloned spatials share the same mesh, while each cloned spatial can have its own local transformation (translation, rotation, and scale) in the scene. This means you only use <code>clone()</code> on spatials whose meshes never change. The most common use case for cloning is when you use several Spatials that are based on the same <a href="#jme3/advanced/shape.adoc" class="page unresolved">Shape</a>s (e.g. trees, crates).</p>
+<p>Cloned spatials share the same mesh, while each cloned spatial can have its own local transformation (translation, rotation, and scale) in the scene. This means you only use <code>clone()</code> on spatials whose meshes never change. The most common use case for cloning is when you use several Spatials that are based on the same <a href="shape/shape.html" class="page">Shape</a>s (e.g. trees, crates).</p>
 </div>
 <div class="paragraph">
 <p>The second use case is: When you load a model using <code>loadModel()</code> from the AssetManager, you may automatically get a `clone()`ed object. In particular:</p>
