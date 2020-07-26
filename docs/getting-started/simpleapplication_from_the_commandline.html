@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>jMonkeyEngine 3.0 Feature Overview :: jMonkeyEngine Docs</title>
-    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/jme3/features.html">
+    <title>Starting a JME3 application from the command-line :: jMonkeyEngine Docs</title>
+    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/getting-started/simpleapplication_from_the_commandline.html">
+    <meta name="keywords" content="documentation, install">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
-<meta property="og:description" content="jMonkeyEngine 3.0 Feature Overview">
+<meta property="og:description" content="Starting a JME3 application from the command-line">
 <meta property="og:title" content="jMonkeyEngine Docs">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -972,765 +973,338 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../documentation.html">Docs</a></li>
-    <li><a href="features.html">jMonkeyEngine 3.0 Feature Overview</a></li>
+    <li><a href="simpleapplication_from_the_commandline.html">Starting a JME3 application from the command-line</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/ROOT/pages/jme3/features.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/ROOT/pages/getting-started/simpleapplication_from_the_commandline.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">jMonkeyEngine 3.0 Feature Overview</h1>
+<h1 class="page">Starting a JME3 application from the command-line</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>See also: <a href="requirements.html" class="page">requirements</a>.</p>
+<p>Although we recommend the jMonkeyEngine <a href="../sdk/sdk.html" class="page">SDK</a> for developing JME3 games, you can use any IDE (integrated development environment) such as <a href="#jme3/setting_up_netbeans_and_jme3.adoc" class="page unresolved">NetBeans</a> or <a href="#jme3/setting_up_jme3_in_eclipse.adoc" class="page unresolved">Eclipse</a>, and even work freely from the command-line. Here is a generic IDE-independent &#8220;getting started&#8221; tutorial.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="software-development-kit-jmonkeyengine-sdk"><a class="anchor" href="#software-development-kit-jmonkeyengine-sdk"></a>Software Development Kit: jMonkeyEngine SDK</h2>
+<h2 id="installing-the-jme3-framework"><a class="anchor" href="#installing-the-jme3-framework"></a>Installing the JME3 Framework</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../sdk/project_creation.html" class="page">Creates jME3-ready Java projects</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Preconfigured classpath</p>
-</li>
-<li>
-<p>Bundled with compatible JDK</p>
-</li>
-<li>
-<p><a href="../core/asset/asset_manager.html" class="page">Asset Manager</a> for loading multi-media files and 3D models including asset name code completion</p>
-</li>
-<li>
-<p><a href="../sdk/default_build_script.html" class="page">Non-proprietary Ant build scripts</a></p>
-</li>
-<li>
-<p>jME3-ready Javadoc popups, <a href="../sdk/sample_code.html" class="page">sample code projects</a>, and code snippet palette</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="../sdk/code_editor.html" class="page">Full-featured Java and XML code editor</a></p>
-</li>
-<li>
-<p><a href="../sdk/update_center.html" class="page">Plugins</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../sdk/version_control.html" class="page">File Version Control</a></p>
-</li>
-<li>
-<p><a href="../sdk/debugging_profiling_testing.html" class="page">Debugger and Profiler (optional)</a></p>
-</li>
-<li>
-<p><a href="../sdk/model_loader_and_viewer.html" class="page">Converters and Importers for game assets (3D models etc)</a></p>
-</li>
-<li>
-<p><a href="../sdk/scene_composer.html" class="page">3D Scene Viewer and Scene Composer</a></p>
-</li>
-<li>
-<p><a href="../sdk/material_editing.html" class="page">Material editor</a></p>
-</li>
-<li>
-<p>Shader Node editor</p>
-</li>
-<li>
-<p><a href="../sdk/terrain_editor.html" class="page">Terrain generation, painting, and editing</a></p>
-</li>
-<li>
-<p><a href="../sdk/plugin/fonts.html" class="page">Custom font creator</a></p>
-</li>
-<li>
-<p><a href="../sdk/neotexture.html" class="page">Procedural texture creator (NeoTexture)</a></p>
-</li>
-<li>
-<p><a href="../core/scene/control/level_of_detail.html" class="page">Level of Detail (LOD) generator</a></p>
-</li>
-<li>
-<p><a href="../sdk/sdk.html" class="page">&#8230;&#8203; and much more&#8230;&#8203;</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="../sdk/application_deployment.html" class="page">Deployment</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Generates desktop executables for Win, Mac, Linux</p>
-</li>
-<li>
-<p>Generates mobile executables for <a href="../sdk/android.html" class="page">Android</a>, iOS support is in the works.</p>
-</li>
-<li>
-<p>Generates JNLP WebStart and Java Browser Applets</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="../sdk/whynoteclipse.html" class="page">Based on the NetBeans Platform</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Supports all NetBeans IDE plugins</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<div class="paragraph">
+<p>There are many ways to install the JME framework from the command-line, but for this tutorial we will narrow it down to two, the easy way and the hard way.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="physics"><a class="anchor" href="#physics"></a>Physics</h2>
+<h2 id="installing-with-git-easy-way"><a class="anchor" href="#installing-with-git-easy-way"></a>Installing with Git (easy way)</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../physics/physics.html" class="page">Bullet physics binding</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../physics/control/walking_character.html" class="page">Physical characters</a></p>
-</li>
-<li>
-<p><a href="../physics/joint/hinges_and_joints.html" class="page">Physical joints and hinges</a></p>
-</li>
-<li>
-<p><a href="../physics/control/vehicles.html" class="page">Ray-cast vehicle</a></p>
-</li>
-<li>
-<p><a href="../physics/control/ragdoll.html" class="page">Ragdoll physics</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>You can build JME3 from the sources. (Recommended for JME3 developers.) This example expects <a href="https://help.github.com/articles/set-up-git/">Git</a> to be installed on your system.</p>
 </div>
-</li>
-<li>
-<p><a href="../physics/bullet_multithreading.html" class="page">Multi-threaded physics</a></p>
-</li>
-<li>
-<p><a href="../physics/physics.html#create-a-collisionshape" class="page">Mesh-accurate collision shapes</a></p>
-</li>
-</ul>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>mkdir jme3
+cd jme3
+
+// if you have a rsa key configured
+git clone git@github.com:jMonkeyEngine/jmonkeyengine.git
+// or
+// if you don't, but you'll be asked for credential after the next command
+git clone https://github.com/jMonkeyEngine/jmonkeyengine.git
+//can take a while
+
+// build the engine and install it in your local maven repo.
+./gradlew install</code></pre>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="supported-formats"><a class="anchor" href="#supported-formats"></a>Supported Formats</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="jmonkeyengine3-file-formats"><a class="anchor" href="#jmonkeyengine3-file-formats"></a>jMonkeyEngine3 File Formats</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 10%;">
-<col style="width: 65%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
+<div class="admonitionblock tip">
+<table>
 <tr>
-<th class="tableblock halign-left valign-top">Suffix</th>
-<th class="tableblock halign-left valign-top">Usage</th>
-<th class="tableblock halign-left valign-top">Learn more</th>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+What is an <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">RSA key</a>?
+</td>
 </tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.j3o</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Binary 3D model or scene. At the latest from the Beta release of your game on, you should convert all models to .j3o format.<br>
-During alpha and earlier development phases (when models still change a lot) you can alternatively load GLTF/OBJ models directly.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="../sdk/model_loader_and_viewer.html" class="page">Model Loader and Viewer</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.j3m</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A custom Material. You can create a .j3m file to store a Material configuration for a Geometry (e.g. 3D model).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="../core/material/materials_overview.html" class="page">Materials Overview</a><br>
-<a href="../sdk/material_editing.html" class="page">Material Editing</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.j3md</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A Material definition. These are pre-defined templates for shader-based Materials.<br>
-Each custom .j3m Material is based on a material definition. Advanced users can create their own material definitions.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="../core/material/materials_overview.html" class="page">Materials Overview</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.j3f</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>A custom post-processor filter configuration. You can create a .j3f file to store a FilterPostProcessor with a set of preconfigured filters.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="../sdk/filters.html" class="page">Filters</a><br>
-<a href="../core/effect/effects_overview.html" class="page">Effects Overview</a></p>
-</div></div></td>
-</tr>
-</tbody>
 </table>
 </div>
+<div class="paragraph">
+<p>The install command will install the built jars into your local maven repositories org.jmonkeyengine folder, which on Linux is ~/.m2, and on Windows might be in AppData, or in your home directory.</p>
+</div>
+<div class="paragraph">
+<p>To use the engine in a game project, you can use <a href="https://hub.jmonkeyengine.org/t/bootmonkey-bootstrap-your-jme-project/37141">BootMonkey</a> or clone a template project from GitHub.</p>
+</div>
+<div class="paragraph">
+<p>To use the template, first create a folder for your project:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>cd ..
+mkdir HelloJME3
+cd HelloJME3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next, clone one of these templates:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/Simsilica/Examples/tree/master/simple-jme">Simsilica/Examples</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Nehon/base-jme">Nehon/base-jme</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>After cloning, open the <code>build.gradle</code> file and uncomment the <code>mavenLocal()</code> repository, change the version variable, and uncomment any dependencies you will need:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>repositories {
+    //This is where jme3 dependencies are stored.
+    jcenter()
+
+    //Uncomment this if you install local dependencies.
+    mavenLocal()
+
+    //Uncomment this if you use external dependencies
+    //mavenCentral()
+
+    //Uncomment this if you use jme3-niftygui
+    //maven{url 'http://nifty-gui.sourceforge.net/nifty-maven-repo'}
+
+}
+
+ext.jmeVersion = "[3.2,)"
+
+...
+
+dependencies {
+
+    compile "org.jmonkeyengine:jme3-core:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-desktop:$jmeVersion"
+    compile "org.jmonkeyengine:jme3-lwjgl:$jmeVersion"
+
+    //Those are jme3 additional library uncomment the ones you need
+    //compile "org.jmonkeyengine:jme3-android-native:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-android:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-bullet-native-android:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-blender:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-bullet-native:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-bullet:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-effects:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-jogg:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-jogl:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-lwjgl3:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-networking:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-plugins:$jmeVersion"
+    //compile "org.jmonkeyengine:jme3-terrain:$jmeVersion"
+
+    //You need to uncomment nifty repository in the repositories section if you use this dependency
+    //compile "org.jmonkeyengine:jme3-niftygui:$jmeVersion"
+
+    runtime project(':assets')
+}
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For a detailed description of the separate jar files see xref:jme3/jme3_source_structure#structure_of_jmonkeyengine3_jars,this list].</p>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it, you&#8217;re done. After the clone, you will have a project that contains a source package with a default blue cube JME3 app and a subproject that has the proper asset directory structure for your assets.</p>
+</div>
+<div class="paragraph">
+<p>Build and run your project and you should see a blue cube.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="manual-download-hard-way"><a class="anchor" href="#manual-download-hard-way"></a>Manual Download (hard way)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This example shows how to set up and run a simple application (HelloJME3) that depends on the jMonkeyEngine3 libraries.</p>
+</div>
+<div class="paragraph">
+<p>The directory structure will look as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>jme3/
+jme3/lib
+jme3/src
+...
+HelloJME3/
+HelloJME3/lib
+HelloJME3/assets
+HelloJME3/src
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To install the development version of jme3, download the latest  <a href="https://github.com/jMonkeyEngine/jmonkeyengine/releases">stable release</a>, unzip the folder into a directory named <code>jme3</code>. The filenames here are just an example, but they will always be something like <code>jME3.x-stable</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>mkdir jme3
+cd jme3
+unzip jME3.2-stable.zip
+cd ..</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sample-project-directory-structure"><a class="anchor" href="#sample-project-directory-structure"></a>Sample Project Directory Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>First we set up the directory and source package structure for your game project. Note that the game project directory <code>HelloJME3</code> is on the same level as your <code>jme3</code> folder. In this example, we create a Java package that we call <code>mygame</code> in the source directory.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>mkdir HelloJME3
+mkdir HelloJME3/src
+mkdir HelloJME3/src/mygame</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="libraries"><a class="anchor" href="#libraries"></a>Libraries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Next you copy the necessary JAR libraries from the download to your project. You only have to do this set of steps once every time you download a new JME3 build. For a detailed description of the separate jar files see xref:jme3/jme3_source_structure#structure_of_jmonkeyengine3_jars,this list].</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>mkdir HelloJME3/build
+mkdir HelloJME3/lib
+cp jme3/lib/*.* HelloJME3/lib</code></pre>
+</div>
+</div>
 <div class="sect2">
-<h3 id="supported-external-file-types"><a class="anchor" href="#supported-external-file-types"></a>Supported External File Types</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 40%;">
-<col style="width: 15%;">
-<col style="width: 45%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">File Suffix</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.mesh.xml, .meshxml, .scene</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>3D model</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Ogre Mesh XML <strong>(soon to be discontinued)</strong><br>
-see:</p>
+<h3 id="sample-code"><a class="anchor" href="#sample-code"></a>Sample Code</h3>
+<div class="paragraph">
+<p>To test your setup, create the file <code>HelloJME3/src/mygame/HelloJME3.java</code> with any text editor, paste the following sample code, and save.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../tutorials/how-to/modeling/blender/blender_ogre_export.html" class="page">Exporting Models as Ogre XML meshes from Blender</a></p>
-</li>
-<li>
-<p><a href="../tutorials/how-to/modeling/blender/blender_ogre_compatibility.html" class="page">Ogre Compatibility</a></p>
-</li>
-</ul>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package mygame;
+
+import com.jme3.app.SimpleApplication;
+import com.jme3.material.Material;
+import com.jme3.math.Vector3f;
+import com.jme3.scene.Geometry;
+import com.jme3.scene.shape.Box;
+import com.jme3.math.ColorRGBA;
+
+public class HelloJME3 extends SimpleApplication {
+
+    public static void main(String[] args){
+        HelloJME3 app = new HelloJME3();
+        app.start();
+    }
+
+    @Override
+    public void simpleInitApp() {
+        Box b = new Box(Vector3f.ZERO, 1, 1, 1);
+        Geometry geom = new Geometry("Box", b);
+        Material mat = new Material(assetManager,
+          "Common/MatDefs/Misc/Unshaded.j3md");
+        mat.setColor("Color", ColorRGBA.Blue);
+        geom.setMaterial(mat);
+        rootNode.attachChild(geom);
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="build-and-run"><a class="anchor" href="#build-and-run"></a>Build and Run</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We build the sample application into the build directory…</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>cd HelloJME3
+javac -d build -cp "lib/eventbus.jar:lib/j-ogg-all.jar:lib/jme3-lwjgl.jar:lib/jme3-bullet.jar:lib/jinput.jar:lib/lwjgl.jar:lib/stack-alloc.jar:lib/vecmath.jar:lib/xpp3.jar:lib/jme3-blender.jar:lib/jme3-core.jar:lib/jme3-desktop.jar:lib/jme3-jogg.jar:lib/jme3-plugins.jar:lib/jme3-terrain.jar:lib/jme3-testdata.jar:lib/jme3-niftygui.jar:lib/nifty-default-controls.jar:lib/nifty-examples.jar:lib/nifty-style-black.jar:lib/nifty.jar:." src/mygame/HelloJME3.java</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>Converting to j3o:</p>
+<p>… and run it.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../sdk/model_loader_and_viewer.html" class="page">SDK convert</a></p>
-</li>
-<li>
-<p><a href="https://javadoc.jmonkeyengine.org/v3.3.2-stable/com/jme3/export/binary/BinaryExporter.html">BinaryExporter</a></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.obj, .mtl</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>3D model</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Wavefront<br>
-Converting to j3o:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>cd build
+java -cp "../lib/eventbus.jar:../lib/j-ogg-all.jar:../lib/jme3-lwjgl.jar:../lib/jme3-bullet.jar:../lib/jinput.jar:../lib/lwjgl.jar:../lib/stack-alloc.jar:../lib/vecmath.jar:../lib/xpp3.jar:../lib/jme3-blender.jar:../lib/jme3-core.jar:../lib/jme3-desktop.jar:../lib/jme3-jogg.jar:../lib/jme3-plugins.jar:../lib/jme3-terrain.jar:../lib/jme3-testdata.jar:../lib/jme3-niftygui.jar:../lib/nifty-default-controls.jar:../lib/nifty-examples.jar:../lib/nifty-style-black.jar:../lib/nifty.jar:." mygame/HelloJME3</code></pre>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../sdk/model_loader_and_viewer.html" class="page">SDK convert</a></p>
-</li>
-<li>
-<p><a href="https://javadoc.jmonkeyengine.org/v3.3.2-stable/com/jme3/export/binary/BinaryExporter.html">BinaryExporter</a></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.xbuf</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>3D model</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Blender version 2.74<br>
-See:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://hub.jmonkeyengine.org/t/xbuf-format-a-developer-friendly-game-exchange-format-for-3d-data/31130">.xbuf</a> forum post.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Converting to j3o:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../sdk/model_loader_and_viewer.html" class="page">SDK convert</a></p>
-</li>
-<li>
-<p><a href="https://javadoc.jmonkeyengine.org/v3.3.2-stable/com/jme3/export/binary/BinaryExporter.html">BinaryExporter</a></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
+<div class="admonitionblock note">
+<table>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.fbx</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>3D model</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Filmbox<br>
-See:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://hub.jmonkeyengine.org/t/fbx-importer/30309">Fbx importer</a> forum post.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Converting to j3o:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../sdk/model_loader_and_viewer.html" class="page">SDK convert</a></p>
-</li>
-<li>
-<p><a href="https://javadoc.jmonkeyengine.org/v3.3.2-stable/com/jme3/export/binary/BinaryExporter.html">BinaryExporter</a></p>
-</li>
-</ul>
-</div></div></td>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you use Windows, the classpath separator is <kbd>\</kbd>  instead of <kbd>/</kbd>.
+</td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.gltf, .bin, .glb, custom extensions</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>3D model</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Blender version 2.78c onwards,<br>
-See:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://hub.jmonkeyengine.org/t/jme-gltf-support/39174">gltf</a> forum post</p>
-</li>
-<li>
-<p><a href="../tutorials/how-to/modeling/blender/blender_gltf.html" class="page">Exporting Models as GlTF meshes from Blender</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Converting to j3o:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://hub.jmonkeyengine.org/t/jmeconvert-tool/41831">JmeConvert tool</a></p>
-</li>
-<li>
-<p><a href="../sdk/model_loader_and_viewer.html" class="page">SDK convert</a></p>
-</li>
-<li>
-<p><a href="https://javadoc.jmonkeyengine.org/v3.3.2-stable/com/jme3/export/binary/BinaryExporter.html">BinaryExporter</a></p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.jpg, .png, .gif</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>image</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Textures, icons</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.dds</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>image</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Direct Draw Surface texture</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.hdr</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>image</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>High Dynamic Range texture</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.tga</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>image</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Targa Image File texture</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.pfm</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>image</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Portable Float Map texture</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.bmp</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>image</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Bitmap texture</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.ani, .cur, .ico</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>image</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Windows Cursor, static or animated.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.fnt</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>bitmap font</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>AngelCode font for <abbr title="Graphical User Interface">GUI</abbr> and HUD</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.wav</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>audio</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Wave music and sounds</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="literal"><pre>.ogg</pre></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>audio</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>OGG Vorbis music and sounds</p>
-</div></div></td>
-</tr>
-</tbody>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="shaders"><a class="anchor" href="#shaders"></a>Shaders</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>GLSL support</p>
-</li>
-<li>
-<p>Shader libraries</p>
-</li>
-<li>
-<p>Shader permutations</p>
-</li>
-<li>
-<p><a href="../core/shader/jme3_shadernodes.html" class="page">Shader Nodes</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>If a settings dialog pops up, confirm the default settings. You should now see a simple window with a 3-D cube. Use the mouse and the WASD keys to move. It works!</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="material-lighting"><a class="anchor" href="#material-lighting"></a>Material Lighting</h2>
+<h2 id="recommended-asset-directory-structure"><a class="anchor" href="#recommended-asset-directory-structure"></a>Recommended Asset Directory Structure</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Per-pixel lighting</p>
-</li>
-<li>
-<p>Multi-pass lighting</p>
-</li>
-<li>
-<p>Phong Lighting</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Diffuse Map</p>
-</li>
-<li>
-<p>Alpha Map</p>
-</li>
-<li>
-<p>Glow Map</p>
-</li>
-<li>
-<p>Specular Map</p>
-</li>
-<li>
-<p>Normal Map, Parallax Map (a.k.a. bump mapping)</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>For <a href="../tutorials/concepts/multi-media_asset_pipeline.html" class="page">multi-media files, models, and other assets</a>, we recommend creating the following project structure:</p>
 </div>
-</li>
-<li>
-<p>Tangent shading</p>
-</li>
-<li>
-<p>Reflection</p>
-</li>
-</ul>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>cd HelloJME3
+mkdir assets
+mkdir assets/Interface
+mkdir assets/Materials
+mkdir assets/MatDefs
+mkdir assets/Models
+mkdir assets/Scenes
+mkdir assets/Shaders
+mkdir assets/Sounds
+mkdir assets/Textures</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This directory structure will allow <a href="../core/app/simpleapplication.html" class="page">SimpleApplication</a>'s default <a href="../core/asset/asset_manager.html" class="page">AssetManager</a> to load media files from your <code>assets</code> directory, like in this example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>import com.jme3.scene.Spatial;
+...
+  Spatial elephant = assetManager.loadModel("Models/Elephant/Elephant.meshxml");
+  rootNode.attachChild(elephant);
+...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will learn more about the asset manager and how to customize it later. For now feel free to structure your assets (images, textures, models) into further sub-directories, like in this example the <code>assets/models/Elephant</code> directory that contains the <code>elephant.mesh.xml</code> model and its materials.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="material-textures"><a class="anchor" href="#material-textures"></a>Material Textures</h2>
+<h2 id="next-steps"><a class="anchor" href="#next-steps"></a>Next Steps</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Texturing</p>
-<div class="ulist">
-<ul>
-<li>
-<p>material colors (ambient, diffuse, specular/shininess, glow),</p>
-</li>
-<li>
-<p>color map, light map,</p>
-</li>
-<li>
-<p>transparency, translucency, alpha map, alpha testing with falloff threshold,</p>
-</li>
-<li>
-<p>sphere map, cube map,</p>
-</li>
-<li>
-<p>texture scale,</p>
-</li>
-<li>
-<p>wireframe</p>
-</li>
-<li>
-<p>color ramp texture</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Multi-texturing through shaders</p>
-</li>
-<li>
-<p>UV textures</p>
-</li>
-<li>
-<p>Splat textures, Phong lit or unshaded, supports diffuse and normal maps</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="asset-system"><a class="anchor" href="#asset-system"></a>Asset System</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Asset importing</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Animation</p>
-</li>
-<li>
-<p>Meshes</p>
-</li>
-<li>
-<p>Textures</p>
-</li>
-<li>
-<p>Scenes</p>
-</li>
-<li>
-<p>Materials</p>
-</li>
-<li>
-<p>Shaders</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Multi-threaded asset loading via HTTP</p>
-</li>
-<li>
-<p>Loading scenes from .ZIP files</p>
-</li>
-<li>
-<p>Sharable AssetPacks</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="special-effects"><a class="anchor" href="#special-effects"></a>Special Effects</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../core/effect/particle_emitters.html" class="page">Particles: Smoke, fire, explosions, etc</a></p>
-</li>
-<li>
-<p><a href="../core/effect/effects_overview.html" class="page">Post processing / 2D Filter Effects</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Reflective Water</p>
-</li>
-<li>
-<p>Shadow mapping</p>
-</li>
-<li>
-<p>High Dynamic Range rendering</p>
-</li>
-<li>
-<p>Screen Space Ambient Occlusion</p>
-</li>
-<li>
-<p>Light Scattering</p>
-</li>
-<li>
-<p>Cartoon Effect</p>
-</li>
-<li>
-<p>Fog</p>
-</li>
-<li>
-<p>Bloom</p>
-</li>
-<li>
-<p>Depth of Field Blur</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="terrain"><a class="anchor" href="#terrain"></a>Terrain</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../core/terrain/terrain.html" class="page">Geomipmapped hightmap terrain</a></p>
-</li>
-<li>
-<p><a href="../tutorials/how-to/modeling/blender/blender_ogre_compatibility.html" class="page">Ogre Compatibility</a></p>
-</li>
-<li>
-<p><a href="../core/util/sky.html" class="page">SkyBox and SkyDome</a></p>
-</li>
-<li>
-<p>Terrain lighting</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="gui-hud"><a class="anchor" href="#gui-hud"></a>GUI / HUD</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../core/ui/hud.html" class="page">Orthogonal (Billboard) node</a></p>
-</li>
-<li>
-<p><a href="../core/gui/nifty_gui.html" class="page">Nifty GUI integration</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="miscellaneous"><a class="anchor" href="#miscellaneous"></a>Miscellaneous</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../core/app/state/application_states.html" class="page">Application States</a> and <a href="../core/scene/control/custom_controls.html" class="page">Controls</a> to implement <a href="../core/app/update_loop.html" class="page">game logic</a></p>
-</li>
-<li>
-<p><a href="../core/cinematic/cinematics.html" class="page">Cinematics and motion paths</a></p>
-</li>
-<li>
-<p><a href="../core/renderer/camera.html" class="page">Camera System</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Normal or parallel view</p>
-</li>
-<li>
-<p>Multiple views</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Swing canvas (e.g. for Applets)</p>
-</li>
-<li>
-<p><a href="../core/input/input_handling.html" class="page">Input handling</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Mouse, keyboard, joystick</p>
-</li>
-<li>
-<p><a href="../core/input/combo_moves.html" class="page">Combo moves</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="networking"><a class="anchor" href="#networking"></a>Networking</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../networking/networking.html" class="page">SpiderMonkey API</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Now follow the <a href="../tutorials/beginner/beginner.html" class="page">tutorials</a> and write your first jMonkeyEngine game.</p>
 </div>
 </div>
 </div>

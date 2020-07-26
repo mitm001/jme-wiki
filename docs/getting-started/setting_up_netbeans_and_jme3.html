@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Building JME3 from Sources in Netbeans 8.x :: jMonkeyEngine Docs</title>
-    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/jme3/build_jme3_sources_with_netbeans.html">
+    <title>Setting up JME3 in Netbeans 8.x :: jMonkeyEngine Docs</title>
+    <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/getting-started/setting_up_netbeans_and_jme3.html">
     <meta name="keywords" content="documentation, install">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
 <meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
-<meta property="og:description" content="Building JME3 from Sources in Netbeans 8.x">
+<meta property="og:description" content="Setting up JME3 in Netbeans 8.x">
 <meta property="og:title" content="jMonkeyEngine Docs">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -973,80 +973,21 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../documentation.html">Docs</a></li>
-    <li><a href="build_jme3_sources_with_netbeans.html">Building JME3 from Sources in Netbeans 8.x</a></li>
+    <li><a href="setting_up_netbeans_and_jme3.html">Setting up JME3 in Netbeans 8.x</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/ROOT/pages/jme3/build_jme3_sources_with_netbeans.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/mitm001/jme-wiki/edit/modules/docs/modules/ROOT/pages/getting-started/setting_up_netbeans_and_jme3.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Building JME3 from Sources in Netbeans 8.x</h1>
+<h1 class="page">Setting up JME3 in Netbeans 8.x</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>You are welcome to try out the new jME3, and contribute patches and features! This document shows how to download, set up, build, and run the latest development version from the sources. These instructions work in NetBeans IDE 8.x or better.</p>
-</div>
-<div class="olist arabic">
-<div class="title">Prerequisites</div>
-<ol class="arabic">
-<li>
-<p>Have a <a href="https://github.com/">GitHub account</a>.</p>
-</li>
-<li>
-<p>Are a jMonkeyEngine project member.</p>
-</li>
-</ol>
+<p>For development with the jMonkeyEngine 3, we recommend to use the jMonkeyEngine <a href="../sdk/sdk.html" class="page">SDK</a>.</p>
 </div>
 <div class="paragraph">
-<p>If you are not a member, you fork the repository into your GitHub account and issue pull requests from there.</p>
-</div>
-<div class="paragraph">
-<p>To fork the jMonkeyEngine repository into your GitHub Account:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Navigate to <a href="https://github.com/jMonkeyEngine/jmonkeyengine">https://github.com/jMonkeyEngine/jmonkeyengine</a>.</p>
-</li>
-<li>
-<p>In the menu at the top of the page, select the <span class="icon"><i class="fa fa-code-fork"></i></span><strong>Fork</strong> button.</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-In the following, always replace <kbd>~</kbd> with the path to your home directory.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="downloading-the-sources"><a class="anchor" href="#downloading-the-sources"></a>Downloading the Sources</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Clone the sources from the repository.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>In NetBeans, go to <code><span class="menuseq"><b class="menu">Team</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Git</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Clone</b></span></code>.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Repository <abbr title="Uniform Resource Locator">URL</abbr>:</p>
-<div class="openblock">
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre>https://github.com/jMonkeyEngine/jmonkeyengine</pre>
-</div>
+<p>Alternatively, you can use your favorite IDE: In this tutorial we show how to download and set up the latest nightly build of the jMonkeyEngine 3 for use with the NetBeans IDE. Instructions for <a href="#jme3/setting_up_jme3_in_eclipse.adoc" class="page unresolved">Eclipse</a> are also available.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1055,163 +996,138 @@ In the following, always replace <kbd>~</kbd> with the path to your home directo
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Use the <abbr title="Uniform Resource Locator">URL</abbr> to your repository fork and clone your fork if a non-member and you wish to contribute.
+<div class="paragraph">
+<p>Note that the jMonkeyEngine SDK is built in top of the NetBeans Platform, and is identical to the NetBeans IDE for Java (plus some unique NetBeans plugins). Basically it&#8217;s redundant and unnecessary to set up jME for NetBeans – but if you want to, it&#8217;s easily possible.</p>
+</div>
 </td>
 </tr>
 </table>
 </div>
 </div>
 </div>
-</li>
-<li>
-<p>You can leave user/pw blank for anonymous access unless you are going to <code>push</code> a <code>commit</code>.</p>
-</li>
-<li>
-<p>Specify Destination Folder.<br>
-Local Folder: <code>~/NetBeansProjects]/jmonkeyengine</code></p>
-</li>
-<li>
-<p>Click <b class="button">Next</b>.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Select:</p>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> master*</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Click <b class="button">Next</b>.</p>
-</li>
-</ol>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Verify the auto-fill information in the <code>Destination Directory</code> dialog is correct.</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Optional:</p>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-square-o"></i> Scan for NetBeans Projects after Clone</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Click <b class="button">Finish</b> and wait.</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
+<div class="sect1">
+<h2 id="downloading-jme3"><a class="anchor" href="#downloading-jme3"></a>Downloading jME3</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>After some time the download will end.</p>
+<p>The currently available JAR binaries are the nightly builds.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download the most recent zipped build from <a href="https://github.com/jMonkeyEngine/jmonkeyengine/releases">https://github.com/jMonkeyEngine/jmonkeyengine/releases</a></p>
+</li>
+<li>
+<p>Unzip the file and save it as <code>jME3.2-stable</code> in your NetBeansProjects directory. You should see the following files and directories:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>lib/</code> - The jMonkeyEngine binaries and libraries. (Don&#8217;t remove.)</p>
+</li>
+<li>
+<p><code>jMonkeyEngine3.jar</code> – Run this executable jar file to see various feature demos. (optional)</p>
+</li>
+<li>
+<p><code>javadoc/</code> - jME3 <abbr title="Application Programming Interface">API</abbr> documentation. (optional)</p>
+</li>
+<li>
+<p><code>sources/</code> - jME3 source files. (optional)</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="information-on-pullpushing-commits"><a class="anchor" href="#information-on-pullpushing-commits"></a>Information on Pull/Pushing Commits</h2>
+<h2 id="creating-a-project"><a class="anchor" href="#creating-a-project"></a>Creating a Project</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You now have a local copy of the <code>jmonkeyengine</code> repository. There are a few rules you need to follow in order to contribute.</p>
+<p>In NetBeans, choose <code><span class="menuseq"><b class="menu">File</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">New Project</b></span></code>, select <code><span class="menuseq"><b class="menu">Java</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Java Application</b></span></code>, click <b class="button">Next</b>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Project Name: HelloJME3</p>
+</li>
+<li>
+<p>Project Location: ~/NetBeansProjects</p>
+</li>
+<li>
+<p>Create main() Class: Yes</p>
+</li>
+<li>
+<p>Click <b class="button">Finish</b></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<div class="title">Members &amp; Non-Members Pull/Push</div>
-<p>Update your local copy and push commits by using the NetBeans command <code><span class="menuseq"><b class="menu">Git</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Remote</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Pull From Upstream</b></span></code> or <code><span class="menuseq"><b class="menu">Git</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Remote</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Push To Upstream</b></span></code>. Members will be pushing/pulling to/from the jMonkeyEngine repo and non-members to/from their fork of the jMonkeyEngine repo.</p>
+<p>The new project appears in the Projects window.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="setting-up-dependencies"><a class="anchor" href="#setting-up-dependencies"></a>Setting up Dependencies</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<div class="title">Non-Members</div>
-<p>To update <strong>your fork</strong> on GitHub:</p>
+<p>Your project depends on the jMonkeyEngine libraries and needs to know where they are. We will create a global library so you can use it for other projects without having to re-configure everything. You only do this one time.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to your version of the repository on GitHub.</p>
+<p>In the Projects window of the HelloJME3 project, <b class="button">RMB</b> click the project&#8217;s <code>Libraries</code> node and choose <code>Add Library</code>.</p>
 </li>
 <li>
-<p>Click the <b class="button">New Pull Request</b> button at the top.</p>
+<p>In the <code>Add Library</code> dialog, click the <b class="button">Create</b> button.</p>
 </li>
 <li>
-<p>Note that the jMonkeyEngine repository will be on the left and your repository will be on the right.</p>
-<div class="openblock">
-<div class="content">
+<p>For the <code>Library Name</code> enter &#8220;jME3.2-stable&#8221;.</p>
+</li>
+<li>
+<p>For the <code>Library Type</code> select <code>Class Libraries</code>.</p>
+</li>
+<li>
+<p>Click <b class="button">OK</b> and the <code>Customize Library</code> dialog will open.</p>
+</li>
+<li>
+<p>In the <code>Classpath</code> tab, click the <b class="button">Add Jar/Folder</b> button and navigate to the <code>lib/</code> directory located in your <code>~/NetBeansProjects/jME3.2-stable</code> folder.
+.  Select all JARs in <code>lib/</code> and when done click the <b class="button">Add Jar/Folder</b> button.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Optional: Configuring the <code>Source File</code>  editor for NetBeans.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In the <code>Sources</code> tab, click the <b class="button">Add Jar/Folder</b> button and navigate to the <code>sources/</code> directory located in your <code>~/NetBeansProjects/jME3.2-stable</code> folder.
+**  Select all JARs in <code>sources/</code> and when done click the <b class="button">Add Jar/Folder</b> button.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Optional: Configuring the JavaDoc Popups in NetBeans.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In the <code>Javadoc</code> tab, click the <b class="button">Add ZIP/Folder</b> button and navigate to the <code>javadoc/</code> folder located in your <code>~/NetBeansProjects/jME3.2-stable</code> folder.</p>
+</li>
+<li>
+<p>Select the <code>javadoc/</code> folder but do not enter the directory, the <code>File Name</code> will change to <code>javadoc</code>. Click the <b class="button">Add ZIP/Folder</b> button to close the dialog.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click the <b class="button">OK</b> button, next click the <b class="button">Add Library</b> to create the library.</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
-<p>From here, there are two options for updating your fork.</p>
-</div>
-<div class="olist loweralpha">
-<div class="title">Option A</div>
-<ol class="loweralpha" type="a">
-<li>
-<p>Click the <b class="button">Base Fork</b> button and from the drop down menu select your forked repository.</p>
-</li>
-<li>
-<p>Select the <code><em><u>compare across forks</u></em></code> link.</p>
-</li>
-<li>
-<p>Click the <b class="button">Head Fork</b> button and from the drop down list select &#8220;jMonkeyEngine/jmonkeyengine&#8221;.</p>
-</li>
-</ol>
-</div>
-<div class="olist loweralpha">
-<div class="title">Option B</div>
-<ol class="loweralpha" type="a">
-<li>
-<p>Select the <code><em><u>switching the base</u></em></code> link.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</li>
-<li>
-<p>Click the green button <b class="button">Create pull request</b>.</p>
-</li>
-<li>
-<p>Give a succinct and informative title, in the comment field give a short explanation of the changes and click the green button <b class="button">Create pull request</b> again.</p>
-</li>
-<li>
-<p>Select <b class="button">Rebase And Merge</b> from the drop down menu.</p>
-</li>
-<li>
-<p>Press the <b class="button">Rebase And Merge</b> button again to confirm your choice.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>To submit changes to the jMonkeyEngine repository after pushing them to <strong>your fork</strong>:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Go to your version of the repository on GitHub.</p>
-</li>
-<li>
-<p>Click the <b class="button">New Pull Request</b> button at the top.</p>
-</li>
-<li>
-<p>Note that the jMonkeyEngine repository will be on the left and your repository will be on the right.</p>
-</li>
-<li>
-<p>Click the green button <b class="button">Create pull request</b>.</p>
-</li>
-<li>
-<p>Give a succinct and informative title, in the comment field give a short explanation of the changes.</p>
-</li>
-<li>
-<p>Click the green button <b class="button">Create pull request</b> again to submit the request.</p>
-</li>
-</ol>
+<p>The necessary libraries are now on the classpath and should appear in the Libraries list. You now have a global library you can add to any project.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1220,8 +1136,12 @@ Local Folder: <code>~/NetBeansProjects]/jmonkeyengine</code></p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<div class="title">Everyone</div>
-See  <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/CONTRIBUTING.md">How to contribute to jMonkeyEngine</a> before submitting a P/R.
+<div class="paragraph">
+<p>If you configured your library with sources and javadocs, open a class of your HelloJME3 project, place the caret into a jme3 class, and press <kbd>Ctrl</kbd> + <kbd>Space</kbd> to see the javadoc popup, as well as code-completion.</p>
+</div>
+<div class="paragraph">
+<p>To open the source file editor, <b class="button">RMB</b> click on any jME3 class or method, then select <code><span class="menuseq"><b class="menu">Navigate</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Go To Source</b></span></code>.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -1229,231 +1149,51 @@ See  <a href="https://github.com/jMonkeyEngine/jmonkeyengine/blob/master/CONTRIB
 </div>
 </div>
 <div class="sect1">
-<h2 id="verify-cloned-subprojects"><a class="anchor" href="#verify-cloned-subprojects"></a>Verify Cloned Subprojects</h2>
+<h2 id="build-run-tips-in-netbeans"><a class="anchor" href="#build-run-tips-in-netbeans"></a>Build &amp; Run Tips in NetBeans</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Look into the <code>Subprojects</code> node and confirm that the subprojects cloned:</p>
+<p>How to build and run in NetBeans:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>jme3-android</p>
+<p>Clean and build the whole project by pressing <kbd>Shift</kbd> + <kbd>F11</kbd>.</p>
 </li>
 <li>
-<p>jme3-android-native</p>
+<p>Run any file that is open in the editor and has a main() class by pressing <kbd>Shift</kbd> + <kbd>F6</kbd>.</p>
 </li>
 <li>
-<p>jme3-blender</p>
-</li>
-<li>
-<p>jme3-bullet</p>
-</li>
-<li>
-<p>jme3-bullet-native</p>
-</li>
-<li>
-<p>jme3-bullet-native-android</p>
-</li>
-<li>
-<p>jme3-core</p>
-</li>
-<li>
-<p>jme3-desktop</p>
-</li>
-<li>
-<p>jme3-effects</p>
-</li>
-<li>
-<p>jme3-examples</p>
-</li>
-<li>
-<p>jme3-ios</p>
-</li>
-<li>
-<p>jme3-jbullet</p>
-</li>
-<li>
-<p>jme3-jogg</p>
-</li>
-<li>
-<p>jme3-jogl</p>
-</li>
-<li>
-<p>jme3-lwjgl</p>
-</li>
-<li>
-<p>jme3-lwjgl3</p>
-</li>
-<li>
-<p>jme3-networking</p>
-</li>
-<li>
-<p>jme3-niftygui</p>
-</li>
-<li>
-<p>jme3-plugins</p>
-</li>
-<li>
-<p>jme3-terrain</p>
-</li>
-<li>
-<p>jme3-testdata</p>
-</li>
-<li>
-<p>jme3-vr</p>
+<p>Run the Main class of the project by pressing <kbd>F6</kbd>.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>For a detailed description of the separate jar files see <a href="jme3_source_structure.html#structure_of_jmonkeyengine3_jars" class="page">this list</a>.</p>
+<p>Tips for configuring the main class in NetBeans:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><b class="button">RMB</b> select the HelloJME3 project and choose &#8220;Set as main project&#8221;. Now you can use the toolbar buttons (clean&amp;build, run, debug, etc) to control this project.</p>
+</li>
+<li>
+<p><b class="button">RMB</b> select the HelloJME3 project and choose <code>Properties</code>. Go to the <code>Run</code> section.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Under Main Class, specify the class that will be executed when you run the whole project. For now, enter <code>hellojme3.HelloJME3</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="build-the-project-and-run-a-sample-app"><a class="anchor" href="#build-the-project-and-run-a-sample-app"></a>Build the Project and Run a Sample App</h2>
-<div class="sectionbody">
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>When you build the engine from the root node, part of the build process includes building the header files for the jme3-bullet-native subproject. This updates the timestamp on the header files, even though you did not edit them. This will then mark them as modified, which will add them to your next commit.</p>
-</div>
-<div class="paragraph">
-<p>To prevent them from being commited, before you do anything else:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>In the Projects window, open the <code>jme3-bullet-native</code> subproject node.</p>
-</li>
-<li>
-<p>Navigate to the <code>Source Packages/&lt;default package&gt;</code> folder.</p>
-</li>
-<li>
-<p>Select all <code>.h</code> header files to highlight them.</p>
-</li>
-<li>
-<p><b class="button">RMB</b> select the highlighted files then choose <code><span class="menuseq"><b class="menu">Git</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Ignore</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">Exclude From Commit</b></span></code></p>
-</li>
-</ol>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><b class="button">RMB</b> select the <code>jmonkeyengine</code> project root node and <code>Clean and Build</code> the project.</p>
-</li>
-<li>
-<p>In the Projects window, <b class="button">RMB</b> select and then open the <code>jme-examples</code> node which contains the sample apps. You do this for any subproject you wish to make changes to.</p>
-</li>
-<li>
-<p>Every file in the <code>Source Packages</code> folder with a Main class (for example <code>jme3test.model/TestHoverTank.java</code> or <code>jme3test.games/CubeField.java</code>) is an app.</p>
-</li>
-<li>
-<p>Right-click a sample app and choose &#8220;Run File&#8221; (Shift-F6).</p>
-</li>
-<li>
-<p>Generally in sample apps:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>the mouse and the WASD keys control movement</p>
-</li>
-<li>
-<p>the Esc key exits the application</p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-You can <b class="button">RMB</b> select the <code>jme-examples</code> node and select <code>Run</code> to start the <code>Test Chooser</code> app whether or not you open the project node.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="optional-javadoc-popups-and-source-navigation-in-netbeans"><a class="anchor" href="#optional-javadoc-popups-and-source-navigation-in-netbeans"></a>Optional: Javadoc Popups and Source Navigation in NetBeans</h2>
+<h2 id="writing-a-simpleapplication"><a class="anchor" href="#writing-a-simpleapplication"></a>Writing a SimpleApplication</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you are working on the jmonkeyengine sources:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Confirm in the Files window that the javadoc has been created in <code>~/NetBeansProjects/jmonkeyengine/dist/javadoc</code></p>
-</li>
-<li>
-<p>In the editor, place the caret in a jme class and press <kbd>ctrl</kbd>-<kbd>space</kbd> to view javadoc.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>If you are working on a game project that depends on jmonkeyengine:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>In the jmonkeyengine source:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p><b class="button">RMB</b> selecting a subproject node and choosing <code><span class="menuseq"><b class="menu">Tasks</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">install</b></span></code> will install the built jars for that subproject into your local maven repositories <code>org.jmonkeyengine</code> folder, which on linux is ~/.m2, and on Windows might be in AppData, or in your home directory.</p>
-</li>
-<li>
-<p><b class="button">RMB</b> selecting the root node and choosing <code><span class="menuseq"><b class="menu">Tasks</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">dist</b></span></code> creates a jME3 examples distribution with all jme3 binaries, javadoc and external libraries under <code>~/NetBeansProjects/jmonkeyengine/dist</code>.</p>
-</li>
-<li>
-<p><b class="button">RMB</b> selecting the root node and choosing <code><span class="menuseq"><b class="menu">Tasks</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">libDist</b></span></code> builds and copies the engine binaries and sources to <code>~/NetBeansProjects/jmonkeyengine/build/libDist</code>.</p>
-</li>
-<li>
-<p><b class="button">RMB</b> selecting the root node and choosing <code><span class="menuseq"><b class="menu">Tasks</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem">copyLib</b></span></code> copies the engine dependencies to <code>~/NetBeansProjects/jmonkeyengine/build/libDist/lib-ext</code>.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>In your game project, add the jme3 jar by <b class="button">RMB</b> selecting the Libraries node and selecting <b class="button">Add Jar/Folder</b>.</p>
-</li>
-<li>
-<p>Navigate to the folder of choice and select the library jar you&#8217;re interested in.  Check &#8220;as relative path&#8221; and click <b class="button">Open</b> .</p>
-</li>
-<li>
-<p><b class="button">RMB</b> select the newly added jar and choose &#8220;Edit&#8221;.</p>
-</li>
-<li>
-<p>In the <code>Edit Jar Reference</code> dialog, <code>JavaDoc:</code> <b class="button">Browse</b> to the <code>javadoc/</code> folder of choice. Check &#8220;as relative path&#8221; and click <b class="button">Open</b> .</p>
-</li>
-<li>
-<p>In the <code>Edit Jar Reference</code> dialog, <code>Sources:</code> <b class="button">Browse</b> to the folder of choice that contains your sources. Check &#8220;as relative path&#8221; and click <b class="button">Open</b>.</p>
-</li>
-<li>
-<p>In the editor, place the caret in a jme class and press <kbd>ctrl</kbd>-<kbd>space</kbd> to view javadoc. Ctrl-click any jme3 method to jump to its definition in the sources.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>This tip works for any third-party JAR library that you use. (You may have to download the javadoc/sources from their home page separately).</p>
-</div>
-<hr>
-<div class="paragraph">
-<p>Sources used: <a href="https://github.com/jMonkeyEngine/jmonkeyengine">https://github.com/jMonkeyEngine/jmonkeyengine</a></p>
+<p>You can now continue to write <a href="../tutorials/beginner/hello_simpleapplication.html" class="page">your first jme3 application</a>!</p>
 </div>
 </div>
 </div>
