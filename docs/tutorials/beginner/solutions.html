@@ -1273,7 +1273,7 @@ public void simpleUpdate(float tpf) {
 <div class="sect2">
 <h3 id="exercise-1-3"><a class="anchor" href="#exercise-1-3"></a>Exercise 1</h3>
 <div class="paragraph">
-<p>You can jump right off and obtain the hit object&#8217;s material, by acessing the “closest object we previously acquired, obtain it&#8217;s geometry through .getGeometry(), and then get the Geometry&#8217;s material through .getMaterial(), like so:</p>
+<p>You can jump right off and obtain the hit object&#8217;s material, by acessing the &#8220;closest&#8221; object we previously acquired, obtain it&#8217;s geometry through .getGeometry(), and then get the Geometry&#8217;s material through .getMaterial(), like so:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1282,7 +1282,7 @@ public void simpleUpdate(float tpf) {
 </div>
 <div class="paragraph">
 <p>It&#8217;s the same as going through the two steps hinted in the tips: <code>Geometry g = closest.getGeometry(); Material material = g.getMaterial();</code>
-Finally, you need only add this line: <code>material.setColor(“Color, ColorRGBA.randomColor())</code> , which will change the material from the hit object to a random color!</p>
+Finally, you need only add this line: <code>material.setColor("Color", ColorRGBA.randomColor())</code> , which will change the material from the hit object to a random color!</p>
 </div>
 <div class="paragraph">
 <p>The lines can be added anywhere within the <code>if (results.size() &gt; 0)</code> block, after declaring the closest object. End result is as so:</p>

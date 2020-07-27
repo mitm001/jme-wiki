@@ -1027,7 +1027,7 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>The game idea is based on “BattleZone” arcade game from the 1980s, a first-person shooter the with real-time strategy elements.
+<p>The game idea is based on &#8220;BattleZone&#8221; arcade game from the 1980s, a first-person shooter the with real-time strategy elements.
 The game was written using the jMonkeyEngine SDK, and it&#8217;s based off the BasicGame project template. It took us one week to create a playable pre-alpha, including networking.
 The project design follows best practices that make it possible to edit maps, vehicles, etc, in jMonkeyEngine SDK without having to change the code – This allows 3D graphic designers to contribute models more easily. (If you feel like contributing assets or working on parts of the game code, drop us a note!)</p>
 </div>
@@ -1050,7 +1050,7 @@ _The way MonkeyZone is implemented is just one of the many possible ways to do a
 <div class="ulist">
 <ul>
 <li>
-<p>Player –	Logical human or AI player that can enter entities and generally act, only exists as PlayerData “database” with an id.</p>
+<p>Player –	Logical human or AI player that can enter entities and generally act, only exists as PlayerData &#8220;database&#8221; with an id.</p>
 </li>
 <li>
 <p>Entity –	Spatial with UserData, a world object like character, vehicle, box or factory. The base form is defined only by a String pointing to the j3o which already has all userdata like hitpoints, speed etc.</p>
@@ -1082,7 +1082,7 @@ The gameplay is largely controlled by the ServerGameManager which does gameplay 
 <div class="sect3">
 <h4 id="as-entity-capabilities"><a class="anchor" href="#as-entity-capabilities"></a>&#8230;&#8203;As entity capabilities</h4>
 <div class="paragraph">
-<p>Controls attached to Spatials are generally used like an “array of capabilities” that the entity posesses. So when an entity has a VehicleControl its expected to be a vehicle, when its got a CharacterControl its expected to be a character.
+<p>Controls attached to Spatials are generally used like an &#8220;array of capabilities&#8221; that the entity posesses. So when an entity has a VehicleControl its expected to be a vehicle, when its got a CharacterControl its expected to be a character.
 Other Controls work completely on their own, like CharacterAnimControl which just uses the CharacterControl of the entity to check if the character is running, jumping etc. and then animates the entity if it has an AnimControl.</p>
 </div>
 </div>
@@ -1148,7 +1148,7 @@ Other Controls work completely on their own, like CharacterAnimControl which jus
 <div class="sect3">
 <h4 id="triggers"><a class="anchor" href="#triggers"></a>Triggers</h4>
 <div class="paragraph">
-<p>The SphereTrigger is a TriggerControl that is also attached to each AI players current entity. It consists of a GhostControl that checks the overlapping entities around the entity its attached to. It can be assigned a command that is checked with every entity entering the SphereTrigger and executed if applicable (e.g. normal “attack enemy” mode).</p>
+<p>The SphereTrigger is a TriggerControl that is also attached to each AI players current entity. It consists of a GhostControl that checks the overlapping entities around the entity its attached to. It can be assigned a command that is checked with every entity entering the SphereTrigger and executed if applicable (e.g. normal &#8220;attack enemy&#8221; mode).</p>
 </div>
 </div>
 <div class="sect3">
@@ -1162,7 +1162,7 @@ Other Controls work completely on their own, like CharacterAnimControl which jus
 <h3 id="networking"><a class="anchor" href="#networking"></a>Networking</h3>
 <div class="paragraph">
 <p>Networking is realized in the PhysicsSyncManager which we hope to extend to a state where it can serve as a general sync system for physics based network games.
-The sync manager basically puts a timestamp on every message sent from the server and then buffers all arriving messages on the client within a certain time window. This allows to compensate for messages arriving too soon or too late within the constraints of the buffer, a future version might step the clients physics space different to compensate for network delays without “snapping”.</p>
+The sync manager basically puts a timestamp on every message sent from the server and then buffers all arriving messages on the client within a certain time window. This allows to compensate for messages arriving too soon or too late within the constraints of the buffer, a future version might step the clients physics space different to compensate for network delays without &#8220;snapping&#8221;.</p>
 </div>
 </div>
 </div>

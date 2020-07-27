@@ -1037,7 +1037,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>The parts of the “pendulum are Physics Control&#8217;ed Spatials with Collision Shapes.</p>
+<p>The parts of the &#8220;pendulum&#8221; are Physics Control&#8217;ed Spatials with Collision Shapes.</p>
 </li>
 <li>
 <p>We create a fixed <code>hookNode</code> and a dynamic <code>pendulumNode</code>.</p>
@@ -1046,7 +1046,7 @@
 </div>
 </li>
 <li>
-<p>We can “crank the handle and rotate the joint like a hinge, or we can let loose and expose the joints freely to gravity.</p>
+<p>We can &#8220;crank&#8221; the handle and rotate the joint like a hinge, or we can let loose and expose the joints freely to gravity.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1107,7 +1107,7 @@ getPhysicsSpace().add(pendulumNode);</code></pre>
 <p>A PhysicsHingeJoint is an invisible connection between two nodes – here between the pendulum body and the hook. Why are hinges and joints represented by the same class? Hinges and joints have something in common: They constrain the <em>mechanical degree of freedom</em> (DOF) of another object.</p>
 </div>
 <div class="paragraph">
-<p>Consider a free falling, “unchained object in physical 3D space: It has 6 DOFs:</p>
+<p>Consider a free falling, &#8220;unchained&#8221; object in physical 3D space: It has 6 DOFs:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1160,7 +1160,9 @@ getPhysicsSpace().add(pendulumNode);</code></pre>
                      new Vector3f(0f, 0f, 0f),  // pivot point local to A
                      new Vector3f(0f, 1f, 0f),  // pivot point local to B
                      Vector3f.UNIT_Z,           // DoF Axis of A (Z axis)
-                     Vector3f.UNIT_Z  );        // DoF Axis of B (Z axis)</code></pre>
+                     Vector3f.UNIT_Z  );        // DoF Axis of B (Z axis)
+...
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1213,7 +1215,7 @@ getPhysicsSpace().add(pendulumNode);</code></pre>
 <h2 id="apply-physical-forces"><a class="anchor" href="#apply-physical-forces"></a>Apply Physical Forces</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can apply forces to dynamic nodes (the ones that have a mass), and see how other joined (“chained) objects are dragged along.</p>
+<p>You can apply forces to dynamic nodes (the ones that have a mass), and see how other joined (chained) objects are dragged along.</p>
 </div>
 <div class="paragraph">
 <p>Alternatively, you can also apply forces to the joint itself. In a game, you may want to spin an automatic revolving door, or slam a door closed in a spooky way, or dramatically open the lid of a treasure chest.</p>

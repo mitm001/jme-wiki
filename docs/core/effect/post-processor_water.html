@@ -1025,7 +1025,7 @@ published on gamedev.net. Here&#8217;s a video:</p>
 <p>The effect is part of a deferred rendering process, taking advantage of the pre-computed position buffer and back buffer (a texture representing the screen’s pixels position in view space, and a texture of the rendered scene).</p>
 </div>
 <div class="paragraph">
-<p>After some calculation, this allows to reconstruct the position in world space for each pixel on the screen. “If a pixel is under a given water height, let’s render it as a blue pixel! Blue pixel? Not exactly, we want waves, we want ripples, we want foam, we want reflection and refraction.</p>
+<p>After some calculation, this allows to reconstruct the position in world space for each pixel on the screen. If a pixel is under a given water height, let’s render it as a blue pixel! Blue pixel? Not exactly, we want waves, we want ripples, we want foam, we want reflection and refraction.</p>
 </div>
 <div class="paragraph">
 <p>The GameDev.net article describes how those effects are achieved, but the main idea is to generate waves from a height map, create ripples from a normal map, blend in the foam texture when the water depth is below a certain height, compute the refraction color with a clever color extinction algorithm, and then, display the reflection and specular effect by computing a Fresnel term (like in the simple water effect). In addition, this effect allows to blend the water shore with the ground to avoid the hard edges of classic water effects based on grids or quads.</p>
@@ -1201,25 +1201,25 @@ public void simpleUpdate(float tpf) {
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>water.setHeightTexture( (Texture2D)<br>
-manager.loadTexture(“Textures/waveheight.png) )</p>
+manager.loadTexture("Textures/waveheight.png") )</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This height map describes the shape of the waves</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>“Common/MatDefs/Water/Textures/heightmap.jpg</p>
+<p>"Common/MatDefs/Water/Textures/heightmap.jpg"</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>water.setNormalTexture( (Texture2D)<br>
-manager.loadTexture(“Textures/wavenormals.png) )</p>
+manager.loadTexture("Textures/wavenormals.png") )</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This normal map describes the shape of the waves</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>“Common/MatDefs/Water/Textures/gradient_map.jpg</p>
+<p>"Common/MatDefs/Water/Textures/gradient_map.jpg"</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1322,7 +1322,7 @@ ColorRGBA(0.0f, 0.0f,0.2f,1.0f)</p>
 <p>water.setColorExtinction(new Vector3f(10f,20f,30f));</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Sets At what depth the refraction color extincts. The three values are RGB (red, green, blue) in this order. Play with these parameters to “muddy the water.</p>
+<p>Sets At what depth the refraction color extincts. The three values are RGB (red, green, blue) in this order. Play with these parameters to &#8220;muddy&#8221; the water.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Vector3f(5f,20f,30f)</p>
@@ -1430,13 +1430,13 @@ water.setRadius(260);</p>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>water.setFoamTexture( (Texture2D)<br>
-manager.loadTexture(“Textures/foam.png) )</p>
+manager.loadTexture("Textures/foam.png") )</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>This foam texture will be used with WrapMode.Repeat</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>“Common/MatDefs/Water/Textures/foam.jpg</p>
+<p>"Common/MatDefs/Water/Textures/foam.jpg"</p>
 </div></div></td>
 </tr>
 </tbody>

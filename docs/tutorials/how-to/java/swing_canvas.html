@@ -7,7 +7,6 @@
     <link rel="canonical" href="https://mitm001.github.io/jme-wiki/docs/tutorials/how-to/java/swing_canvas.html">
     <link rel="prev" href="localization.html">
     <link rel="next" href="logging.html">
-    <meta name="keywords" content="documentation, gui">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <meta property="og:image" content="https://wiki.jmonkeyengine.org/_/img/iconx128.png">
@@ -1057,7 +1056,7 @@ The camera&#8217;s default behaviour in SimpleApplication is to capture the mous
 <h2 id="main-and-runnable"><a class="anchor" href="#main-and-runnable"></a>Main() and Runnable()</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Swing isn&#8217;t thread-safe and doesn&#8217;t allow us to keep the jME3 canvas up-to-date. This is why we create a runnable for the jME canvas and queue it in the AWT event thread, so it can be invoked “later in the loop, when Swing is ready with updating its own stuff.<br>
+<p>The Swing isn&#8217;t thread-safe and doesn&#8217;t allow us to keep the jME3 canvas up-to-date. This is why we create a runnable for the jME canvas and queue it in the AWT event thread, so it can be invoked &#8220;later&#8221; in the loop, when Swing is ready with updating its own stuff.<br>
 In the SwingCanvasTest&#8217;s main() method, create a queued runnable(). It will contain the jME canvas and the Swing frame.</p>
 </div>
 <div class="listingblock">
@@ -1129,7 +1128,7 @@ window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>We create a standard JPanel inside the JFrame. Give it any Layout you wish – here we use a simple Flow Layout. Where the code sample says “Some Swing Component, this is where you add your buttons and controls.<br>
+<p>We create a standard JPanel inside the JFrame. Give it any Layout you wish – here we use a simple Flow Layout. Where the code sample says &#8220;Some Swing Component&#8221;, this is where you add your buttons and controls.<br>
 The important step is to add() the canvas component into the panel, like all the other Swing components.</p>
 </div>
 <div class="listingblock">

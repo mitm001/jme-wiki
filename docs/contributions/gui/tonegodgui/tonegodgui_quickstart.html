@@ -1015,7 +1015,7 @@ guiNode.addControl(screen);</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// this = any JME Application
-Screen screen = new Screen(this, “tonegod/gui/style/def/style_map.xml”);
+Screen screen = new Screen(this, "tonegod/gui/style/def/style_map.xml");
 screen.initialize();
 guiNode.addControl(screen);</code></pre>
 </div>
@@ -1046,7 +1046,7 @@ style_map.xml consists of a list of xml documents containing varied styles for v
   * Vector2f position
   */
 
-Window win = new Window(screen, “win”, new Vector2f(15, 15));
+Window win = new Window(screen, "win", new Vector2f(15, 15));
 screen.addElement(win);</code></pre>
 </div>
 </div>
@@ -1061,7 +1061,7 @@ screen.addElement(win);</code></pre>
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/** Additional Parameter:
   * Vector2f dimensions  */
 
-Window win = new Window(screen, “win”, new Vector2f(15, 15),
+Window win = new Window(screen, "win", new Vector2f(15, 15),
     new Vector2f(400, 300)
 );
 screen.addElement(win);</code></pre>
@@ -1077,9 +1077,9 @@ screen.addElement(win);</code></pre>
   * String defaultImg
   */
 
-Window win = new Window(screen, “win”, new Vector2f(15, 15), new Vector2f(400, 300),
+Window win = new Window(screen, "win", new Vector2f(15, 15), new Vector2f(400, 300),
     new Vector4f(14,14,14,14),
-    “tonegod/gui/style/def/Window/panel_x.png”
+    "tonegod/gui/style/def/Window/panel_x.png"
 );
 screen.addElement(win);</code></pre>
 </div>
@@ -1127,7 +1127,7 @@ The button control (like many controls) is abstract and provides methods for han
 public final void createNewWindow(String someWindowTitle) {
     Window nWin = new Window(
         screen,
-        “Window” + winCount,
+        "Window " + winCount,
         new Vector2f( (screen.getWidth()/2)-175, (screen.getHeight()/2)-100 )
     );
     nWin.setWindowTitle(someWindowTitle);
@@ -1147,10 +1147,10 @@ public final void createNewWindow(String someWindowTitle) {
   * Vector2f position
   */
 
-ButtonAdapter makeWindow = new ButtonAdapter( screen, “Btn1″, new Vector2f(15, 55) ) {
+ButtonAdapter makeWindow = new ButtonAdapter( screen, "Btn1", new Vector2f(15, 55) ) {
     @Override
     public void onButtonMouseLeftUp(MouseButtonEvent evt, boolean toggled) {
-        createNewWindow(“New Window ” + winCount);
+        createNewWindow("New Window " + winCount);
     }
 };
 

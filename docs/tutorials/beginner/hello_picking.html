@@ -1186,13 +1186,13 @@ public class HelloPicking extends SimpleApplication {
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><code>makeCube()</code> creates simple colored boxes for “target practice.</p>
+<p><code>makeCube()</code> creates simple colored boxes for &#8220;target&#8221; practice.</p>
 </li>
 <li>
-<p><code>makeFloor()</code> creates a gray floor node for “target practice.</p>
+<p><code>makeFloor()</code> creates a gray floor node for &#8220;target&#8221; practice.</p>
 </li>
 <li>
-<p><code>initMark()</code> creates a red sphere (“mark). We will use it later to mark the spot that was hit.</p>
+<p><code>initMark()</code> creates a red sphere (mark). We will use it later to mark the spot that was hit.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1202,7 +1202,7 @@ public class HelloPicking extends SimpleApplication {
 </div>
 </li>
 <li>
-<p><code>initCrossHairs()</code> creates simple cross-hairs by printing a “+ sign in the middle of the screen.</p>
+<p><code>initCrossHairs()</code> creates simple cross-hairs by printing a &#8220;+&#8221; sign in the middle of the screen.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1214,7 +1214,7 @@ public class HelloPicking extends SimpleApplication {
 </ol>
 </div>
 <div class="paragraph">
-<p>In this example, we attached all “shootable objects to one custom node, <code>Shootables</code>. This is an optimization so the engine only has to calculate intersections with objects we are actually interested in.  The <code>Shootables</code> node is attached to the <code>rootNode</code> as usual.</p>
+<p>In this example, we attached all &#8220;shootable&#8221; objects to one custom node, <code>Shootables</code>. This is an optimization so the engine only has to calculate intersections with objects we are actually interested in.  The <code>Shootables</code> node is attached to the <code>rootNode</code> as usual.</p>
 </div>
 </div>
 </div>
@@ -1222,7 +1222,7 @@ public class HelloPicking extends SimpleApplication {
 <h2 id="understanding-ray-casting-for-hit-testing"><a class="anchor" href="#understanding-ray-casting-for-hit-testing"></a>Understanding Ray Casting for Hit Testing</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Our goal is to determine which box the user “shot (picked). In general, we want to determine which mesh the user has selected by aiming the cross-hairs at it. Mathematically, we draw a line from the camera and see whether it intersects with objects in the 3D scene. This line is called a ray.</p>
+<p>Our goal is to determine which box the user &#8220;shot&#8221; (picked). In general, we want to determine which mesh the user has selected by aiming the cross-hairs at it. Mathematically, we draw a line from the camera and see whether it intersects with objects in the 3D scene. This line is called a ray.</p>
 </div>
 <div class="paragraph">
 <p>Here is our simple ray casting algorithm for picking objects:</p>
@@ -1378,7 +1378,7 @@ public class HelloPicking extends SimpleApplication {
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Notice how you use the provided method <code>results.getClosestCollision().getContactPoint()</code> to determine the <em>closest</em> hit&#8217;s location. If your game includes a “weapon or “spell that can hit multiple targets, you could also loop over the list of results, and interact with each of them.
+Notice how you use the provided method <code>results.getClosestCollision().getContactPoint()</code> to determine the <em>closest</em> hit&#8217;s location. If your game includes a &#8220;weapon&#8221; or &#8220;spell&#8221; that can hit multiple targets, you could also loop over the list of results, and interact with each of them.
 </td>
 </tr>
 </table>
@@ -1480,7 +1480,7 @@ Here are some tips:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Tip: You can use <code>Spatial golem = assetManager.loadModel(“Models/Oto/Oto.mesh.xml);</code> from the engine&#8217;s jme3-test-data.jar.</p>
+<p>Tip: You can use <code>Spatial golem = assetManager.loadModel("Models/Oto/Oto.mesh.xml");</code> from the engine&#8217;s jme3-test-data.jar.</p>
 </li>
 <li>
 <p>Tip: Models are shaded! You need some light!</p>
@@ -1506,7 +1506,7 @@ Here are some tips:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>If your nodes use a lit Material (not “Unshaded.j3md), also add a light to the guiNode.</p>
+<p>If your nodes use a lit Material (not &#8220;Unshaded.j3md&#8221;), also add a light to the guiNode.</p>
 </li>
 <li>
 <p>Size units are pixels in the HUD, therefor a 2-wu cube is displayed only 2 pixels wide in the HUD. – Scale it bigger!</p>

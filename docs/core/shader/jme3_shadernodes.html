@@ -1015,7 +1015,7 @@
 </div>
 <div class="paragraph">
 <p>Shader Nodes were designed with this in mind and are the fruit of many long discussions in the core chat balancing the pros and cons of this or that pattern.<br>
-At first this system was referred to as “Shader injection. The basic idea was to allow users to inject code into shaders with a tag replacement system.<br>
+At first this system was referred to as &#8220;Shader&#8221; injection. The basic idea was to allow users to inject code into shaders with a tag replacement system.<br>
 We finally came with a different concept called Shader Nodes, that is inspired from blender nodes system for textures and post process.<br>
 <strong>The final shader is generated at run time by the system by assembling shader nodes together.</strong></p>
 </div>
@@ -1150,7 +1150,7 @@ The global structure should look like this :</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>ShaderType</strong> : The type of shader for this definition. For now only “Vertex and “Fragment are supported.</p>
+<p><strong>ShaderType</strong> : The type of shader for this definition. For now only &#8220;Vertex&#8221; and &#8220;Fragment&#8221; are supported.</p>
 </li>
 </ul>
 </div>
@@ -1186,7 +1186,7 @@ The global structure should look like this :</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>GlslVarType</strong> : a valid glsl variable type that will be used in the shader for this input. see <a href="https://www.khronos.org/opengl/wiki/GLSL_Type">https://www.khronos.org/opengl/wiki/GLSL_Type</a> and the “Declare an array chapter</p>
+<p><strong>GlslVarType</strong> : a valid glsl variable type that will be used in the shader for this input. see <a href="https://www.khronos.org/opengl/wiki/GLSL_Type">https://www.khronos.org/opengl/wiki/GLSL_Type</a> and the &#8220;Declare&#8221; an array chapter</p>
 </li>
 <li>
 <p><strong>VarName</strong> : the name of the variable. Note that you can&#8217;t have several inputs with the same name.</p>
@@ -1199,7 +1199,7 @@ The global structure should look like this :</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>GlslVarType</strong> : a valid glsl variable type that will be used in the shader for this input. see <a href="https://www.khronos.org/opengl/wiki/GLSL_Type">https://www.khronos.org/opengl/wiki/GLSL_Type</a> and the “Declare an array chapter</p>
+<p><strong>GlslVarType</strong> : a valid glsl variable type that will be used in the shader for this input. see <a href="https://www.khronos.org/opengl/wiki/GLSL_Type">https://www.khronos.org/opengl/wiki/GLSL_Type</a> and the &#8220;Declare&#8221; an array chapter</p>
 </li>
 <li>
 <p><strong>VarName</strong> : the name of the variable. Note that you can&#8217;t have several outputs with the same name.</p>
@@ -1308,7 +1308,7 @@ NumberOfElement <strong>HAS</strong> to be declared in the material definition a
 <div class="paragraph">
 <p>The shader code associated with a Shader node is similar to any shader code.<br>
 The code for a Vertex shader node should be in a .vert file and the code for a Fragment shader node should be in a .frag file.
-It has a declarative part containing variable declaration, function declaration and so on… And a main part that is embed in a “void main(){} block.<br>
+It has a declarative part containing variable declaration, function declaration and so on… And a main part that is embed in a &#8220;void main(){}&#8221; block.<br>
 Input and output variables declared in the shader node definition can be used <strong>without</strong> being declared in the shader code. ( they shouldn&#8217;t even or you&#8217;ll have issues).<br>
 Here is a the code of the LightMap.frag shader.</p>
 </div>
@@ -1381,7 +1381,7 @@ Here is how a ShaderNode declaration should look :</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>ActivationCondition</strong> : The condition for this node to be used. Today we use Defines to use different blocks of code used depending on the state of a Material Parameter. The condition here use the exact same paradigm. A valid condition must be the name of a material parameter or any combinations using logical operators &#8220;||,“&amp;&amp;,“! or grouping characters “( and “). The generator will create the corresponding define and the shader node code will be embed into and #ifdef statement.</p>
+<p><strong>ActivationCondition</strong> : The condition for this node to be used. Today we use Defines to use different blocks of code used depending on the state of a Material Parameter. The condition here use the exact same paradigm. A valid condition must be the name of a material parameter or any combinations using logical operators &#8220;||,&#8220;&amp;&amp;&#8221;, &#8220;!&#8221; or grouping characters &#8220;(&#8221; and &#8220;)&#8221;. The generator will create the corresponding define and the shader node code will be embed into and #ifdef statement.</p>
 </li>
 </ul>
 </div>
@@ -1389,7 +1389,7 @@ Here is how a ShaderNode declaration should look :</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>For example, let&#8217;s say we have a Color and ColorMap material parameter, this condition “Color || ColorMap will generate this statement :</p>
+<p>For example, let&#8217;s say we have a Color and ColorMap material parameter, this condition &#8220;Color || ColorMap&#8221; will generate this statement :</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1446,7 +1446,7 @@ Here is how a ShaderNode declaration should look :</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>NameSpace</strong> : the name space of the output to assign, this can only be “Global here.</p>
+<p><strong>NameSpace</strong> : the name space of the output to assign, this can only be &#8220;Global&#8221; here.</p>
 </li>
 <li>
 <p><strong>VarName</strong> : the name of a global output (can be anything, just be aware that 2 different names result in 2 different outputs).</p>

@@ -1015,7 +1015,7 @@ guiNode.addControl(screen);</code></pre>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// this = any JME Application
-Screen screen = new Screen(this, “tonegod/gui/style/def/style_map.xml”);
+Screen screen = new Screen(this, "tonegod/gui/style/def/style_map.xml");
 guiNode.addControl(screen);</code></pre>
 </div>
 </div>
@@ -1051,7 +1051,7 @@ Here are the three contrustor choices for creating the window:</p>
   * Vector2f position
   */
 
-Window win = new Window(screen, “win”, new Vector2f(15, 15));
+Window win = new Window(screen, "win", new Vector2f(15, 15));
 screen.addElement(win);</code></pre>
 </div>
 </div>
@@ -1067,7 +1067,7 @@ The second adds a 4th parameter to specify the windows dimensions, like such:</p
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/** Additional Parameter:
   * Vector2f dimensions  */
 
-Window win = new Window(screen, “win”, new Vector2f(15, 15),
+Window win = new Window(screen, "win", new Vector2f(15, 15),
     new Vector2f(400, 300)
 );
 screen.addElement(win);</code></pre>
@@ -1084,9 +1084,9 @@ The third option adds 2 more parameters and looks like this:</p>
   * String defaultImg
   */
 
-Window win = new Window(screen, “win”, new Vector2f(15, 15), new Vector2f(400, 300),
+Window win = new Window(screen, "win", new Vector2f(15, 15), new Vector2f(400, 300),
     new Vector4f(14,14,14,14),
-    “tonegod/gui/style/def/Window/panel_x.png”
+    "tonegod/gui/style/def/Window/panel_x.png"
 );
 screen.addElement(win);</code></pre>
 </div>
@@ -1155,7 +1155,7 @@ screen.addElement(win);</code></pre>
 public final void createNewWindow(String someWindowTitle) {
     Window nWin = new Window(
         screen,
-        “Window” + winCount,
+        "Window" + winCount,
         new Vector2f( (screen.getWidth()/2)-175, (screen.getHeight()/2)-100 )
     );
     nWin.setWindowTitle(someWindowTitle);
@@ -1175,10 +1175,10 @@ public final void createNewWindow(String someWindowTitle) {
   * Vector2f position
   */
 
-ButtonAdapter makeWindow = new ButtonAdapter( screen, “Btn1″, new Vector2f(15, 55) ) {
+ButtonAdapter makeWindow = new ButtonAdapter( screen, "Btn1", new Vector2f(15, 55) ) {
     @Override
     public void onButtonMouseLeftUp(MouseButtonEvent evt, boolean toggled) {
-        createNewWindow(“New Window ” + winCount);
+        createNewWindow("New Window " + winCount);
     }
 };
 
@@ -1268,7 +1268,7 @@ private Screen screen;
 public final void createNewWindow(String someWindowTitle) {
     Window nWin = new Window(
         screen,
-        “Window” + winCount,
+        "Window" + winCount,
         new Vector2f( (screen.getWidth()/2)-175, (screen.getHeight()/2)-100 )
     );
     nWin.setWindowTitle(someWindowTitle);
@@ -1277,18 +1277,18 @@ public final void createNewWindow(String someWindowTitle) {
 }
 
 public void simpleInitApp() {
-    screen = new Screen(this, “tonegod/gui/style/def/style_map.xml”);
+    screen = new Screen(this, "tonegod/gui/style/def/style_map.xml");
     screen.initialize();
     guiNode.addControl(screen);
 
     // Add window
-    Window win = new Window(screen, “win”, new Vector2f(15, 15));
+    Window win = new Window(screen, "win", new Vector2f(15, 15));
 
     // create button and add to window
-    ButtonAdapter makeWindow = new ButtonAdapter( screen, “Btn1″, new Vector2f(15, 55) ) {
+    ButtonAdapter makeWindow = new ButtonAdapter( screen, "Btn1", new Vector2f(15, 55) ) {
         @Override
         public void onButtonMouseLeftUp(MouseButtonEvent evt, boolean toggled) {
-            createNewWindow(“New Window ” + winCount);
+            createNewWindow("New Window " + winCount);
         }
     };
 

@@ -1006,7 +1006,7 @@ Gamma Correction is the technique that tends to correct the issue. Gamma is an p
 <div class="paragraph">
 <p><strong>Knowing what colors we have as input</strong><br>
 The other aspect of gamma correction is the colors we get as input in the rendering process that are stored in textures or in ColorRGBA material params. Almost all image editors are storing color data in images already gamma corrected (so that colors are correct when you display the picture in a viewer of in a browser). Also most hand picked colors (in a color picker) can be assumed as gamma corrected as you most probably chose this color through a monitor display.
-Such images or color are said to be in sRGB color space, meaning “standard RGB” (which is not the standard one would guess).
+Such images or color are said to be in sRGB color space, meaning &#8220;standard RGB&#8221; (which is not the standard one would guess).
 That means that textures and colors that we use as input in our shaders are not in a linear space. The issue is that we need them in linear space when we compute the lighting, else the lighting is wrong.
 To avoid this we need to apply some gamma correction to the colors : (pow(color, gamma);
 This only apply to textures that will render colors on screen (basically diffuse map, specular, light maps). Normal maps, height maps don’t need the correction.</p>
@@ -1106,7 +1106,7 @@ This can be toggled at run time.</p>
 <td class="content">
 <div class="paragraph">
 <p>This will not yield exact results, as the real gamma can vary depending on the monitor.<br>
-If this is a problem, please refer to the “handling gamma correction in a post process section.</p>
+If this is a problem, please refer to the &#8220;handling gamma correction&#8221; in a post process section.</p>
 </div>
 </td>
 </tr>
@@ -1234,7 +1234,7 @@ One can now specify in a material definition file (j3md) if a texture parameter 
 </div>
 </div>
 <div class="paragraph">
-<p>When a texture is assigned to this material param by using material.setTexture(“NormalMap, myNormalTexture), the color space of this texture&#8217;s image will be forced to linear. So if you make your own material and want to use Gamma Correction, make sure you properly mark your textures as in the proper color space.</p>
+<p>When a texture is assigned to this material param by using material.setTexture("NormalMap", myNormalTexture), the color space of this texture&#8217;s image will be forced to linear. So if you make your own material and want to use Gamma Correction, make sure you properly mark your textures as in the proper color space.</p>
 </div>
 <div class="paragraph">
 <p>This can sound complicated, but you just have to answer this question :  Does my image represent color data? if the answer is no, then you have to set the -Linear flag.</p>
