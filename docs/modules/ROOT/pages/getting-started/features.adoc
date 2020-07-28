@@ -1,0 +1,298 @@
+= jMonkeyEngine 3.0 Feature Overview
+:revnumber: 2.2
+:revdate: 2020/07/24
+
+
+See also: xref:getting-started/requirements.adoc[requirements].
+
+
+== Software Development Kit: jMonkeyEngine SDK
+
+*  xref:sdk:project_creation.adoc[Creates jME3-ready Java projects]
+**  Preconfigured classpath
+**  Bundled with compatible JDK
+**  xref:core:asset/asset_manager.adoc[Asset Manager] for loading multi-media files and 3D models including asset name code completion
+**  xref:sdk:default_build_script.adoc[Non-proprietary Ant build scripts]
+**  jME3-ready Javadoc popups, xref:sdk:sample_code.adoc[sample code projects], and code snippet palette
+*  xref:sdk:code_editor.adoc[Full-featured Java and XML code editor]
+*  xref:sdk:update_center.adoc[Plugins]
+**  xref:sdk:version_control.adoc[File Version Control]
+**  xref:sdk:debugging_profiling_testing.adoc[Debugger and Profiler (optional)]
+**  xref:sdk:model_loader_and_viewer.adoc[Converters and Importers for game assets (3D models etc)]
+**  xref:sdk:scene_composer.adoc[3D Scene Viewer and Scene Composer]
+**  xref:sdk:material_editing.adoc[Material editor]
+**  Shader Node editor
+**  xref:sdk:terrain_editor.adoc[Terrain generation, painting, and editing]
+**  xref:sdk:plugin/fonts.adoc[Custom font creator]
+**  xref:sdk:neotexture.adoc[Procedural texture creator (NeoTexture)]
+**  xref:core:/scene/control/level_of_detail.adoc[Level of Detail (LOD) generator]
+**  xref:sdk:sdk.adoc[... and much more...]
+
+*  xref:sdk:application_deployment.adoc[Deployment]
+**  Generates desktop executables for Win, Mac, Linux
+**  Generates mobile executables for xref:sdk:android.adoc[Android], iOS support is in the works.
+**  Generates JNLP WebStart and Java Browser Applets
+
+*  xref:sdk:whynoteclipse.adoc[Based on the NetBeans Platform]
+**  Supports all NetBeans IDE plugins
+
+
+
+== Physics
+
+*  xref:physics:physics.adoc[Bullet physics binding]
+**  xref:physics:control/walking_character.adoc[Physical characters]
+**  xref:physics:joint/hinges_and_joints.adoc[Physical joints and hinges]
+**  xref:physics:control/vehicles.adoc[Ray-cast vehicle]
+**  xref:physics:control/ragdoll.adoc[Ragdoll physics]
+
+*  xref:physics:bullet_multithreading.adoc[Multi-threaded physics]
+*  <<physics:physics.adoc#create-a-collisionshape,Mesh-accurate collision shapes>>
+
+
+== Supported Formats
+
+=== jMonkeyEngine3 File Formats
+[cols="10,65,25", options="header"]
+|===
+
+a|Suffix
+a|Usage
+a|Learn more
+
+l|.j3o
+a|Binary 3D model or scene. At the latest from the Beta release of your game on, you should convert all models to .j3o format. +
+During alpha and earlier development phases (when models still change a lot) you can alternatively load GLTF/OBJ models directly.
+a|xref:sdk:model_loader_and_viewer.adoc[Model Loader and Viewer]
+
+l|.j3m
+a|A custom Material. You can create a .j3m file to store a Material configuration for a Geometry (e.g. 3D model).
+a|xref:core:material/materials_overview.adoc[Materials Overview] +
+xref:sdk:material_editing.adoc[Material Editing]
+
+l|.j3md
+a|A Material definition. These are pre-defined templates for shader-based Materials. +
+Each custom .j3m Material is based on a material definition. Advanced users can create their own material definitions.
+a| xref:core:material/materials_overview.adoc[Materials Overview]
+
+l|.j3f
+a|A custom post-processor filter configuration. You can create a .j3f file to store a FilterPostProcessor with a set of preconfigured filters.
+a| xref:sdk:filters.adoc[Filters] +
+xref:core:effect/effects_overview.adoc[Effects Overview]
+
+|===
+
+=== Supported External File Types
+
+[cols="40,15,45", options="header"]
+|===
+
+a|File Suffix
+a|Type
+a|Description
+
+l|.mesh.xml, .meshxml, .scene
+a|3D model
+a|Ogre Mesh XML *(soon to be discontinued)* +
+see:
+
+* xref:tutorials:how-to/modeling/blender/blender_ogre_export.adoc[Exporting Models as Ogre XML meshes from Blender]
+* xref:tutorials:how-to/modeling/blender/blender_ogre_compatibility.adoc[Ogre Compatibility]
+
+Converting to j3o:
+
+* xref:sdk:model_loader_and_viewer.adoc[SDK convert]
+* link:{link-javadoc}/com/jme3/export/binary/BinaryExporter.html[BinaryExporter]
+
+l|.obj, .mtl
+a|3D model
+a|Wavefront +
+Converting to j3o:
+
+* xref:sdk:model_loader_and_viewer.adoc[SDK convert]
+* link:{link-javadoc}/com/jme3/export/binary/BinaryExporter.html[BinaryExporter]
+
+l|.xbuf
+a|3D model
+a|Blender version 2.74 +
+See:
+
+* link:https://hub.jmonkeyengine.org/t/xbuf-format-a-developer-friendly-game-exchange-format-for-3d-data/31130[.xbuf] forum post.
+
+Converting to j3o:
+
+* xref:sdk:model_loader_and_viewer.adoc[SDK convert]
+* link:{link-javadoc}/com/jme3/export/binary/BinaryExporter.html[BinaryExporter]
+
+l|.fbx
+a|3D model
+a|Filmbox +
+See:
+
+* link:https://hub.jmonkeyengine.org/t/fbx-importer/30309[Fbx importer] forum post.
+
+Converting to j3o:
+
+* xref:sdk:model_loader_and_viewer.adoc[SDK convert]
+* link:{link-javadoc}/com/jme3/export/binary/BinaryExporter.html[BinaryExporter]
+
+l|.gltf, .bin, .glb, custom extensions
+a|3D model
+a|Blender version 2.78c onwards, +
+See:
+
+* link:https://hub.jmonkeyengine.org/t/jme-gltf-support/39174[gltf] forum post
+* xref:tutorials:how-to/modeling/blender/blender_gltf.adoc[Exporting Models as GlTF meshes from Blender]
+
+Converting to j3o:
+
+* link:https://hub.jmonkeyengine.org/t/jmeconvert-tool/41831[JmeConvert tool]
+* xref:sdk:model_loader_and_viewer.adoc[SDK convert]
+* link:{link-javadoc}/com/jme3/export/binary/BinaryExporter.html[BinaryExporter]
+
+l|.jpg, .png, .gif
+a|image
+a|Textures, icons
+
+l|.dds
+a|image
+a|Direct Draw Surface texture
+
+l|.hdr
+a|image
+a|High Dynamic Range texture
+
+l|.tga
+a|image
+a|Targa Image File texture
+
+l|.pfm
+a|image
+a|Portable Float Map texture
+
+l|.bmp
+a|image
+a|Bitmap texture
+
+l|.ani, .cur, .ico
+a|image
+a|Windows Cursor, static or animated.
+
+l|.fnt
+a|bitmap font
+a|AngelCode font for +++<abbr title="Graphical User Interface">GUI</abbr>+++ and HUD
+
+l|.wav
+a|audio
+a|Wave music and sounds
+
+l|.ogg
+a|audio
+a|OGG Vorbis music and sounds
+
+|===
+
+
+== Shaders
+
+*  GLSL support
+*  Shader libraries
+*  Shader permutations
+*  xref:core:shader/jme3_shadernodes.adoc[Shader Nodes]
+
+
+== Material Lighting
+
+*  Per-pixel lighting
+*  Multi-pass lighting
+*  Phong Lighting
+**  Diffuse Map
+**  Alpha Map
+**  Glow Map
+**  Specular Map
+**  Normal Map, Parallax Map (a.k.a. bump mapping)
+
+*  Tangent shading
+*  Reflection
+
+
+== Material Textures
+
+*  Texturing
+***  material colors (ambient, diffuse, specular/shininess, glow),
+***  color map, light map,
+***  transparency, translucency, alpha map, alpha testing with falloff threshold,
+***  sphere map, cube map,
+***  texture scale,
+***  wireframe
+***  color ramp texture
+
+*  Multi-texturing through shaders
+*  UV textures
+*  Splat textures, Phong lit or unshaded, supports diffuse and normal maps
+//*  link:http://hub.jmonkeyengine.org/forum/topic/textureatlas-creation-and-packed-texture-handling-in-sdk/[Texture Atlas, handling of packed Textures]
+
+
+== Asset System
+
+*  Asset importing
+**  Animation
+**  Meshes
+**  Textures
+**  Scenes
+**  Materials
+**  Shaders
+
+*  Multi-threaded asset loading via HTTP
+*  Loading scenes from .ZIP files
+*  Sharable AssetPacks
+
+
+== Special Effects
+
+*  xref:core:effect/particle_emitters.adoc[Particles: Smoke, fire, explosions, etc]
+*  xref:core:effect/effects_overview.adoc[Post processing / 2D Filter Effects]
+**  Reflective Water
+**  Shadow mapping
+**  High Dynamic Range rendering
+**  Screen Space Ambient Occlusion
+**  Light Scattering
+**  Cartoon Effect
+**  Fog
+**  Bloom
+**  Depth of Field Blur
+
+
+
+== Terrain
+
+*  xref:core:terrain/terrain.adoc[Geomipmapped hightmap terrain]
+*  xref:tutorials:how-to/modeling/blender/blender_ogre_compatibility.adoc[Ogre Compatibility]
+*  xref:core:util/sky.adoc[SkyBox and SkyDome]
+*  Terrain lighting
+
+
+== GUI / HUD
+
+*  xref:core:ui/hud.adoc[Orthogonal (Billboard) node]
+*  xref:core:gui/nifty_gui.adoc[Nifty GUI integration]
+
+
+== Miscellaneous
+
+*  xref:core:app/state/application_states.adoc[Application States] and xref:core:scene/control/custom_controls.adoc[Controls] to implement xref:core:app/update_loop.adoc[game logic]
+*  xref:core:cinematic/cinematics.adoc[Cinematics and motion paths]
+*  xref:core:renderer/camera.adoc[Camera System]
+**  Normal or parallel view
+**  Multiple views
+
+*  Swing canvas (e.g. for Applets)
+*  xref:core:input/input_handling.adoc[Input handling]
+**  Mouse, keyboard, joystick
+**  xref:core:input/combo_moves.adoc[Combo moves]
+
+
+
+== Networking
+
+*  xref:networking:networking.adoc[SpiderMonkey API]

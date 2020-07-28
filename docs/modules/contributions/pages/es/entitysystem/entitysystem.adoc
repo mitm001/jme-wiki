@@ -1,0 +1,54 @@
+= Entity System Zay-ES
+:revnumber: 2.0
+:revdate: 2020/07/25
+
+
+Entity Systems are a new way of organising your game data.
+
+The basic idea comes from the famous t-machine article about entity systems as a possibility for mmorpg development.
+Zay-ES is pspeed's Entity System which he uses for his game Mythruna.
+Entity Systems aim to make your project more clear and dynamic.
+
+
+== Entity System Introduction
+
+If you are new to this topic you should read:
+
+xref:es/entitysystem/introduction.adoc[Entity System Introduction]
+
+*Read this if you want to look carefully at the design of a general ES and compare between different projects.*
+
+xref:es/entitysystem/detailed.adoc[Entity System Detailed]
+
+xref:es/entitysystem/interviews.adoc[Entity System Approaches and Interviews]
+
+
+== Zay-ES Tutorials
+
+*  link:https://github.com/jMonkeyEngine-Contributions/zay-es/wiki[Official Zay ES Wiki]
+*  xref:es/entitysystem/beginner.adoc[Zay-ES Beginner]
+*  xref:es/entitysystem/entityset.adoc[The EntitySet]
+*  AppStates/Filter
+*  Zay-ES and SQL
+
+
+== Zay-ES Examples
+
+In the future, more examples will be added to help with solving problems the Entity System way.
+
+*  xref:es/entitysystem/examples/damagesystem.adoc[Making a Damage System]
+*  xref:es/entitysystem/examples/own_logic_thread.adoc[Your Own Logic Thread]
+
+
+== Zay-ES Forum
+
+A lot of very up-to-date information on the Zay-ES entity system can be found on the jME3 Forum.  There are example projects, example code, and a lot of general help.
+
+*  link:http://hub.jmonkeyengine.org/c/user-code-projects/zay-es[ Zay-ES forum]
+
+
+== Zay-ES Download
+
+Zay-ES can be downloaded via SVN from link:https://github.com/jMonkeyEngine-Contributions/zay-es[https://github.com/jMonkeyEngine-Contributions/zay-es]
+
+It also now available as a jMonkey SDK plugin.

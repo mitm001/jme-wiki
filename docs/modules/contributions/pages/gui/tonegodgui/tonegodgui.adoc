@@ -1,0 +1,136 @@
+= tonegodgui
+:revnumber: 2.0
+:revdate: 2020/07/25
+
+
+
+== tonegodGUI
+
+
+=== A Native GUI Library for JME3.
+
+video::oZvmRXprAj4[youtube]
+video::x8_94-A4hOM[youtube]
+
+[IMPORTANT]
+====
+* This is a (somewhere between) Alpha/Beta release and though it is extensive and pretty solid, there is always the potential of change.
+* Sources can be had link:http://code.google.com/p/tonegodgui/source/browse/[HERE] as they are not part of the plugin until the alpha release.
+* Latest build & Android Test Project can be found link:https://sourceforge.net/projects/tonegodemitter/files/?source=navbar[HERE]
+====
+
+
+
+=== Quick Start
+
+xref:gui/tonegodgui/quickstart.adoc[Quick Start Guide]
+
+
+=== Best Practices
+
+xref:gui/tonegodgui/donts.adoc[Don'ts]
+
+
+=== Core Components
+
+xref:gui/tonegodgui/screen.adoc[The Screen Class],
+xref:gui/tonegodgui/multiplescreens.adoc[Implementing Multiple Screens],
+xref:gui/tonegodgui/xmllayouts.adoc[Using XML to Define Layouts],
+xref:gui/tonegodgui/element.adoc[The Element Class]
+
+
+=== Components
+
+
+==== Buttons:
+
+xref:gui/tonegodgui/button.adoc[Button],
+xref:gui/tonegodgui/checkbox.adoc[Check Box],
+xref:gui/tonegodgui/radiobutton.adoc[Radio Button],
+xref:gui/tonegodgui/radiobuttongroup.adoc[Radio Button Group]
+
+
+==== List-based Controls:
+
+xref:gui/tonegodgui/slider.adoc[Slider],
+xref:gui/tonegodgui/spinner.adoc[Spinner],
+xref:gui/tonegodgui/dial.adoc[Dial],
+xref:gui/tonegodgui/combobox.adoc[ComboBox &amp; SelectBox]
+
+
+==== Text Controls:
+
+xref:gui/tonegodgui/label.adoc[Label],
+xref:gui/tonegodgui/textfield.adoc[Text Field],
+xref:gui/tonegodgui/password.adoc[Password]
+
+
+==== Menus:
+
+xref:gui/tonegodgui/menu.adoc[Menu]
+
+
+==== Scrolling:
+
+xref:gui/tonegodgui/scrollarea.adoc[Scroll Area]
+
+
+==== Windowing:
+
+xref:gui/tonegodgui/panel.adoc[Panel],
+xref:gui/tonegodgui/window.adoc[Window],
+xref:gui/tonegodgui/alertbox.adoc[Alert Box],
+xref:gui/tonegodgui/dialogbox.adoc[Dialog Box]
+
+
+==== Extras:
+
+xref:gui/tonegodgui/indicator.adoc[Indicators],
+xref:gui/tonegodgui/osrviewport.adoc[Off-screen Rendered View Port],
+xref:gui/tonegodgui/dragelement.adoc[Drag Element]
+
+
+=== Effects
+
+xref:gui/tonegodgui/effectmanager.adoc[The Effect Manager],
+xref:gui/tonegodgui/createeffects.adoc[Effects]
+
+
+=== Custom Controls
+
+xref:gui/tonegodgui/customcontrols.adoc[Creating New Controls]
+
+
+=== Styles
+
+xref:gui/tonegodgui/styles.adoc[Creating A New Theme]
+
+
+
+=== Event Listeners
+
+
+
+==== Focus:
+
+xref:gui/tonegodgui/evmousefocus.adoc[Mouse Focus Listener],
+xref:gui/tonegodgui/evtabfocus.adoc[Tab Focus Listener]
+
+
+==== Mouse Input:
+
+xref:gui/tonegodgui/evmousebutton.adoc[Mouse Button Listener],
+xref:gui/tonegodgui/evmousewheel.adoc[Mouse Wheel Listener],
+xref:gui/tonegodgui/evmousemove.adoc[Mouse Movement Listener]
+
+
+==== Keyboard Input:
+
+xref:gui/tonegodgui/evkeyboard.adoc[Keyboard Listener]
+
+==== Layouts:
+
+*  FlowLayout
+*  HorizontalLayout
+*  VerticalLayout
+*  MigLayout

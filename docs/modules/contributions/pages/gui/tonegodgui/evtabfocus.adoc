@@ -1,0 +1,17 @@
+= evtabfocus
+:revnumber: 2.0
+:revdate: 2020/07/27
+
+
+
+== TabFocusListener
+
+The TabFocusListener provides abstract methods for the following events:
+
+[source,java]
+----
+
+void setTabFocus();
+void resetTabFocus();
+
+----

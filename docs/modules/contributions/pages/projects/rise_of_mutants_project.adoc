@@ -1,0 +1,30 @@
+= rise_of_mutants_project
+:revnumber: 2.0
+:revdate: 2020/07/23
+
+
+Rise of Mutants project by BigBootsTeam.
+
+Project is hosted here: link:https://code.google.com/archive/p/rise-of-mutants/[https://code.google.com/archive/p/rise-of-mutants/]
+
+Features:
+
+- World Editor is Blender (export to Ogre scene).
+
+- Entity System.
+
+- Ready Framework.
+
+- Ready Gameplay.
+
+- Model Viewer tool.
+
+- LightBlow Shader is used.
+
+ScreenShot:
+
+image:https://i.imgur.com/uFRw4.jpg[https://i.imgur.com/uFRw4.jpg]
+
+Video:
+
+image::projects/rise/riseofmutants3.jpg[youtu.be/_aFSEJlISyI,width="",height="",link="https://youtu.be/_aFSEJlISyI"]

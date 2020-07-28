@@ -1,8 +1,12 @@
 name: docs
-title: Docs
+title: JME
 version: master
 start_page: ROOT:documentation.adoc
 nav:
 - modules/ROOT/nav.adoc
 - modules/tutorials/nav.adoc
+- modules/core/nav.adoc
+- modules/physics/nav.adoc
+- modules/networking/nav.adoc
+- modules/contributions/nav.adoc
 - modules/sdk/nav.adoc

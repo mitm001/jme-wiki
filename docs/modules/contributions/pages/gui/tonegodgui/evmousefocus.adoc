@@ -1,0 +1,17 @@
+= evmousefocus
+:revnumber: 2.0
+:revdate: 2020/07/27
+
+
+
+== MouseFocusListener
+
+The MouseFocusListener provides abstract methods for the following events:
+
+[source,java]
+----
+
+void onGetFocus(MouseMotionEvent evt);
+void onLoseFocus(MouseMotionEvent evt);
+
+----
