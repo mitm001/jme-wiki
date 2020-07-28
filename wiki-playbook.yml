@@ -13,7 +13,7 @@ content:
     start_path: docs
   - url: .
     branches: HEAD
-    start_path: docs-transition
+    start_path: docs-wiki
 ui:
   bundle:
     url: https://github.com/mitm001/jme-ui/releases/latest/download/ui-bundle.zip
