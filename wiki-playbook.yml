@@ -6,13 +6,13 @@ site:
 content:
   sources:
   - url: .
-    branches: [master, v3.2]
+    branches: [HEAD, v3.2]
     start_path: docs
   - url: https://github.com/mitm001/jme-ui
     branches: HEAD
     start_path: docs
   - url: .
-    branches: [master, v3.2]
+    branches: [HEAD, v3.2]
     start_path: docs-wiki
 ui:
   bundle:
