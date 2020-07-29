@@ -6,7 +6,7 @@ site:
 content:
   sources:
   - url: .
-    branches: HEAD
+    branches: [ HEAD, 3.2 ]
     start_path: docs
   - url: https://github.com/mitm001/jme-ui
     branches: HEAD
