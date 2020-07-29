@@ -1,6 +1,6 @@
 name: wiki-contribution
 title: Wiki Contribution
-version: 'v3.3'
+version: 3.2
 start_page: ROOT:wiki_contributor.adoc
 nav:
 - modules/ROOT/nav.adoc

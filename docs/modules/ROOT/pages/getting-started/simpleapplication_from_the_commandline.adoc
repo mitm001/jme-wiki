@@ -67,7 +67,7 @@ repositories {
     //mavenCentral()
 
     //Uncomment this if you use jme3-niftygui
-    //maven{url 'https://nifty-gui.sourceforge.net/nifty-maven-repo'}
+    //maven{url 'http://nifty-gui.sourceforge.net/nifty-maven-repo'}
 
 }
 
