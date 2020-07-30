@@ -11,8 +11,8 @@ content:
   - url: https://github.com/mitm001/jme-ui
     branches: HEAD
     start_path: docs
-  - url: .
-    branches: [HEAD]
+  - url: https://github.com/mitm001/jme-wiki.git
+    branches: [HEAD, v3.2]
     start_path: docs-wiki
 ui:
   bundle:
