@@ -89,8 +89,9 @@ jobs:
       run: npm audit
 
     - name: Build Docs
-      run: npm run buildDocs
-
+      run: |
+        npm run buildDocs
+        ls -al ./build/site
     # Detects any updates to package-lock.json and package.json and commits the
     # files to root.
     # see:
