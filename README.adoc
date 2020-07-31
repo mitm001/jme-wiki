@@ -6,14 +6,14 @@ see link:https://mitm001.github.io/jme-wiki/[https://wiki.jmonkeyengine.org/]
 
 The project to store, edit, and generate the documentation of http://jmonkeyengine.org[jMonkeyEngine].
 
-The documentation in `docs/modules/` is editable :
+The documentation `docs/modules/ROOT/pages` is editable :
 
 * Online via github (Edit link located on the top navbar of the Wiki + Pull Request)
-* Offline with the Atom editor, which includes a built in previewer and code editor. see xref:docs-wiki/modules/ROOT/pages/atom_editor.adoc[Atom Editor for Wiki Editing]
+* Offline with the Atom editor, which includes a built in previewer and code editor. see link:https://wiki.jmonkeyengine.org/docs/docs-wiki/atom_editor.html[Atom Editor for Wiki Editing]
 * Any text editor and browser program of your choice.
 * Setting up your own local Node.js environment.
 
-NOTE: Read the xref:docs-wiki/modules/ROOT/pages/wiki_contributor.adoc[Wiki Contributions].
+NOTE: Read the link:https://wiki.jmonkeyengine.org/docs/docs-wiki/wiki_contributions.html[Wiki Contributions] document for details on how to contribute.
 
 == Build & Preview
 
